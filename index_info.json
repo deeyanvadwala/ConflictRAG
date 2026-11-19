@@ -1,0 +1,8 @@
+{
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "chunk_chars": 1500,
+  "chunk_overlap": 200,
+  "n_chunks": 816,
+  "chromadb": "1.5.9",
+  "sentence_transformers": "6.3.0"
+}

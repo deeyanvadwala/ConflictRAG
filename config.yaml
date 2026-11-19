@@ -1,0 +1,12 @@
+# All pipeline settings live here. Change a setting here, then log the change.
+embedding_model: BAAI/bge-small-en-v1.5
+query_prefix: "Represent this sentence for searching relevant passages: "
+
+chunk_chars: 1500        # about 350-400 tokens, fits the model's input limit
+chunk_overlap: 200
+min_chunk_chars: 200     # drop tiny fragments (page numbers, stray headings)
+
+chroma_path: chroma_db
+collection: mars
+top_k: 5
+seed: 42
