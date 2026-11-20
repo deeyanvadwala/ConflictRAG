@@ -10,3 +10,13 @@ chroma_path: chroma_db
 collection: mars
 top_k: 5
 seed: 42
+
+# Generation (llm.py). Free options only: gemini (free tier) or ollama (local).
+llm_provider: gemini
+llm_models:
+  gemini: gemini-3.5-flash   # 2026-11-20: 2.5-flash retired for new keys; 3.8-flash returned 503 (overloaded)
+  ollama: llama3.1:8b    # must be pulled first: ollama pull llama3.1:8b
+  anthropic: claude-haiku-5-5   # paid API, not used under the $0 budget
+temperature: 0
+max_output_tokens: 1024
+ollama_url: http://localhost:11434

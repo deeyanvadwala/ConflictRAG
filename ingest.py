@@ -27,14 +27,19 @@ def extract(doc_id):
     if len(pages) >= 8:
         counts = collections.Counter()
         for lines in pages:
-            counts.update({norm(l) for l in lines if len(l) < 80})
+            # Only lines with a letter: norm() turns every bare number into "#",
+            # which would otherwise mark all table numbers as a repeated header.
+            counts.update({norm(l) for l in lines if len(l) < 80 and re.search(r"[A-Za-z]", l)})
         repeated = {k for k, c in counts.items() if c >= 0.4 * len(pages)}
 
     out, empty = [], 0
     for n, lines in enumerate(pages, start=1):
+        edge = {0, 1, len(lines) - 2, len(lines) - 1}  # first/last 2 lines: where page numbers sit
         kept = [
-            l for l in lines
-            if not re.fullmatch(r"[\d\-\sivxIVX]{1,8}", l)   # bare page numbers
+            l for i, l in enumerate(lines)
+            # bare page numbers, only at the page edges: mid-page bare numbers are
+            # table values (e.g. the crew-size row of 20160006315 Table 1, PDF page 11)
+            if not (i in edge and re.fullmatch(r"[\d\-\sivxIVX]{1,8}", l))
             and not re.fullmatch(r"[•·\-–—]", l)             # lone bullets
             and norm(l) not in repeated
         ]
