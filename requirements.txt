@@ -1,0 +1,17 @@
+# Python 3.12. Install with:  python -m pip install -r requirements.txt
+# Versions are pinned because they change results:
+#   pymupdf changes the extracted text; torch/transformers/sentence-transformers change embeddings.
+
+# PDF download and text extraction
+requests==2.34.2
+pymupdf==2.1
+
+# Settings and secrets (.env)
+PyYAML==6.0.3
+python-dotenv==1.2.4
+
+# Embeddings and vector index
+sentence-transformers==6.3.0
+transformers==5.23.0
+torch==2.15.0          # CPU build was used for the recorded results
+chromadb==1.5.9
