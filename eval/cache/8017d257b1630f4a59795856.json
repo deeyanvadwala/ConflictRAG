@@ -1,0 +1,9 @@
+{
+ "provider": "gemini",
+ "model": "gemini-3.5-flash",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.34,
+ "output": "```json\n{\n  \"abstained\": false,\n  \"correctness\": \"partial\",\n  \"faithful\": true,\n  \"claims_disagreement\": false,\n  \"only_older_value\": false,\n  \"reason\": \"The answer accurately summarizes the retrieved context (450–550 days at Mars, ~500 days on the surface), but does not note the specific conflicting source figures described in the reference answer.\"\n}\n```",
+ "created": "2026-11-20 16:16:54"
+}

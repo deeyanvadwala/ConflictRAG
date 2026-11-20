@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.27,
+ "output": "There is no information in the provided context about the first powered helicopter flight on Mars. The context discusses a Mars Reference Mission plan, which includes sending infrastructure elements, crew, and cargo missions to Mars, but it does not mention a powered helicopter flight.",
+ "created": "2026-11-20 16:41:30"
+}

@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 9.37,
+ "output": "According to [1], the goals and objectives of the Reference Mission focus on allowing human crews to spend the greatest amount of time on the surface of Mars for the investment made to transport them there and to learn as much as possible about how humans react in this environment. It is stated that verifying the ability of people to inhabit Mars requires more than a brief stay of 30 days at the planet. However, the specific duration of stay for Version 1.0 is not explicitly mentioned in the provided text.\n\nHowever, according to [2], the masses of Reference Mission 1.0 are provided for comparison, but the specific duration of stay is not mentioned. \n\nBut according to [3], the Reference Mission architecture allows for a robust surface capability with significant performance margins: Crews will explore in the vicinity of the outpost out to a few hundred kilometers, will be able to study materials in situ and in a surface laboratory, and will be allowed to update and modify the exploration plan to take advantage of their discoveries. It is stated that the crew will spend long periods of time (18 to 20 months; 600 days nominal) on the surface, rather than alternative approaches which require longer times in space and reduce time on the surface.\n\nTherefore, based on the information provided, it can be inferred that the astronauts stay on the Martian surface for approximately 600 days in NASA's Version 1.0 Mars Reference Mission.",
+ "created": "2026-11-20 16:41:56"
+}

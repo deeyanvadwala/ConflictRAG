@@ -54,7 +54,7 @@ def _post(url, headers, body, timeout=120):
         return r.json()
 
 
-def _gemini(prompt, model):
+def _gemini(prompt, model, json_mode=False):
     body = {
         "contents": [{"role": "user", "parts": [{"text": prompt}]}],
         "generationConfig": {
@@ -63,6 +63,8 @@ def _gemini(prompt, model):
             "seed": CFG["seed"],
         },
     }
+    if json_mode:  # the API guarantees syntactically valid JSON
+        body["generationConfig"]["responseMimeType"] = "application/json"
     headers = {"x-goog-api-key": _key("GEMINI_API_KEY")}  # key in a header, not the URL
     data = _post(f"{GEMINI_URL}/models/{model}:generateContent", headers, body)
     cands = data.get("candidates") or []
@@ -71,12 +73,10 @@ def _gemini(prompt, model):
     parts = cands[0].get("content", {}).get("parts", [])
     text = "".join(p.get("text", "") for p in parts if not p.get("thought"))
     finish = cands[0].get("finishReason")
-    if finish != "STOP":
-        print(f"[llm] warning: finishReason={finish} (answer may be cut off or blocked)", file=sys.stderr)
-    return text
+    return text, "stop" if finish == "STOP" else str(finish).lower()
 
 
-def _ollama(prompt, model):
+def _ollama(prompt, model, json_mode=False):
     body = {
         "model": model,
         "prompt": prompt,
@@ -85,15 +85,20 @@ def _ollama(prompt, model):
             "temperature": CFG["temperature"],
             "num_predict": CFG["max_output_tokens"],
             "seed": CFG["seed"],
+            # Ollama's default context is small and it silently drops the start of longer prompts.
+            "num_ctx": CFG["ollama_num_ctx"],
         },
     }
+    if json_mode:
+        body["format"] = "json"
     try:
-        return _post(f"{CFG['ollama_url']}/api/generate", {}, body, timeout=600)["response"]
+        data = _post(f"{CFG['ollama_url']}/api/generate", {}, body, timeout=600)
+        return data["response"], "max_tokens" if data.get("done_reason") == "length" else "stop"
     except LLMError as e:
         raise LLMError(f"{e}. Is Ollama running and has `ollama pull {model}` been done?") from None
 
 
-def _anthropic(prompt, model):
+def _anthropic(prompt, model, json_mode=False):  # json_mode: relies on the prompt asking for JSON
     # Paid API: not used under the $0 budget. Kept so the wrapper matches the plan.
     body = {
         "model": model,
@@ -103,21 +108,31 @@ def _anthropic(prompt, model):
     }
     headers = {"x-api-key": _key("ANTHROPIC_API_KEY"), "anthropic-version": "2023-06-01"}
     data = _post(ANTHROPIC_URL, headers, body)
-    return "".join(b.get("text", "") for b in data["content"] if b["type"] == "text")
+    text = "".join(b.get("text", "") for b in data["content"] if b["type"] == "text")
+    return text, "stop" if data.get("stop_reason") == "end_turn" else str(data.get("stop_reason"))
 
 
 PROVIDERS = {"gemini": _gemini, "ollama": _ollama, "anthropic": _anthropic}
 
 
-def complete(prompt, provider=None, model=None):
-    """Send one prompt, return the model's text."""
+def complete_meta(prompt, provider=None, model=None, json_mode=False):
+    """Send one prompt. Returns (text, finish); finish is "stop" when the model ended normally,
+    otherwise e.g. "max_tokens" (cut off) or "safety" (blocked). json_mode asks for valid JSON."""
     provider = provider or CFG["llm_provider"]
     if provider not in PROVIDERS:
         raise LLMError(f"unknown provider {provider!r}; choose from {list(PROVIDERS)}")
     model = model or CFG["llm_models"][provider]
     if not model or model == "SET_ME":
         raise LLMError(f"set llm_models.{provider} in config.yaml (see: python llm.py --list-models)")
-    return PROVIDERS[provider](prompt, model)
+    return PROVIDERS[provider](prompt, model, json_mode)
+
+
+def complete(prompt, provider=None, model=None):
+    """Send one prompt, return the model's text. Warns if the answer did not end normally."""
+    text, finish = complete_meta(prompt, provider, model)
+    if finish != "stop":
+        print(f"[llm] warning: finish={finish} (answer may be cut off or blocked)", file=sys.stderr)
+    return text
 
 
 def list_gemini_models():

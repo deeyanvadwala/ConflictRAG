@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 7.22,
+ "output": "According to [1], the NASA Design Reference Architecture 5.0 envisions sending six crew members to Mars on a minimum of three consecutive opportunities.\n\nHowever, it's worth noting that this is just one of the plans mentioned in the provided documents. In [4], the Inspiration Mars 2021 mission concept is described, which would send a two-person crew to Mars on a flyby mission.\n\nIn [5], a study on the Evolvable Mars Campaign (EMC) is mentioned, which aimed to define how near-term investments could build upon one another to enable human missions to Mars. However, the number of astronauts planned for this mission is not specified in the provided snippet.\n\nTherefore, based on the provided information, NASA plans to send either six crew members (according to the Design Reference Architecture 5.0) or a two-person crew (according to the Inspiration Mars 2021 mission concept) to Mars on a human mission.",
+ "created": "2026-11-20 16:37:40"
+}

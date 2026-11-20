@@ -19,9 +19,18 @@ def page_lines(page):
     return lines
 
 
-def extract(doc_id):
+def page_range(spec, n_pages):
+    """'25-90' -> PDF page numbers 25..90; blank -> every page."""
+    if not spec:
+        return list(range(1, n_pages + 1))
+    a, b = (int(x) for x in spec.split("-"))
+    return list(range(a, min(b, n_pages) + 1))
+
+
+def extract(doc_id, spec=""):
     doc = pymupdf.open(RAW / f"{doc_id}.pdf")
-    pages = [page_lines(p) for p in doc]
+    numbers = page_range(spec, len(doc))          # original PDF page numbers, kept for citations
+    pages = [page_lines(doc[n - 1]) for n in numbers]
 
     repeated = set()
     if len(pages) >= 8:
@@ -33,7 +42,7 @@ def extract(doc_id):
         repeated = {k for k, c in counts.items() if c >= 0.4 * len(pages)}
 
     out, empty = [], 0
-    for n, lines in enumerate(pages, start=1):
+    for n, lines in zip(numbers, pages):
         edge = {0, 1, len(lines) - 2, len(lines) - 1}  # first/last 2 lines: where page numbers sit
         kept = [
             l for i, l in enumerate(lines)
@@ -59,7 +68,7 @@ for row in rows:
     if not (RAW / f"{doc_id}.pdf").exists():
         print(f"{doc_id:<13} MISSING PDF")
         continue
-    text, n_pages, empty = extract(doc_id)
+    text, n_pages, empty = extract(doc_id, row.get("pages", ""))
     (CLEAN / f"{doc_id}.txt").write_text(text, encoding="utf-8")
     note = []
     if row["year"] == "TODO":

@@ -1,0 +1,9 @@
+{
+ "provider": "gemini",
+ "model": "gemini-3.5-flash",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.94,
+ "output": "Based on the provided context, there is no information mentioning the specific crew sizes or how the planned crew size changed between the 1997 Reference Mission and the 2015 Evolvable Mars Campaign.",
+ "created": "2026-11-20 16:16:59"
+}

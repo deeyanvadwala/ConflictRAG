@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.05,
+ "output": "According to [3], the total mission duration for a \"Short-Stay\" mission to the moons of Mars, which includes a 60-day stay at Mars, is approximately 20-25 months (opportunity dependent). This duration includes the time it takes to travel to Mars, stay at Mars, and return to Earth.\n\nAs for the time the crew would get to explore Phobos, according to [3], the crew would spend approximately 2 weeks exploring Phobos after transferring from the parking orbit to the vicinity of Phobos using a Space Exploration Vehicle (SEV) and one of three chemical orbit transfer stages (OTS).",
+ "created": "2026-11-20 16:38:47"
+}

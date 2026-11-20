@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.21,
+ "output": "According to [2], the crew transfer habitat and propulsive elements are assembled in Low-Distance High-Energy Orbit (LD-HEO) before Earth departure.\n\nSpecifically, it states: \"Once the crew stack has performed the Mars Orbit Insertion (MOI) burn, the MOI stage is dropped and the Earth return elements are mated to the transfer habitat. After performing their mission at Mars for the prescribed long-stay duration (350-550 days), the crew returns to Earth using these pre-deployed assets.\"\n\nThis indicates that the crew transfer habitat and propulsive elements are pre-deployed in LD-HEO, allowing for a propulsive capture upon returning to Earth.",
+ "created": "2026-11-20 16:40:01"
+}

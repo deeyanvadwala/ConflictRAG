@@ -1,0 +1,9 @@
+{
+ "provider": "gemini",
+ "model": "gemini-3.5-flash",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 9.33,
+ "output": "Based on the provided context, a specific departure year for the first crew in **Version 1.0** of the Reference Mission is **not provided**; the context only lists its timeline relative to launch opportunities, with the crew departing during the \"Second Opportunity\" [1]. \n\nFor comparison, **Version 3.0** specifies that the crew transit habitat is launched in **2014** (following the initial cargo missions launched in 2011) [1].",
+ "created": "2026-11-20 16:16:39"
+}

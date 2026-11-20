@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.93,
+ "output": "According to [3] (document 19980037039, pages 108-108), the result of the workload analysis indicates that the surface mission can be conducted with a minimum crew of five, based on the technical skills required. However, loss or incapacitation of one or more crew members could jeopardize mission success. Therefore, a larger crew may be required to address the risk issues. Currently, the Reference Mission is built on the assumption of a crew of six.\n\nSo, the answer is: 5-6 astronauts make up each crew in the 1997 NASA Mars Reference Mission (SP-6107).",
+ "created": "2026-11-20 16:41:41"
+}

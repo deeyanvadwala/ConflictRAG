@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.0,
+ "output": "The answer cannot be determined from the provided context. The context only mentions the use of a single Trans-Mars Injection (TMI) stage for both piloted and human missions in the 1997 Reference Mission, but it does not specify the number of nuclear engines used in the 1997 Reference Mission or Reference Mission Version 3.0.\n\nHowever, it is mentioned in [4] that the 2011 TMI Stack 1 and 2, and the 2014 TMI Stack all use a common \"core\" propulsion stage with three 25 klbf \"composite fuel\" NERVA-derived NTR engines.",
+ "created": "2026-11-20 16:42:32"
+}

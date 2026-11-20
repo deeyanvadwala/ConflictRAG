@@ -1,0 +1,9 @@
+{
+ "provider": "gemini",
+ "model": "gemini-3.5-flash",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 12.41,
+ "output": "{\n  \"abstained\": false,\n  \"correctness\": \"partial\",\n  \"faithful\": true,\n  \"claims_disagreement\": false,\n  \"only_older_value\": false,\n  \"reason\": \"The answer accurately reflects the durations found in the retrieved context (450–550 days at Mars, up to 500 days on the surface), but misses the 540-day figure mentioned in the reference answer.\"\n}",
+ "created": "2026-11-20 16:19:52"
+}

@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.24,
+ "output": "According to [5], the total crew flight duration for the chemical option is approximately 900 days. This includes the transit time from LEO to Mars and back to LEO.",
+ "created": "2026-11-20 16:39:25"
+}

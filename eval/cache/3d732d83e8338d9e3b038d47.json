@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.41,
+ "output": "According to the 2015 comparison of Mars architectures [5], the JPL Minimal Mars Architecture's short-stay mission would have a crew of two spending a maximum of 24 days on the Martian surface.\n\nSource: [5] (document 20160006315, pages 6-6)",
+ "created": "2026-11-20 16:40:10"
+}

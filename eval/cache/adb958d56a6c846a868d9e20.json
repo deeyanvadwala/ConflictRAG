@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.48,
+ "output": "Unfortunately, the provided documents do not mention the specific launch pad at Kennedy Space Center that will be used for the Evolvable Mars Campaign (EMC) crew launch.\n\nHowever, based on the context, it is likely that the launch will be conducted using the Space Launch System (SLS) or another heavy-lift launch vehicle. The documents mention the use of the SLS for delivery of various architecture elements, but they do not specify the launch pad.\n\nTherefore, I must answer that the question cannot be definitively answered based on the provided information.",
+ "created": "2026-11-20 16:42:43"
+}

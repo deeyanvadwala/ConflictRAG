@@ -26,6 +26,38 @@ Record each failure when it happens, with the evidence. Do not fix an entry unti
 - **Remaining limitation:** tables are extracted one cell per line, so a value is not explicitly tied to its column. "6" follows "Crew Size" but the link to "Mars DRA 5.0" is only positional.
 - **Before/after:** see eval/changes.md, C1.
 
+## F3: DRA 5.0 paper's crewed MTV IMLEO is not retrieved (2026-11-20)
+
+- **Query:** "What is the IMLEO of the crewed Mars transfer vehicle?"
+- **Gold passage:** 20090040343, PDF page 15: "The 'all-propulsive' crewed MTV has an IMLEO of 356.4 t". Appears in chunks 20090040343_0053 and _0054.
+- **Result:** best gold chunk (_0053, p.14-15) ranks 155 of 818, distance 0.345. The old page-range rule had reported rank 14 because a different p.15 chunk without the sentence was retrieved (changes.md C2).
+- **Related, not concluded:** 20090010571 p.36 gives "'0-gE' Crewed MTV: IMLEO ~336.5 t" (rank 2). The two figures carry different labels ("all-propulsive" vs "0-gE"), which points to different configurations rather than a design change, but this is not verified. Do not call it a conflict yet.
+- **Hypotheses (untested):** same as F1 (dilution in a 1,476-character chunk; many documents mention MTV and IMLEO).
+- **Status:** unfixed. Test with the retrieval experiments on dev.
+
+## F4: answers mix eras: 1997 values given for later studies (baseline dev run, 2026-11-20)
+
+- **dra01** "What surface power system does DRA 5.0 use, and how many kilowatts?" answered "160 kWe", citing 19980037039 p.40 (the 1997 book). DRA 5.0's figure is 30 kWe (20090012109 p.25).
+- **emc01, emc06** (EMC Mars Ascent Vehicle engine): the answer says the value is not stated, then infers from the 1997 book's RL10 engines.
+- **Why it matters:** this is the failure ConflictRAG exists to prevent: a confident answer built from the wrong study's passage. The baseline prompt shows no year or study, by design.
+- **Status:** open; the conflict module and study-aware prompting are tested on dev.
+
+## F5: both sides of a conflict are never retrieved together (baseline dev run, 2026-11-20)
+
+- conflict coverage@5 = 0/7: for no conflicting or false-conflict question do the top 5 chunks contain the gold quotes from every source. The generator therefore cannot report a disagreement, and conflict detection is 0/5 (hand labels).
+- **Status:** open. Retrieval across years (e.g. per-study retrieval) is the planned fix.
+
+## J1: the local judge (llama3.1:8b) is not reliable enough to publish (2026-11-20)
+
+- Hand-labelled all 30 dev answers (eval/hand_labels_dev.jsonl, labeler: claude). Spot-checked by the project owner on 2026-11-20: no labels changed (which IDs were checked is not recorded). Agreement with the judge: correctness 23/30, abstained 21/30, claims_disagreement 26/30, only_older_value 28/30.
+- All 7 correctness disagreements are the judge being too harsh, e.g. it graded "There is no information in the provided context about the first powered helicopter flight" (mk05) as not abstaining and incorrect.
+- Biggest distortions: abstention accuracy judge 33% vs hand 100%; conflict detection judge 80% vs hand 0%.
+- **Rule until fixed:** report judge-based metrics only with the hand-label figures beside them, and use eval/judge_agreement.py to validate any judge change.
+
+## G1: frozen reference for cf06 is incomplete (2026-11-20)
+
+- cf06 "How many days does the DRA 5.0 crew spend at Mars?" The baseline answered "450-550 days", which 20160006315 states for DRA 5.0 (Table 1, PDF page 11). The frozen reference lists only ~500 and 540 days. The question file is frozen, so it is not edited; hand label for cf06 is "partial" and the gap is recorded here.
+
 ## R1: document-level study label misattributes passages (risk, 2026-11-20)
 
 Not yet a wrong answer; logged because the conflict module will depend on it.

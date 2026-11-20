@@ -1,0 +1,9 @@
+{
+ "provider": "gemini",
+ "model": "gemini-3.5-flash",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 8.57,
+ "output": "Based on the provided context, NASA's Design Reference Architecture 5.0 envisions sending **six crewmembers** to Mars [1]. \n\n*(Note: The Inspiration Mars 2021 flyby mission concept proposes a two-person crew [4]).*",
+ "created": "2026-11-20 16:16:21"
+}

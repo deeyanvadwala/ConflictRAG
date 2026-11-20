@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.8,
+ "output": "{\n  \"abstained\": true,\n  \"correctness\": \"correct\",\n  \"faithful\": true,\n  \"claims_disagreement\": false,\n  \"only_older_value\": false,\n  \"reason\": \"The system correctly abstained from answering the question as the documents do not contain the answer.\"\n}",
+ "created": "2026-11-20 16:42:59"
+}

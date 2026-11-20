@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.45,
+ "output": "The 1997 Reference Mission uses a nuclear propulsion system [4].",
+ "created": "2026-11-20 16:42:04"
+}

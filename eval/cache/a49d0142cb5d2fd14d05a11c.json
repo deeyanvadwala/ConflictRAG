@@ -1,0 +1,9 @@
+{
+ "provider": "gemini",
+ "model": "gemini-3.5-flash",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 11.92,
+ "output": "```json\n{\n  \"abstained\": true,\n  \"correctness\": \"correct\",\n  \"faithful\": true,\n  \"claims_disagreement\": false,\n  \"only_older_value\": false,\n  \"reason\": \"The system correctly identified that the context does not contain information about NASA's Perseverance rover.\"\n}\n```",
+ "created": "2026-11-20 15:48:35"
+}

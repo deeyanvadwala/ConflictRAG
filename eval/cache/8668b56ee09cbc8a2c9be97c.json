@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.02,
+ "output": "{\n  \"abstained\": false,\n  \"correctness\": \"partial\",\n  \"faithful\": false,\n  \"claims_disagreement\": true,\n  \"only_older_value\": true,\n  \"reason\": \"The system answer only mentions the older value of 18 to 20 months, but not the newer value of 500 days.\"\n}",
+ "created": "2026-11-20 16:42:01"
+}

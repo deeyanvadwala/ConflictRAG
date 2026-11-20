@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.6,
+ "output": "{\n  \"reference_facts\": \"About 14 t or more: solar is over 22,000 kg (25 kWe, with dust-storm array) versus about 8,000 kg for a 30 kWe nuclear system.\",\n  \"answer_facts\": \"Choosing nuclear fission power would save approximately 5,500 kg of mass compared to a solar power system for the DRA 5.0 Commuter surface option.\",\n  \"correctness\": \"incorrect\"\n}",
+ "created": "2026-11-20 17:45:28"
+}

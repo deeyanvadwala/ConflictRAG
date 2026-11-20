@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.2,
+ "output": "{\n  \"abstained\": false,\n  \"correctness\": \"incorrect\",\n  \"faithful\": false,\n  \"claims_disagreement\": false,\n  \"only_older_value\": false,\n  \"reason\": \"The system answer partially quotes the correct range of crew sizes, but incorrectly states that the documents are from 1997, when they are actually from 1998.\"\n}",
+ "created": "2026-11-20 16:41:46"
+}

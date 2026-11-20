@@ -1,0 +1,9 @@
+{
+ "provider": "gemini",
+ "model": "gemini-3.5-flash",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.03,
+ "output": "```json\n{\n  \"abstained\": true,\n  \"correctness\": \"incorrect\",\n  \"faithful\": true,\n  \"claims_disagreement\": false,\n  \"only_older_value\": false,\n  \"reason\": \"The system stated that the retrieved context does not contain the specific departure year for Version 1.0, thereby missing the conflicting dates specified in the reference answer.\"\n}\n```",
+ "created": "2026-11-20 16:16:45"
+}

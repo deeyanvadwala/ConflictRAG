@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.43,
+ "output": "{\n  \"reference_facts\": \"30 kWe nuclear fission power system\",\n  \"answer_facts\": \"160 kWe primary and backup nuclear reactor with dynamic energy conversion\",\n  \"correctness\": \"incorrect\"\n}",
+ "created": "2026-11-20 17:45:12"
+}

@@ -1,0 +1,30 @@
+{"id": "cf01", "correctness": "partial", "abstained": false, "claims_disagreement": false, "only_older_value": true, "labeler": "claude", "note": "gives DRA 5.0 six; mentions other plans but not the EMC four-crew disagreement"}
+{"id": "cf04", "correctness": "incorrect", "abstained": true, "claims_disagreement": false, "only_older_value": false, "labeler": "claude", "note": "'not explicitly stated', then speculates; neither date given"}
+{"id": "cf06", "correctness": "partial", "abstained": false, "claims_disagreement": false, "only_older_value": false, "labeler": "claude", "note": "450-550 days is a real corpus figure (20160006315 p.12/Table 1) missing from the frozen reference; no disagreement reported"}
+{"id": "cf07", "correctness": "incorrect", "abstained": true, "claims_disagreement": false, "only_older_value": false, "labeler": "claude", "note": "says crew sizes are not stated"}
+{"id": "dra01", "correctness": "incorrect", "abstained": false, "claims_disagreement": false, "only_older_value": false, "labeler": "claude", "note": "gives the 1997 book's 160 kWe as DRA 5.0's power (cross-era contamination, failure_log F4)"}
+{"id": "dra02", "correctness": "correct", "abstained": false, "claims_disagreement": false, "only_older_value": false, "labeler": "claude"}
+{"id": "dra03", "correctness": "incorrect", "abstained": false, "claims_disagreement": false, "only_older_value": false, "labeler": "claude"}
+{"id": "dra07", "correctness": "correct", "abstained": false, "claims_disagreement": false, "only_older_value": false, "labeler": "claude", "note": "answer 9 = 5 + 4 is right; it attributes a 2009 NTR-paper quote to the 2010 paper"}
+{"id": "dra08", "correctness": "incorrect", "abstained": false, "claims_disagreement": false, "only_older_value": false, "labeler": "claude"}
+{"id": "dra09", "correctness": "incorrect", "abstained": false, "claims_disagreement": false, "only_older_value": false, "labeler": "claude"}
+{"id": "emc01", "correctness": "incorrect", "abstained": true, "claims_disagreement": false, "only_older_value": false, "labeler": "claude", "note": "'not explicitly stated', then infers from the 1997 book's RL10 engines (F4)"}
+{"id": "emc02", "correctness": "correct", "abstained": false, "claims_disagreement": false, "only_older_value": false, "labeler": "claude"}
+{"id": "emc03", "correctness": "incorrect", "abstained": false, "claims_disagreement": false, "only_older_value": false, "labeler": "claude"}
+{"id": "emc04", "correctness": "correct", "abstained": false, "claims_disagreement": false, "only_older_value": false, "labeler": "claude"}
+{"id": "emc05", "correctness": "correct", "abstained": false, "claims_disagreement": false, "only_older_value": false, "labeler": "claude"}
+{"id": "emc06", "correctness": "incorrect", "abstained": true, "claims_disagreement": false, "only_older_value": false, "labeler": "claude", "note": "'not explicitly mention', then infers from the 1997 book (F4)"}
+{"id": "fc01", "correctness": "correct", "abstained": false, "claims_disagreement": false, "only_older_value": false, "labeler": "claude"}
+{"id": "fc03", "correctness": "correct", "abstained": false, "claims_disagreement": false, "only_older_value": false, "labeler": "claude"}
+{"id": "mk01", "correctness": "correct", "abstained": true, "claims_disagreement": false, "only_older_value": false, "labeler": "claude"}
+{"id": "mk04", "correctness": "correct", "abstained": true, "claims_disagreement": false, "only_older_value": false, "labeler": "claude", "note": "says it is not mentioned, then speculates vaguely; does not name an outside station"}
+{"id": "mk05", "correctness": "correct", "abstained": true, "claims_disagreement": false, "only_older_value": false, "labeler": "claude"}
+{"id": "rm01", "correctness": "partial", "abstained": false, "claims_disagreement": false, "only_older_value": false, "labeler": "claude", "note": "answers '5-6'; the reference says six (five is the workload minimum)"}
+{"id": "rm02", "correctness": "partial", "abstained": false, "claims_disagreement": false, "only_older_value": true, "labeler": "claude", "note": "gives only the 1997 book's 18-20 months"}
+{"id": "rm03", "correctness": "correct", "abstained": false, "claims_disagreement": false, "only_older_value": false, "labeler": "claude", "note": "'nuclear propulsion system' matches the reference"}
+{"id": "rm04", "correctness": "correct", "abstained": false, "claims_disagreement": false, "only_older_value": false, "labeler": "claude"}
+{"id": "rm05", "correctness": "correct", "abstained": false, "claims_disagreement": false, "only_older_value": false, "labeler": "claude"}
+{"id": "rm08", "correctness": "incorrect", "abstained": true, "claims_disagreement": false, "only_older_value": false, "labeler": "claude", "note": "says engine counts are not specified"}
+{"id": "un01", "correctness": "correct", "abstained": true, "claims_disagreement": false, "only_older_value": false, "labeler": "claude", "note": "declines, then speculates about SLS without naming a pad"}
+{"id": "un02", "correctness": "correct", "abstained": true, "claims_disagreement": false, "only_older_value": false, "labeler": "claude"}
+{"id": "un03", "correctness": "correct", "abstained": true, "claims_disagreement": false, "only_older_value": false, "labeler": "claude"}

@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.43,
+ "output": "Unfortunately, the provided context does not mention the data rate of the DRA 5.0 Mars-to-Earth communication link. The documents provided discuss various aspects of the Mars Design Reference Architecture 5.0 (DRA 5.0), including power requirements, nuclear thermal rocket propulsion, and surface strategy options, but do not mention data rates for communication links.\n\nTherefore, I must answer that the data rate of the DRA 5.0 Mars-to-Earth communication link is not specified in the provided context.",
+ "created": "2026-11-20 17:44:14"
+}

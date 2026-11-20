@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.03,
+ "output": "According to [1] (document 20150006952, pages 9-10), the SEP cargo stage in the SEP-Chem Evolvable Mars Campaign architecture was assumed to supply 150 kW of power to its electric propulsion thrusters.\n\nAdditionally, [4] (document 20150006952, pages 3-3) confirms this, stating that \"After performing a series of power and propellant trades, the cargo delivery performance analysis focused on an SEP stage that was deemed extensible to the Asteroid Robotic Redirection Mission (ARRM). This evolved SEP stage was examined in detail. This stage assumed 150 kW of power to the EP thruster system...\"",
+ "created": "2026-11-20 16:39:50"
+}

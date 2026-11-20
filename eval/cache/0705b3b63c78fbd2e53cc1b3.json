@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.1,
+ "output": "{\n  \"abstained\": false,\n  \"correctness\": \"incorrect\",\n  \"faithful\": false,\n  \"claims_disagreement\": false,\n  \"only_older_value\": false,\n  \"reason\": \"The system answer incorrectly states that the power system mass for the solar/RFC system is approximately 15,000 kg, while the correct value is 22,000 kg (25 kWe, with dust-storm array) versus about 8,000 kg for a 30 kWe nuclear system.\"\n}",
+ "created": "2026-11-20 16:39:20"
+}

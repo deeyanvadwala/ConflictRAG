@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.06,
+ "output": "According to [2], the launch vehicle required to have a payload capability of 80 metric tons to minimize on-orbit assembly costs and meet payload size requirements for the Mars Reference Mission Version 3.0.",
+ "created": "2026-11-20 16:42:22"
+}

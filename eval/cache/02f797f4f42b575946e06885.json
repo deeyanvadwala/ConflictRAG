@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.34,
+ "output": "{\n  \"reference_facts\": {\n    \"total_flight_time\": \"598 to 672 days\",\n    \"phobos_exploration_time\": \"less than 30 days\"\n  },\n  \"answer_facts\": {\n    \"total_flight_time\": \"20-25 months (opportunity dependent)\",\n    \"phobos_exploration_time\": \"approximately 2 weeks\"\n  },\n  \"correctness\": \"partial\"\n}",
+ "created": "2026-11-20 17:45:20"
+}

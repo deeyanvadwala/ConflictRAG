@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.95,
+ "output": "Unfortunately, I have to inform you that the question about the cost of a ticket to Mars on the Mars One mission cannot be answered based on the provided context. The context only discusses various mission plans, trajectories, and assumptions for sending humans to Mars, but it does not mention the Mars One mission or provide any information about ticket prices.\n\nMars One was a non-profit organization that aimed to send humans to Mars on a one-way trip, but it has been defunct since 2019. The organization's plans and costs were not publicly disclosed, and it's unclear if any of the plans were ever implemented.\n\nIf you're looking for information on the cost of a ticket to Mars, I'd be happy to try and help you find more general information or point you in the direction of resources that might be able to provide more specific answers.",
+ "created": "2026-11-20 16:43:06"
+}

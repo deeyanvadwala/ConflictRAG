@@ -1,0 +1,9 @@
+{
+ "provider": "gemini",
+ "model": "gemini-3.5-flash",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 17.11,
+ "output": "{\n  \"abstained\": true,\n  \"correctness\": \"incorrect\",\n  \"faithful\": true,\n  \"claims_disagreement\": false,\n  \"only_older_value\": false,\n  \"reason\": \"The system abstained by stating the specific year is not provided in the context, but because the source documents can answer the question, abstaining is incorrect.\"\n}",
+ "created": "2026-11-20 16:19:40"
+}

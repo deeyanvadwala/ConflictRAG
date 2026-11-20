@@ -1,0 +1,9 @@
+{
+ "provider": "gemini",
+ "model": "gemini-3.5-flash",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 10.41,
+ "output": "Yes, they differ in their specific estimates and ranges for the duration of the crew's stay at Mars [4]:\n\n* **DRA 5.0:** Specifies a stay at Mars of **450–550 days** (approximately 500 days) [2], [3], [4].\n* **Evolvable Mars Campaign (EMC):** Varies depending on the mission architecture option [4]:\n  * **Split option:** 320–550 days at Mars [4].\n  * **Hybrid option:** 300–420 days at Mars [4].\n\nWhile there is some overlap (up to 550 days at Mars under the EMC Split option), EMC includes shorter potential stays at Mars compared to the baseline set by DRA 5.0 [4].",
+ "created": "2026-11-20 15:48:46"
+}

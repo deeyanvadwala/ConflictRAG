@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 10.26,
+ "output": "Unfortunately, the answer is not explicitly stated in the provided documents. However, we can infer some information from the documents.\n\nDocument [1] describes the Reference Mission Version 3.0, which includes a comparison of the mass breakdown for the various flights, including the Reference Mission 1.0 and 3.0. However, it does not provide information on when the first crew leaves Earth for Mars in Version 1.0.\n\nDocument [3] provides an overview of the human exploration of Mars and mentions that the Reference Mission addresses human exploration of Mars, but it does not provide specific information on the timeline for the first crew mission.\n\nDocument [4] discusses the interplanetary trajectory and mission analysis for a crewed mission to Mars, but it does not provide information on the specific timeline for the first crew mission.\n\nDocument [5] provides a more detailed description of the surface campaign and the timeline for the first crew mission. According to this document, the first crew of four departs for Mars in 2026 and arrives in 2027.\n\nHowever, since the question specifically asks about the Version 1.0 Reference Mission, and Document [1] only describes Version 3.0, we cannot directly answer the question based on the provided information.\n\nBut, if we look at the context, it seems that the Version 1.0 Reference Mission is an older version, and the timeline for the first crew mission might be different from the one described in Document [5]. Unfortunately, the provided documents do not provide enough information to determine the exact timeline for the first crew mission in Version 1.0.",
+ "created": "2026-11-20 16:37:55"
+}

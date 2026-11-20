@@ -1,0 +1,9 @@
+{
+ "provider": "gemini",
+ "model": "gemini-3.5-flash",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 34.27,
+ "output": "{\n  \"abstained\": true,\n  \"correctness\": \"incorrect\",\n  \"faithful\": true,\n  \"claims_disagreement\": false,\n  \"only_older_value\": false,\n  \"reason\": \"The system abstained because the retrieved context lacked the required information, but since the source documents can answer the question, abstaining is marked incorrect.\"\n}",
+ "created": "2026-11-20 16:20:27"
+}

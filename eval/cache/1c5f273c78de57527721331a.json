@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.24,
+ "output": "{\n  \"reference_facts\": \"Nuclear thermal propulsion (NERVA-derivative engines)\",\n  \"answer_facts\": \"Nuclear propulsion system\",\n  \"correctness\": \"partial\"\n}",
+ "created": "2026-11-20 17:46:02"
+}

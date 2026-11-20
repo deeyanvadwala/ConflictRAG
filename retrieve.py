@@ -10,7 +10,7 @@ _col = None
 def _load():
     global _model, _col
     if _model is None:
-        _model = SentenceTransformer(CFG["embedding_model"])
+        _model = SentenceTransformer(CFG["embedding_model"], revision=CFG["embedding_revision"])
         client = chromadb.PersistentClient(path=CFG["chroma_path"])
         _col = client.get_collection(CFG["collection"])
     return _model, _col

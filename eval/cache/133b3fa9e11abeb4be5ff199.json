@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.81,
+ "output": "{\n  \"abstained\": false,\n  \"correctness\": \"partial\",\n  \"faithful\": true,\n  \"claims_disagreement\": true,\n  \"only_older_value\": false,\n  \"reason\": \"The system answer partially matches the reference answer, but only mentions the older value of 500 days.\"\n}",
+ "created": "2026-11-20 16:38:09"
+}

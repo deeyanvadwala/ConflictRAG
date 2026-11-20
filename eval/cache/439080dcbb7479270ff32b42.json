@@ -1,0 +1,9 @@
+{
+ "provider": "gemini",
+ "model": "gemini-3.5-flash",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 13.16,
+ "output": "Based on the provided context, there is no mention or information regarding NASA's Perseverance rover or its landing date on Mars.",
+ "created": "2026-11-20 15:48:23"
+}

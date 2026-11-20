@@ -1,5 +1,6 @@
 # All pipeline settings live here. Change a setting here, then log the change.
 embedding_model: BAAI/bge-small-en-v1.5
+embedding_revision: 5c38ec7c405ec4b44b94cc5a9bb96e735b38267a   # Hugging Face commit; pinned so results are reproducible
 query_prefix: "Represent this sentence for searching relevant passages: "
 
 chunk_chars: 1500        # about 350-400 tokens, fits the model's input limit
@@ -12,11 +13,12 @@ top_k: 5
 seed: 42
 
 # Generation (llm.py). Free options only: gemini (free tier) or ollama (local).
-llm_provider: gemini
+llm_provider: ollama     # 2026-11-20: Gemini free tier allows 20 requests/day; one dev eval run needs 60
 llm_models:
   gemini: gemini-3.5-flash   # 2026-11-20: 2.5-flash retired for new keys; 3.8-flash returned 503 (overloaded)
   ollama: llama3.1:8b    # must be pulled first: ollama pull llama3.1:8b
   anthropic: claude-haiku-5-5   # paid API, not used under the $0 budget
 temperature: 0
-max_output_tokens: 1024
+max_output_tokens: 4096   # includes Gemini's hidden "thinking" tokens; 1024 cut off judge verdicts
 ollama_url: http://localhost:11434
+ollama_num_ctx: 8192     # judge prompts are ~3k tokens; the Ollama default would silently truncate them

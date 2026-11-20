@@ -1,0 +1,9 @@
+{
+ "provider": "gemini",
+ "model": "gemini-3.5-flash",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 19.38,
+ "output": "Based on the provided context, the surface power options and specifications include:\n\n* **Mars DRA 5.0:** NASA evaluated **surface fission power systems (FSPS)**, **solar photovoltaic**, and **radioisotope concepts** for main base power and long-range mobility [1], [2].\n* **Reference Mission Power Level:** Under the Reference Mission strategy, the surface power system utilizes a **nuclear reactor with dynamic energy conversion** (with primary and backup systems), where each system is capable of producing **160 kWe** of continuous electrical power [4]. Additionally, a pressurized rover's Dynamic Isotope Power System can supply **10 kWe** of continuous power for emergency situations [4].",
+ "created": "2026-11-20 16:20:46"
+}

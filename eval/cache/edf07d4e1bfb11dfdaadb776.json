@@ -1,0 +1,9 @@
+{
+ "provider": "gemini",
+ "model": "gemini-3.5-flash",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 2.83,
+ "output": "Based on the provided context, the DRA 5.0 crew spends:\n\n* **450–550 days** at Mars total [2].\n* Specifically, up to **500 days** (or approximately 500 days) of that time is spent on the Martian surface [1], [3].",
+ "created": "2026-11-20 16:16:48"
+}

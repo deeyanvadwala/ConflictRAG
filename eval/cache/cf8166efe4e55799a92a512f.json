@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.97,
+ "output": "{\n  \"abstained\": false,\n  \"correctness\": \"incorrect\",\n  \"faithful\": false,\n  \"claims_disagreement\": false,\n  \"only_older_value\": true,\n  \"reason\": \"The system answer only mentions the older value of six crew members and omits the newer value of four crew members mentioned in the 2015 source.\"\n}",
+ "created": "2026-11-20 16:38:23"
+}

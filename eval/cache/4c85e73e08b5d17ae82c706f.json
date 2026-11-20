@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.93,
+ "output": "{\n  \"reference_facts\": \"500 sols (Martian days), 500 sols is equivalent to approximately 500 days\",\n  \"answer_facts\": \"500 days (Earth days), 500 Sols is equivalent to approximately 500 days\",\n  \"correctness\": \"partial\"\n}",
+ "created": "2026-11-20 17:45:49"
+}

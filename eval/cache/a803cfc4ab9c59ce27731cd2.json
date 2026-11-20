@@ -1,0 +1,9 @@
+{
+ "provider": "gemini",
+ "model": "gemini-3.5-flash",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 8.66,
+ "output": "```json\n{\n  \"abstained\": false,\n  \"correctness\": \"partial\",\n  \"faithful\": true,\n  \"claims_disagreement\": true,\n  \"only_older_value\": true,\n  \"reason\": \"The system mentions the DRA 5.0 crew size of six and notes the Inspiration Mars proposal, but omits the Evolvable Mars Campaign's planned crew size.\"\n}\n```",
+ "created": "2026-11-20 16:16:29"
+}

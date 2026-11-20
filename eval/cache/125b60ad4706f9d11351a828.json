@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.75,
+ "output": "{\n  \"abstained\": false,\n  \"correctness\": \"incorrect\",\n  \"faithful\": false,\n  \"claims_disagreement\": false,\n  \"only_older_value\": false,\n  \"reason\": \"The system answer incorrectly combines two different launch scenarios.\"\n}",
+ "created": "2026-11-20 16:39:03"
+}

@@ -1,0 +1,9 @@
+{
+ "provider": "gemini",
+ "model": "gemini-3.5-flash",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 14.85,
+ "output": "```json\n{\n  \"abstained\": false,\n  \"correctness\": \"incorrect\",\n  \"faithful\": true,\n  \"claims_disagreement\": true,\n  \"only_older_value\": false,\n  \"reason\": \"The system incorrectly affirms a disagreement between the architectures instead of recognizing that there is no real conflict.\"\n}\n```",
+ "created": "2026-11-20 15:49:01"
+}

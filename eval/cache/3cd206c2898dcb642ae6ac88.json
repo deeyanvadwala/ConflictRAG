@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.69,
+ "output": "{\n  \"abstained\": false,\n  \"correctness\": \"correct\",\n  \"faithful\": true,\n  \"claims_disagreement\": false,\n  \"only_older_value\": false,\n  \"reason\": \"The system's answer accurately reflects the key facts from the documents.\"\n}",
+ "created": "2026-11-20 16:38:41"
+}

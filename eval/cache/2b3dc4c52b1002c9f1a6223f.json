@@ -1,0 +1,9 @@
+{
+ "provider": "gemini",
+ "model": "gemini-3.5-flash",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 64.4,
+ "output": "{\n  \"abstained\": false,\n  \"correctness\": \"partial\",\n  \"faithful\": true,\n  \"claims_disagreement\": false,\n  \"only_older_value\": true,\n  \"reason\": \" The answer mentions the six-person crew from DRA 5.0 (2010) but omits the 2015 Evolvable Mars Campaign steady-state plan of at least four crewmembers.\"\n}",
+ "created": "2026-11-20 16:19:23"
+}

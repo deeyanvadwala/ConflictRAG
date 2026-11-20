@@ -22,7 +22,7 @@ for d, n in sorted(by_doc.items()):
     print(f"  {d}  {n:>5}")
 
 print("\nLoading embedding model (first run downloads about 130 MB)...")
-model = SentenceTransformer(CFG["embedding_model"])
+model = SentenceTransformer(CFG["embedding_model"], revision=CFG["embedding_revision"])
 emb = model.encode(
     [c["text"] for c in chunks],
     batch_size=32,
@@ -50,6 +50,7 @@ for i in range(0, len(chunks), BATCH):
 # Record settings and library versions for the README
 info = {
     "embedding_model": CFG["embedding_model"],
+    "embedding_revision": CFG["embedding_revision"],
     "chunk_chars": CFG["chunk_chars"],
     "chunk_overlap": CFG["chunk_overlap"],
     "n_chunks": len(chunks),

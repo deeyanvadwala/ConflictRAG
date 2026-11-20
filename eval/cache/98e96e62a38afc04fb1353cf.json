@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.22,
+ "output": "According to [4] (document 19980037039, pages 40-40), NASA's Mars DRA 5.0 uses a primary and backup nuclear reactor with dynamic energy conversion, each capable of producing 160 kWe.",
+ "created": "2026-11-20 16:38:27"
+}
