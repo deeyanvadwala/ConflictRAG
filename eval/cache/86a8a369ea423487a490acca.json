@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.25,
+ "output": "{\n  \"reference_facts\": \"Four NERVA-derivative engines in the 1997 mission, three NTR engines in Version 3.0, both 15,000 lbf class\",\n  \"answer_facts\": \"Two RL10-class engines modified to burn LOX/CH4 in both the 1997 mission and Version 3.0\",\n  \"correctness\": \"incorrect\"\n}",
+ "created": "2026-11-20 19:28:32"
+}

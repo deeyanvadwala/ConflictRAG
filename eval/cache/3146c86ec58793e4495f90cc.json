@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.14,
+ "output": "{\n  \"reference_facts\": \"Six crew members per crew.\",\n  \"answer_facts\": \"Six [2].\",\n  \"correctness\": \"partial\"\n}",
+ "created": "2026-11-20 19:25:38"
+}

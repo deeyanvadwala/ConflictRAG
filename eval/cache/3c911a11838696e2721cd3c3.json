@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.73,
+ "output": "{\n  \"reference_facts\": \"360 seconds (a 100 kN LOX/LCH4 pump-fed engine)\",\n  \"answer_facts\": \"360 sec (a 100kN LOX/LCH4 pump-fed rocket engine)\",\n  \"correctness\": \"correct\"\n}",
+ "created": "2026-11-20 19:19:44"
+}

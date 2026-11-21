@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.22,
+ "output": "Source [4] (study, 2009) says the mass of the solar based system for the commuter option was over 22,000 kg for a 25 kWe system, including a dust storm survival array, while Source [4] (study, 2009) also says the nuclear power system mass was approximately 8,000 kg for a 30 kWe system including above ground shield and deployment cart. The sources differ.",
+ "created": "2026-11-20 19:18:22"
+}

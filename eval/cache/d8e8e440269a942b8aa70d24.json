@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.61,
+ "output": "{\n  \"reference_facts\": \"500 sols is equivalent to a little longer than 500 days, using different units (sols vs days) is not a contradiction.\",\n  \"answer_facts\": \"DRA 5.0 plans a long surface stay (~500 days) on Mars, the Evolvable Mars Campaign plans to enable Steady State operations by at least 4 crew for up to 500 sols at a single Mars surface destination.\",\n  \"correctness\": \"correct\"\n}",
+ "created": "2026-11-20 19:23:06"
+}

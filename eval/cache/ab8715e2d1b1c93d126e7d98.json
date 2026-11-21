@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.56,
+ "output": "{\n  \"reference_facts\": \"30 kWe, nuclear fission power system\",\n  \"answer_facts\": \"nuclear power plant, ~7 kWe at 1 A.U.\",\n  \"correctness\": \"incorrect\"\n}",
+ "created": "2026-11-20 18:47:05"
+}

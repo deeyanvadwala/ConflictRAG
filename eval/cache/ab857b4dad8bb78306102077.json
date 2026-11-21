@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.72,
+ "output": "Source [3] (RM 1.0, 1997, pages 26-26) says 18 to 20 months; 600 days nominal.\nSource [4] (DRA 5.0, 2011, pages 11-13) says ~360 days back to Earth and ~250 days out to Mars.\nSource [5] (EMC, 2015, pages 20-20) says 570 days for a mission where the crew only spends 30-40 days at Mars.\nThe sources differ.",
+ "created": "2026-11-20 19:19:01"
+}

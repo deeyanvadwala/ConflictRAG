@@ -16,12 +16,13 @@ def _load():
     return _model, _col
 
 
-def search(query, k=None):
-    """Return the top-k chunks for a query. Lower distance = closer match."""
+def search(query, k=None, where=None):
+    """Return the top-k chunks for a query. Lower distance = closer match.
+    where: optional Chroma metadata filter, e.g. {"study": "EMC"}."""
     k = k or CFG["top_k"]
     model, col = _load()
     q = model.encode([CFG["query_prefix"] + query], normalize_embeddings=True).tolist()
-    r = col.query(query_embeddings=q, n_results=k)
+    r = col.query(query_embeddings=q, n_results=k, where=where)
     return [
         {
             "chunk_id": r["ids"][0][i],

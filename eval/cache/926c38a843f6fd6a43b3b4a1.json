@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.64,
+ "output": "Source [1] (study, 1997) says the first crew of six departs for Mars in mid-November 2009 [1].\nSource [2] (study, 1997) says the first crew of six departs for Mars in the second opportunity [2].\nThe sources differ.",
+ "created": "2026-11-20 19:13:58"
+}

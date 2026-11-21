@@ -30,7 +30,7 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 from chunking import CFG          # noqa: E402
 from generate import build_prompt, cited_numbers   # noqa: E402
 from llm import LLMError, complete_meta   # noqa: E402
-from retrieve import search       # noqa: E402
+from strategies import STRATEGIES  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent
 CACHE = ROOT / "cache"
@@ -117,8 +117,7 @@ lacks information count as supported. Outside knowledge counts as unsupported.
 Return JSON: {{"faithful": true or false}}"""
 
 
-def norm(s):
-    return " ".join(s.lower().split())
+from verify_gold import norm   # noqa: E402  same text matching as the gold verifier (dashes, quotes, ligatures)
 
 
 USED = set()   # cache files used by this run (for --prune)
@@ -213,10 +212,10 @@ def judge_v2(q, answer, context):
     return v
 
 
-def run_one(q, k_gen, judge="v2"):
-    hits = search(q["question"], k=10)
+def run_one(q, k_gen, judge="v2", retrieval="topk", style="naive"):
+    hits = STRATEGIES[retrieval](q["question"], 10)   # top 10 for hit@k; the first k_gen go to the LLM
     gen_hits = hits[:k_gen]
-    prompt = build_prompt(q["question"], gen_hits)
+    prompt = build_prompt(q["question"], gen_hits, style)
     gen = cached_complete(prompt)
     answer = gen["output"]
     cited = [n for n in cited_numbers(answer) if 1 <= n <= len(gen_hits)]
@@ -290,6 +289,8 @@ if __name__ == "__main__":
     p.add_argument("--name", default="baseline")
     p.add_argument("--questions", default=str(ROOT / "questions.jsonl"))
     p.add_argument("--only", nargs="*", help="run only these question ids (smoke test)")
+    p.add_argument("--retrieval", choices=sorted(STRATEGIES), default=CFG["retrieval"])
+    p.add_argument("--prompt", choices=["naive", "conflict"], default=CFG["prompt"])
     p.add_argument("--judge", choices=["v1", "v2"], default="v2",
                    help="v1 = single-prompt judge used for B0; v2 = narrow questions combined by code")
     p.add_argument("--prune", action="store_true",
@@ -307,10 +308,10 @@ if __name__ == "__main__":
     rows = []
     for i, q in enumerate(qs, start=1):
         print(f"[{i}/{len(qs)}] {q['id']} {q['tag']}", file=sys.stderr)
-        rows.append(run_one(q, CFG["top_k"], judge=a.judge))
+        rows.append(run_one(q, CFG["top_k"], judge=a.judge, retrieval=a.retrieval, style=a.prompt))
     m = summarize(rows)
     provider = CFG["llm_provider"]
-    title = (f"{a.name} / {a.split} ({len(rows)} questions; {provider} {CFG['llm_models'][provider]}, judge {a.judge}, "
+    title = (f"{a.name} / {a.split} ({len(rows)} questions; {provider} {CFG['llm_models'][provider]}, judge {a.judge}, retrieval {a.retrieval}, prompt {a.prompt}, "
              f"k={CFG['top_k']}, {CFG['chunk_chars']}/{CFG['chunk_overlap']} chunks)")
     out = table(m, title)
     print(out)

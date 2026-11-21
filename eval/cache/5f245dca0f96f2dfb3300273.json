@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 12.41,
+ "output": "According to the provided documents, NASA plans to send a crew of six astronauts to Mars on a human mission. This is mentioned in [4] (document 20090012109, pages 14-16) and [5] (document 20090040343, pages 7-7).",
+ "created": "2026-11-20 18:44:29"
+}

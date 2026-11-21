@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.0,
+ "output": "Source [4] (DRA 5.0, 2011, pages 18-20) says Total flight time vary between 598 and 672 days with less than 30 days available for Phobos exploration.\n\nSource [4] (DRA 5.0, 2011, pages 18-20) also says that the crew health issues are problematic, including Certification of a viable approach for almost 700 days of micro gravity and Enhanced SPE radiation hazard potential due to trajectory passage close to Sun (inside orbit of Venus).\n\nThe sources differ.",
+ "created": "2026-11-20 19:16:59"
+}

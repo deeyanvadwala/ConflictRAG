@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.04,
+ "output": "According to document [1], each surface nuclear reactor in the 1997 Mars Reference Mission is capable of producing 160 kWe (kilowatts of electrical power).",
+ "created": "2026-11-20 18:58:23"
+}

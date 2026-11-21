@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.49,
+ "output": "The answer is not provided in the given context. The context appears to be related to NASA's plans and missions to Mars, including the Evolvable Mars Campaign, the JPL Minimal Mars Architecture, and the Inspiration Mars Mission, but it does not mention the Perseverance rover.",
+ "created": "2026-11-20 18:55:08"
+}

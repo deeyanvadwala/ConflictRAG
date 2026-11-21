@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.77,
+ "output": "According to [4] (document 20110005558, pages 11-13), the chemical-propulsion human Mars orbit/Phobos mission has a crew transit time of approximately 250 days out to Mars and 360 days back to Earth. Therefore, the total time the crew would spend traveling to and from Mars would be:\n\n250 days (out to Mars) + 360 days (back to Earth) = 610 days\n\nHowever, this answer is not explicitly stated in the provided text. The closest information is in [3] (document 19980037039, pages 26-26), which states that the crew will spend long periods of time (18 to 20 months; 600 days nominal) on the surface, but it does not provide the exact transit times.",
+ "created": "2026-11-20 18:50:00"
+}

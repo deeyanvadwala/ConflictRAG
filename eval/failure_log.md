@@ -66,3 +66,9 @@ Not yet a wrong answer; logged because the conflict module will depend on it.
 - **Risk:** a conflict module that trusts the `study` field would report "EMC (2015) says six crew", which is false. The same applies to 19980218778, which holds both Version 1.0 and Version 3.0 text under one label (`RM 3.0`), and to 19980037039, labelled `RM 1.0` although the book never uses that phrase.
 - **Implication:** the study a claim belongs to must be read from the passage text; the file-level label only says who published the document and when.
 - **Status:** open. Address when building the conflict module.
+
+## F6: conflict prompt makes the 8B model report disagreement everywhere (E2, 2026-11-20)
+
+- With the conflict-aware prompt, answers end with "The sources differ." regardless of content: cf01 lists four sources that all say 6 crew and still concludes they differ; emc03 adds a "1 Sol Mars orbit" as a conflicting answer to an aggregation-orbit question; rm05 contrasts launch-vehicle capability with TMI stack mass.
+- Strict correctness fell from 42% (E1) to 17%.
+- **Implication:** whether two values conflict should be decided by code over extracted claims, not by asking the generator in one prompt.

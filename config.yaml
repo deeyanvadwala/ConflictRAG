@@ -7,9 +7,14 @@ chunk_chars: 1500        # about 350-400 tokens, fits the model's input limit
 chunk_overlap: 200
 min_chunk_chars: 200     # drop tiny fragments (page numbers, stray headings)
 
+reranker_model: BAAI/bge-reranker-base   # cross-encoder for the rerank strategy
+reranker_revision: 2cfc18c9415c912f9d8155881c133215df768a70   # Hugging Face commit, pinned
+
 chroma_path: chroma_db
 collection: mars
 top_k: 5
+retrieval: topk          # strategy from strategies.py; topk = baseline embedding search
+prompt: naive            # naive = baseline prompt; conflict = conflict-aware prompt (generate.py)
 seed: 42
 
 # Generation (llm.py). Free options only: gemini (free tier) or ollama (local).

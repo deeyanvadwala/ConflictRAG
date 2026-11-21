@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.86,
+ "output": "According to [2], in NASA's Version 1.0 Mars Reference Mission, the crew stays on the Martian surface for 500 days.",
+ "created": "2026-11-20 18:57:06"
+}

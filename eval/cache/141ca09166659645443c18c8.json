@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.99,
+ "output": "Source [1] (study, 2015) says 150 kW [1].\nSource [2] (study, 2015) says 150 kW [2].\nSource [3] (study, 2015) says the power to the EP thruster system varied from 40 kW to 300 kW [3].\nSource [4] (study, 2015) does not mention the power supplied to the electric propulsion thrusters.\nSource [5] (study, 2008) does not mention the SEP-Chem Evolvable Mars Campaign architecture.\n\nThe sources differ.",
+ "created": "2026-11-20 19:20:15"
+}

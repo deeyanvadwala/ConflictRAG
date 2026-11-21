@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.39,
+ "output": "According to [2], NASA's Mars DRA 5.0 uses a nuclear power plant as its surface power system. The document states that \"Power for these systems would be supplied by a nuclear power plant that would be previously deployed with the decent-ascent vehicle and used to make a portion of the ascent propellant and consumables (H2O, oxygen (O2), and buffer gases) to be used by the crew when they arrive.\"\n\nAs for the power output, [2] does not provide a specific value for the nuclear power plant's output in kilowatts. However, it does mention that the power system is sized for ~7 kWe at 1 A.U. (astronomical unit), which is a measure of distance from the Sun.",
+ "created": "2026-11-20 18:46:58"
+}

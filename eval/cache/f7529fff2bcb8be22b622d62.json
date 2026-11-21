@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.88,
+ "output": "The sources do not mention the launch pad from which the Evolvable Mars Campaign crew will launch.",
+ "created": "2026-11-20 19:29:03"
+}

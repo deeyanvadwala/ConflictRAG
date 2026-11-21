@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.04,
+ "output": "{\n  \"reference_facts\": \"Total flight time of 598 to 672 days, with less than 30 days available for Phobos exploration.\",\n  \"answer_facts\": \"Total flight time vary between 598 and 672 days with less than 30 days available for Phobos exploration.\",\n  \"correctness\": \"correct\"\n}",
+ "created": "2026-11-20 19:17:06"
+}

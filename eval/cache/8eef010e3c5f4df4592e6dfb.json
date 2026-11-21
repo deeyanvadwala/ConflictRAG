@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.36,
+ "output": "{\n  \"reference_facts\": \"Lunar Distant Retrograde Orbit (LDRO)\",\n  \"answer_facts\": \"1 Sol Mars orbit\",\n  \"correctness\": \"incorrect\"\n}",
+ "created": "2026-11-20 19:20:56"
+}

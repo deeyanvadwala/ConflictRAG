@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 8.72,
+ "output": "Unfortunately, the provided context does not explicitly state the planned crew size for the 1997 Reference Mission or the 2015 Evolvable Mars Campaign. However, we can infer some information from the context.\n\nThe 1997 Reference Mission is discussed in [1] and [2], but the crew size is not explicitly mentioned. In [3], the context mentions that the cargo and piloted Mars spacecraft depart LEO using a \"2-perigee burn\" Earth departure scenario, but it does not mention the crew size.\n\nThe 2015 Evolvable Mars Campaign is discussed in [4], which mentions that the mass associated with a Mars mission does not scale linearly with the size of the crew. It also mentions that once a basic capability to transport and support a crew is established, changes in the size of the crew have a relatively small impact on the overall mass of the mission.\n\nHowever, [4] does provide some information on the crew size. It mentions that the analysis was performed for combinations of four or six crew with lander capacities of 20 t or 40 t of useful payload to the surface of Mars.\n\nUnfortunately, we cannot determine the exact change in planned crew size from the 1997 Reference Mission to the 2015 Evolvable Mars Campaign based on the provided context.",
+ "created": "2026-11-20 18:46:30"
+}

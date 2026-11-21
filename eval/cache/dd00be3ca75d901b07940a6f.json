@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.06,
+ "output": "{\n  \"reference_facts\": \"About 610 days (~250 days out plus ~360 days back), with ~40 sols at Mars.\",\n  \"answer_facts\": \"The crew transit time is approximately 250 days out to Mars and 360 days back to Earth, resulting in a total of 610 days.\",\n  \"correctness\": \"correct\"\n}",
+ "created": "2026-11-20 18:50:07"
+}

@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.44,
+ "output": "Source [4] (RM 1.0, 1997) says 4 RL10-class engines modified to burn LOX/CH4, with a combined thrust not specified.\nSource [1] (EMC, 2015) does not mention the combined thrust of the Mars Ascent Vehicle's first stage.\nSource [2] (EMC, 2015) does not mention the combined thrust of the Mars Ascent Vehicle's first stage.\nThe sources differ.",
+ "created": "2026-11-20 19:22:32"
+}

@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.34,
+ "output": "Source [2] (RM 3.0, 1998) says 500 days.\nSource [5] (RM 1.0, 1997) says 500 to 600 days.\nThe sources differ.",
+ "created": "2026-11-20 19:26:07"
+}

@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.58,
+ "output": "According to [3] (document 19980218778, pages 12-12), the first crew leaves Earth for Mars in the second opportunity, but the exact date is not specified. However, it is mentioned that the crew departs for Mars in the second opportunity, which is after the two cargo missions have been launched.\n\nAccording to [1] (document 19980037039, pages 135-135), the first crew of six departs for Mars in mid-November 2009.",
+ "created": "2026-11-20 18:45:09"
+}

@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.05,
+ "output": "Source [1] (study, 2009) says the core propulsion stage has three 25 klbf NTR engines with a specific impulse of ~900 - 910 s.\n\nSource [2] (study, 2010) says the core propulsion stage has three 111 kN (25-klbf) NTR engines.\n\nThe sources differ.",
+ "created": "2026-11-20 19:16:24"
+}

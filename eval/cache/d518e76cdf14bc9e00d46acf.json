@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.22,
+ "output": "Source [2] (DRA 5.0, 2010) describes a lunar-orbit station as part of the Deep Space architecture, but it does not specify a name. \n\nSource [3] (DRA 5.0, 2011) describes a lunar-orbit station as part of the Deep Space architecture, but it does not specify a name.\n\nSource [4] (EMC, 2015) does not mention a lunar-orbit station by name.\n\nSource [5] (EMC, 2015) does not mention a lunar-orbit station by name.\n\nThe context does not contain the answer.",
+ "created": "2026-11-20 19:24:40"
+}

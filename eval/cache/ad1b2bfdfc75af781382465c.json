@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.16,
+ "output": "According to [2] (document 20160006315, pages 12-12), the DRA 5.0 crew spends 450-550 days at Mars.",
+ "created": "2026-11-20 18:45:48"
+}

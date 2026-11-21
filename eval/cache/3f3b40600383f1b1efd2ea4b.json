@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.32,
+ "output": "{\n  \"reference_facts\": \"About 610 days (~250 days out plus ~360 days back), with ~40 sols at Mars.\",\n  \"answer_facts\": \"18 to 20 months; 600 days nominal, ~360 days back to Earth and ~250 days out to Mars, 570 days for a mission where the crew only spends 30-40 days at Mars.\",\n  \"correctness\": \"partial\"\n}",
+ "created": "2026-11-20 19:19:08"
+}

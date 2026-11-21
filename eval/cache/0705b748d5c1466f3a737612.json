@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.26,
+ "output": "According to [1] (document 20150006952, pages 2-3), the crew transfer habitat and propulsive elements are delivered to the Lunar Distant Retrograde Orbit (LDRO) and assembled there before Earth departure.",
+ "created": "2026-11-20 18:51:45"
+}

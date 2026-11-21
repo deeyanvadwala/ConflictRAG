@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.77,
+ "output": "Source [1] (document 20160006315, label: EMC, 2015, pages 5-5) says that DRA 5.0 uses a surface fission power system (FSPS) [5].\nSource [3] (document 20120012928, label: DRA 5.0, 2009, pages 5-5) says that the Photovoltaic Array (PVA) Primary Power System provides ~7 kWe at 1 A.U. and ~6.75 kWe at Mars.\n\nThe sources differ.",
+ "created": "2026-11-20 19:15:48"
+}

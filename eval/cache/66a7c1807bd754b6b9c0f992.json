@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.42,
+ "output": "Source [1] (study, 2015) says the aggregation orbit is the Lunar Distant Retrograde Orbit (LDRO).\nSource [2] (study, 2015) says the aggregation orbit is a 1 Sol Mars orbit.\n\nThe sources differ.",
+ "created": "2026-11-20 19:20:50"
+}

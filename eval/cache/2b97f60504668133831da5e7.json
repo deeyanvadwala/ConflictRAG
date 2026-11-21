@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.78,
+ "output": "Source [2] (DRA 5.0, 2014, pages 43-43) does not mention the data rate of the DRA 5.0 Mars-to-Earth communication link.\n\nSource [3] (DRA 5.0, 2010, pages 10-11) does not mention the data rate of the DRA 5.0 Mars-to-Earth communication link.\n\nSource [4] (DRA 5.0, 2014, pages 43-44) does not mention the data rate of the DRA 5.0 Mars-to-Earth communication link.\n\nThere is no information in the provided context about the data rate of the DRA 5.0 Mars-to-Earth communication link.",
+ "created": "2026-11-20 19:29:32"
+}

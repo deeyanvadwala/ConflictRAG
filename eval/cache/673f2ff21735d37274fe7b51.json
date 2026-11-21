@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.49,
+ "output": "Source [3] (study, 1997) says the Reference Mission uses a nuclear thermal TMI stage, while Source [1] (study, 1998) says the Reference Mission uses a solar electric \"tug\" and small chemical kick stage. The sources differ.",
+ "created": "2026-11-20 19:26:45"
+}

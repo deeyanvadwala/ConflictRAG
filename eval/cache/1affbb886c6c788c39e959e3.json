@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.3,
+ "output": "{\n  \"reference_facts\": \"150 kW, 16 t xenon\",\n  \"answer_facts\": \"150 kW\",\n  \"correctness\": \"partial\"\n}",
+ "created": "2026-11-20 18:51:15"
+}

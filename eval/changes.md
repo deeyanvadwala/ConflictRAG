@@ -139,4 +139,80 @@ No scores had been produced yet, so nothing is being compared across these chang
   - v2 initial asked "does the answer say the documents do NOT contain...": the negation made llama3.1:8b say "declined" for plain answers (e.g. rm04 "each reactor can produce 160 kWe"). Rev 1 replaced yes/no questions with named labels. Rev 1 still graded dra01 (160 kWe vs reference 30 kWe) "correct"; rev 2 makes the judge write both sets of facts before comparing. Rev 2 also fixed two code bugs: stale and conflict fields were computed for declined answers.
   - Remaining correctness disagreements (dra03, emc02, fc01, rm03, rm04): the judge says "partial" where hand labels say incorrect (1) or correct (4).
 - **Caveat:** the judge was revised while looking at dev labels, so dev agreement overstates it. Before the test run, the test answers will be hand-labelled first and judge agreement on test reported separately.
-- **Baseline under the frozen judge** (eval/results/baseline_j2_dev.json): correct 25% (hand 42%), correct or partial 62% (hand 58%), abstention 100%, false abstention 21%, conflict detection 0%, false-conflict 0%, stale 40%, faithful 95% (n=19, not hand-checked). Strict "correct" is the judge's least reliable number; report "correct or partial" alongside it.
+- **Baseline under the frozen judge** (eval/results/baseline_j2_dev.json; retrieval rows corrected in C9): correct 25% (hand 42%), correct or partial 62% (hand 58%), abstention 100%, false abstention 21%, conflict detection 0%, false-conflict 0%, stale 40%, faithful 95% (n=19, not hand-checked). Strict "correct" is the judge's least reliable number; report "correct or partial" alongside it.
+
+## C9: metric matching fix; retrieval strategy comparison (2026-11-20)
+
+- **Metric bug fixed:** run_eval.py and check-style gold matching lowercased and collapsed whitespace only, while verify_gold.py also maps en-dashes, curly quotes and ligatures. The fc01 EMC quote ("...one Martian day - slightly more than 24 hours long") contains an en-dash in the PDF, so it was never counted as retrieved. run_eval.py and retrieval_eval.py now import `norm` from verify_gold.py. **B0 retrieval rows corrected:** hit@5 46% -> 50%, hit@10 67% -> 71%, MRR@10 0.305 -> 0.313, citation hits gold 25% -> 29%. Hit@3 (38%), coverage (0/7) and all answer-quality numbers are unchanged.
+- **Retrieval-only comparison on dev** (`python eval/retrieval_eval.py --split dev`, no LLM; 24 answerable, 7 conflict/trap questions). Every strategy tried is listed:
+
+| Strategy | n | hit@n | MRR@n | coverage@n |
+|---|---|---|---|---|
+| topk (baseline) | 5 | 12/24 | 0.286 | 0/7 |
+| per_study | 5 | 5/24 | 0.188 | 0/7 |
+| per_doc | 5 | 8/24 | 0.236 | 0/7 |
+| bm25 | 5 | 13/24 | 0.324 | 0/7 |
+| hybrid (RRF) | 5 | 13/24 | 0.312 | 0/7 |
+| rerank | 5 | 16/24 | 0.436 | 2/7 |
+| hybrid_rerank | 5 | 17/24 | 0.449 | 1/7 |
+| hybrid_rerank_diverse | 5 | 17/24 | 0.451 | 1/7 |
+| study_pool_rerank | 5 | 17/24 | 0.478 | 2/7 |
+| topk (baseline) | 8 | 15/24 | 0.304 | 0/7 |
+| per_study | 8 | 9/24 | 0.257 | 0/7 |
+| per_doc | 8 | 8/24 | 0.236 | 0/7 |
+| bm25 | 8 | 15/24 | 0.337 | 0/7 |
+| hybrid (RRF) | 8 | 16/24 | 0.330 | 0/7 |
+| rerank | 8 | 16/24 | 0.436 | 2/7 |
+| hybrid_rerank | 8 | 18/24 | 0.454 | 2/7 |
+| hybrid_rerank_diverse | 8 | 18/24 | 0.456 | 1/7 |
+| study_pool_rerank | 8 | 17/24 | 0.478 | 3/7 |
+
+- **Reading:** forcing study balance without reranking hurts (per_study 5/24); the cross-encoder reranker (BAAI/bge-reranker-base, pinned revision 2cfc18c...) gives the large gain. Among reranking variants the differences are 1-2 questions, within noise for n=24 and n=7. The last two variants were added after seeing the first results; no further variants will be tried on dev.
+- **Why coverage stays low:** with plain embeddings the second side of each conflict ranks 10-91 of 972 (cf01 EMC side 36, cf06 NTR side 82, cf07 EMC side 71).
+- **Chosen for E1:** study_pool_rerank at the baseline's k=5, so the only change is retrieval.
+- New dependency: rank-bm25==0.2.2. The reranker runs on CPU (the installed torch is a CPU build), roughly 5-10 s per query.
+
+## E1: study_pool_rerank retrieval, everything else as B0 (2026-11-20)
+
+`python eval/run_eval.py --split dev --name e1_studypool --retrieval study_pool_rerank` (judge v2, naive prompt, k=5). Results: eval/results/e1_studypool_dev.json.
+
+| Metric | B0 (topk) | E1 (study_pool_rerank) |
+|---|---|---|
+| hit@3 | 38% | 50% |
+| hit@5 | 50% | 71% |
+| MRR@10 | 0.313 | 0.478 |
+| conflict coverage@5 | 0/7 | 2/7 |
+| correct (answerable, judge) | 25% | 42% |
+| correct or partial (judge) | 62% | 79% |
+| citation hits gold | 29% | 50% |
+| false abstention | 21% | 12% |
+| abstention accuracy | 100% | 100% |
+| conflict detection | 0/5 | 0/5 |
+| false-conflict rate | 0/2 | 0/2 |
+| stale answer | 2/5 | 2/5 |
+| faithful (judge, not hand-checked) | 95% (n=19) | 86% (n=21) |
+| median LLM latency | 6.0 s | 5.5 s (plus ~5-10 s CPU reranking) |
+
+- **Hand check:** all 6 questions whose correctness or decline verdict changed from B0 were read: dra08, dra09, emc03, fc01 now correct; cf04 partial and stale (gives only the 1997 book's mid-November 2009); emc01 still incorrect. All 6 verdicts agree with a hand reading.
+- **F4 persists:** emc01 now answers with the 1997 book's MAV specific impulse (379 s) instead of the EMC's 360 s. Better retrieval alone does not stop era mixing.
+- **Conflict detection stays 0/5:** even when both sides are retrieved (cf01, cf04), the naive prompt does not ask the model to compare sources.
+- **Decision:** keep study_pool_rerank as the retrieval for the next experiments.
+
+## E2: conflict-aware prompt on top of E1 (2026-11-20) - rejected
+
+`python eval/run_eval.py --split dev --name e2_conflictprompt --retrieval study_pool_rerank --prompt conflict`. Only change from E1: the prompt (generate.py PROMPT_CONFLICT: shows study label and year, asks for "Source [n] (study, year) says X", unit/configuration check, label warning).
+
+| Metric | E1 | E2 |
+|---|---|---|
+| correct (answerable, judge) | 42% | 17% |
+| correct or partial (judge) | 79% | 71% |
+| citation hits gold | 50% | 62% |
+| invalid citations | 0% | 3% |
+| conflict detection (judge / hand) | 0/5 / 0/5 | 1/5 / 1/5 (rm02) |
+| false-conflict rate (judge / hand) | 0/2 / 0/2 | 2/2 / 1/2 (fc03) |
+| stale answer (judge) | 2/5 | 3/5 |
+| faithful (judge, not hand-checked) | 86% | 71% |
+
+- **Hand reading of all conflict, trap and regressed answers:** llama3.1:8b applies the answer format to every question and ends with "The sources differ." even when all sources agree (cf01 lists four sources saying "6") or when the second source is about something else (emc03, rm05, dra02, emc05). It also copies "study" literally ("Source [1] (study, 1997)").
+- **Judge disagreement:** fc01's answer says the sources "differ in units: one study uses days, the other uses sols", which is the desired behavior; the judge's label rule counts it as a false conflict. Hand: 1/2 false conflicts (fc03 says the two papers "have different information" about a crew of six).
+- **Decision:** rejected. A single instruction-heavy prompt does not work with an 8B model: it raises conflict reporting by one question and creates false conflicts in many others. Next: compare claims in code instead of asking the model to judge disagreement (E3). The prompt will not be tuned further on dev.

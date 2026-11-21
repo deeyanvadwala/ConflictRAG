@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.27,
+ "output": "Source [2] (study, 1997) says six [2].\nSource [3] (study, 1998) describes the 1997 NASA Mars Reference Mission (SP-6107), and it does not mention the crew size.",
+ "created": "2026-11-20 19:25:32"
+}

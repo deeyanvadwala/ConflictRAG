@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.09,
+ "output": "The context does not contain information about the 2015 Evolvable Mars Campaign. It only contains information about the 1997 Reference Mission and the 1998 Reference Mission (RM 3.0).",
+ "created": "2026-11-20 19:15:20"
+}

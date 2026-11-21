@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.69,
+ "output": "Source [4] (DRA 5.0, 2010) says the crew spends up to 500 days on the Martian surface.\nSource [2] (EMC, 2015) says the crew spends 450-550 days at Mars.\n\nThe sources differ.",
+ "created": "2026-11-20 19:14:38"
+}

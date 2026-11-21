@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.09,
+ "output": "The 2015 comparison of Mars architectures [2] and the 2010 DRA 5.0 paper [5] have different information about DRA 5.0's crew size.\n\nSource [2] (EMC, 2015, pages 16-17) says that DRA 5.0 specifies a crew size of six, all of whom descend to the surface for long-stay exploration.\n\nSource [5] (DRA 5.0, 2010, pages 7-7) says that the rationale for a crew of six has been judged to be a reasonable compromise between the skill mix and level of effort for missions of this complexity and duration.\n\nThe sources differ.",
+ "created": "2026-11-20 19:23:37"
+}

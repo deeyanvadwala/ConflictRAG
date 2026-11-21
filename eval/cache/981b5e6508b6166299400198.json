@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.48,
+ "output": "{\n  \"reference_facts\": \"mid-November 2009, 2011, 2014\",\n  \"answer_facts\": \"mid-November 2009\",\n  \"correctness\": \"partial\"\n}",
+ "created": "2026-11-20 18:45:15"
+}

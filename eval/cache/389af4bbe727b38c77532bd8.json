@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.96,
+ "output": "{\n  \"reference_facts\": \"Total flight time: 598 to 672 days, Phobos exploration time: less than 30 days\",\n  \"answer_facts\": \"Total flight time: 6-7 months, Phobos exploration time: less than 30 days\",\n  \"correctness\": \"partial\"\n}",
+ "created": "2026-11-20 18:48:17"
+}

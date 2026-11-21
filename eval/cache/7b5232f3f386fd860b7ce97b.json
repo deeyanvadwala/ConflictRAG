@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.91,
+ "output": "According to the 2015 comparison of Mars architectures [3], the crew size for the Design Reference Architecture 5.0 (DRA 5.0) is six, all of whom descend to the surface for long-stay exploration. This is consistent with the 2010 DRA 5.0 paper [5], which also states that the primary objectives for future human exploration of Mars include sending six crewmembers to Mars on a minimum of three consecutive opportunities.\n\nTherefore, the 2015 comparison of Mars architectures agrees with the 2010 DRA 5.0 paper about DRA 5.0's crew size.",
+ "created": "2026-11-20 18:54:31"
+}

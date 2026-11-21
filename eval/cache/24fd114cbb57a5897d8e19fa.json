@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.57,
+ "output": "{\n  \"reference_facts\": \"22,000 kg (solar, 25 kWe), 8,000 kg (nuclear, 30 kWe), 14 t or more (savings)\",\n  \"answer_facts\": \"22,000 kg (solar, 25 kWe), 8,000 kg (nuclear, 30 kWe), 14,000 kg (savings)\",\n  \"correctness\": \"correct\"\n}",
+ "created": "2026-11-20 18:49:29"
+}

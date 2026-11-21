@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.75,
+ "output": "{\n  \"reference_facts\": \"Three engines, 25 klbf each, Isp of about 900 s\",\n  \"answer_facts\": \"Three engines, 25 klbf each, Isp of ~900 - 910 s\",\n  \"correctness\": \"partial\"\n}",
+ "created": "2026-11-20 19:16:30"
+}

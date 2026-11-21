@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.84,
+ "output": "{\n  \"reference_facts\": \"30 kWe nuclear fission power system\",\n  \"answer_facts\": \"surface fission power system (FSPS), ~7 kWe at 1 A.U. and ~6.75 kWe at Mars\",\n  \"correctness\": \"partial\"\n}",
+ "created": "2026-11-20 19:15:55"
+}

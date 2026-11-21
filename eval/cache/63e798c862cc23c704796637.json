@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.92,
+ "output": "Unfortunately, the provided documents do not mention the cost of a ticket to Mars on the Mars One mission. The documents discuss various aspects of Mars missions, such as trajectory planning, mass breakdown structures, and mission objectives, but do not provide information on ticket prices.\n\nHowever, document [2] mentions that Mars One anticipates delivering food and other consumables to Mars for initial missions, and later relies on the crew producing most of the consumables they need on Mars. This suggests that the mission is focused on establishing a sustainable human presence on Mars, rather than providing commercial space travel services.\n\nTherefore, it is unlikely that a \"ticket to Mars\" would be sold in the classical sense, and the cost of participating in the mission would likely be a significant investment of time, resources, and expertise, rather than a monetary cost.",
+ "created": "2026-11-20 19:01:06"
+}

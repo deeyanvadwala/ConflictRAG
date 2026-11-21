@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.09,
+ "output": "{\n  \"reference_facts\": \"It depends on the study: DRA 5.0 (2010 paper) plans six crewmembers; the Evolvable Mars Campaign (2015) plans a steady-state crew of at least four (with an initial short mission of two).\",\n  \"answer_facts\": \"6\",\n  \"correctness\": \"incorrect\"\n}",
+ "created": "2026-11-20 19:13:24"
+}

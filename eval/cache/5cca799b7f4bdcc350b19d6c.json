@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.83,
+ "output": "Source [1] (study, 2015) says the total initial mass in space is 127t, and the transit habitat element has a mass of 36.6t [1].\nSource [2] (study, 2015) says the total initial mass in space is not explicitly stated, but it mentions that a habitat mass of less than 30t will result in a reduction in the number of SLS launches, and a habitat mass greater than 41.8t will result in an increase in the number of SLS launches [2].\nThe sources differ.",
+ "created": "2026-11-20 19:21:56"
+}

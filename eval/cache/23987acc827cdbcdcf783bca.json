@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.1,
+ "output": "Unfortunately, the provided context does not mention the specific launch pad from which the Evolvable Mars Campaign crew will launch. The context discusses the Evolvable Mars Campaign (EMC) and its various phases, challenges, and potential pathways, but it does not provide information on the launch pad.\n\nHowever, based on the context, it can be inferred that the launch will likely involve the Space Launch System (SLS) rocket, which is a key component of the EMC. The SLS rocket is currently being developed at the Kennedy Space Center, and it is expected to play a crucial role in the EMC.\n\nTo answer the question, we would need more specific information about the launch pad, which is not provided in the context.",
+ "created": "2026-11-20 19:00:10"
+}

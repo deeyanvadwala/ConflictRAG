@@ -14,7 +14,7 @@ import sys
 import time
 
 from chunking import CFG
-from retrieve import search
+from strategies import STRATEGIES
 
 PROMPT = """Answer the question using the context below. Cite the sources you use with their numbers in square brackets, like [1].
 
@@ -26,12 +26,38 @@ Question: {question}
 Answer:"""
 
 
-def build_prompt(question, hits):
+# Conflict-aware prompt (experiment E2). The naive PROMPT above stays the baseline.
+PROMPT_CONFLICT = """Answer the question using only the context below. The sources come from NASA Mars studies written in different years, and they may disagree.
+
+Rules:
+1. Cite every fact with its source number in square brackets, like [1].
+2. If sources give different values for what is asked, do NOT merge them or pick one silently. Report each one in the form "Source [n] (study, year) says X", and say that the sources differ.
+3. Before calling something a disagreement, check whether the values use different units (for example days vs sols) or describe different options or configurations. If so, explain that instead of calling it a conflict.
+4. A source's label tells you who published the document and when. The passage itself may describe a different study (for example a 2015 paper describing DRA 5.0). Say which study the passage describes.
+5. Only use a source for a study if the passage is about that study. Do not answer a question about one study with another study's numbers.
+6. If the context does not contain the answer, say so.
+
+Context:
+{context}
+
+Question: {question}
+
+Answer:"""
+
+PROMPTS = {"naive": PROMPT, "conflict": PROMPT_CONFLICT}
+
+
+def build_prompt(question, hits, style="naive"):
     blocks = []
     for n, h in enumerate(hits, start=1):
         m = h["meta"]
-        blocks.append(f"[{n}] (document {m['doc_id']}, pages {m['page_start']}-{m['page_end']})\n{h['text']}")
-    return PROMPT.format(context="\n\n".join(blocks), question=question)
+        if style == "naive":
+            head = f"[{n}] (document {m['doc_id']}, pages {m['page_start']}-{m['page_end']})"
+        else:
+            head = (f"[{n}] (document {m['doc_id']}, label: {m['study']}, {m['year']}, "
+                    f"pages {m['page_start']}-{m['page_end']})")
+        blocks.append(f"{head}\n{h['text']}")
+    return PROMPTS[style].format(context="\n\n".join(blocks), question=question)
 
 
 def cited_numbers(answer):
@@ -48,9 +74,9 @@ def answer(question, k=None, provider=None, dry_run=False):
 
     k = k or CFG["top_k"]
     t0 = time.perf_counter()
-    hits = search(question, k=k)
+    hits = STRATEGIES[CFG["retrieval"]](question, k)
     t1 = time.perf_counter()
-    prompt = build_prompt(question, hits)
+    prompt = build_prompt(question, hits, CFG["prompt"])
     if dry_run:
         return {"question": question, "prompt": prompt, "hits": hits, "retrieval_s": t1 - t0}
     text = complete(prompt, provider=provider)

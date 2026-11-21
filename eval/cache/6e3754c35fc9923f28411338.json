@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.97,
+ "output": "Source [1] (DRA 5.0, 2009) says DRA 5.0 plans a \"long surface stay (~500 days)\" on Mars.\nSource [4] (EMC, 2015) says the Evolvable Mars Campaign plans to enable \"Steady State\" operations by at least 4 crew for up to 500 sols at a single Mars surface destination.\n\nThe sources differ in units: one study uses days, the other uses sols.",
+ "created": "2026-11-20 19:22:59"
+}

@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.06,
+ "output": "Source [3] (study, 1997) says the piloted trans-Mars injection stage uses two RL10-class engines modified to burn LOX/CH4.\nSource [1] (study, 1998) says the Reference Mission Version 3.0 uses two RL10-class engines modified to burn LOX/CH4.\nThe sources differ.",
+ "created": "2026-11-20 19:28:25"
+}

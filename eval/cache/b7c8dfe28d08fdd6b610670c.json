@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.9,
+ "output": "Source [1] (EMC, 2015, pages 6-7) says the second stage of the MAV uses a single 100kN LOX/LCH4 pump-fed rocket engine with a specific impulse of 360 sec.\n\nSource [2] (RM 1.0, 1997, pages 174-177) says the ascent propulsion system uses two RL10-class engines modified to burn LOX/CH4, which perform with an average specific impulse of 379 seconds throughout the MAV flight regime.\n\nThe sources differ.",
+ "created": "2026-11-20 19:19:38"
+}

@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.09,
+ "output": "{\n  \"reference_facts\": \"six, four, two\",\n  \"answer_facts\": \"six\",\n  \"correctness\": \"partial\"\n}",
+ "created": "2026-11-20 18:44:34"
+}

@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.71,
+ "output": "{\n  \"reference_facts\": \"90.4 t (127 t total minus the 36.6 t transit habitat)\",\n  \"answer_facts\": \"127 t total mass, 36.6 t transit habitat mass\",\n  \"correctness\": \"partial\"\n}",
+ "created": "2026-11-20 19:22:02"
+}

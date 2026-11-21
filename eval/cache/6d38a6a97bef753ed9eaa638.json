@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.5,
+ "output": "Source [3] (study, 2010) says Five Ares-V flights, which are carried out over 120 days, are required for the two cargo vehicles.\nSource [3] (study, 2010) says The first two Ares-V launches deliver the NTR core propulsion stages while the third launch delivers the two short “in-line” LH2 tanks that are packaged end-to-end.\nSource [3] (study, 2010) says Once in orbit, the in-line tanks separate and dock with the propulsion stages, which function as the active element during the AR&D maneuver. The two aerocaptured payload elements are delivered on the last two Ares-V launches.\nThe sources differ.",
+ "created": "2026-11-20 19:17:36"
+}

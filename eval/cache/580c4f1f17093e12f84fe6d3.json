@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.02,
+ "output": "{\n  \"reference_facts\": \"Three engines, 25 klbf each, Isp of about 900 s\",\n  \"answer_facts\": \"Three 25 klbf (111 kN) NTR engines, Isp of ~900 s, thrust-to-weight ratio of ~300:1\",\n  \"correctness\": \"correct\"\n}",
+ "created": "2026-11-20 18:47:40"
+}

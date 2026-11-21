@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 7.68,
+ "output": "According to [3] (document 19980037039, pages 1-5), the 1997 Reference Mission uses a Nuclear Thermal Rocket (NTR) concept to send its spacecraft from Earth orbit toward Mars. This is mentioned in the section \"Mars orbit\" on page 43 of the document.\n\nHowever, it's worth noting that the document [5] (document 19980218778, pages 43-44) mentions that the electric propulsion vehicle was initially considered as the primary propulsion concept for human Mars missions, but it was later eliminated due to significant challenges. The document [1] (document 19980218778, pages 43-44) also mentions that an alternate concept of utilizing electric propulsion was proposed by the Lewis Research Center in the Spring of 1997, but it's not clear if this concept was used in the 1997 Reference Mission.\n\nTherefore, based on the information provided, the 1997 Reference Mission uses a Nuclear Thermal Rocket (NTR) concept to send its spacecraft from Earth orbit toward Mars.",
+ "created": "2026-11-20 18:57:48"
+}
