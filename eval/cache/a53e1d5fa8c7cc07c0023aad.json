@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.45,
+ "output": "According to [3], the DRA 5.0 architecture requires 3 heavy-lift launches: \n\n1. Ares-V heavy lift launch for the cargo lander\n2. Ares-V heavy lift launch for the habitat lander\n3. Ares-V heavy lift launch for the crewed Mars transfer vehicle (MTV)",
+ "created": "2026-11-23 20:54:32"
+}

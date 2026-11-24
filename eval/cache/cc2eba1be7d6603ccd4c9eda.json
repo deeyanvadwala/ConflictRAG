@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.91,
+ "output": "According to [2], the power that is required for the ISRU plant, which is making ascent stage O2 propellant, is 25 kWe operating continuously.",
+ "created": "2026-11-23 20:56:54"
+}

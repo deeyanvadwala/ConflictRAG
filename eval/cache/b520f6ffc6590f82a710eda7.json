@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.39,
+ "output": "{\n  \"reference_facts\": [\n    \"7-Launch\",\n    \"9 Ares-V launches (5 cargo, 4 crew)\",\n    \"7-11 launches depending on in-space propulsion\"\n  ],\n  \"answer_facts\": [\n    \"3 heavy-lift launches\"\n  ],\n  \"correctness\": \"incorrect\"\n}",
+ "created": "2026-11-23 21:02:38"
+}

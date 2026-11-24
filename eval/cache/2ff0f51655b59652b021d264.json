@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.97,
+ "output": "{\n  \"answers\": true,\n  \"value\": \"six\",\n  \"number\": 6,\n  \"unit\": \"crew\",\n  \"describes\": \"the second crew\",\n  \"quote\": \"then the systems delivered in 2009 will support the second crew of six that will launch to Mars early in 2012.\"\n}",
+ "created": "2026-11-20 22:33:19"
+}

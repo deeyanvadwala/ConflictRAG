@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.31,
+ "output": "{\n  \"answers\": true,\n  \"value\": \"up to 500 days\",\n  \"number\": 500,\n  \"unit\": \"days\",\n  \"describes\": \"DRA 5.0\",\n  \"quote\": \"At the next opportunity, a crew of six transfers to Mars and descends to the surface, where they spend up to 500 days on the Martian surface before ascending and returning to Earth.\"\n}",
+ "created": "2026-11-20 22:42:00"
+}

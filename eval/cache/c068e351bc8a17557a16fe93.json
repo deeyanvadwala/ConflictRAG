@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 8.7,
+ "output": "Unfortunately, the provided sources do not explicitly state the planned crew size for the 2015 Evolvable Mars Campaign. However, we can infer some information from [4], which discusses the mass associated with a Mars mission and how it scales with crew size.\n\nAccording to [4], the mass associated with a Mars mission does not scale linearly with the size of the crew. The document compares the mass of missions with different crew sizes, including four and six crew members, and notes that changes in crew size have a relatively small impact on the overall mass of the mission.\n\nWhile we cannot determine the exact planned crew size for the 2015 Evolvable Mars Campaign, we can conclude that the crew size is likely to be similar to or slightly larger than the four or six crew members considered in [4].\n\nIt's worth noting that the 1997 Reference Mission is not explicitly mentioned in [4], but the document does discuss the Evolvable Mars Campaign, which is a follow-up to the Reference Mission. Therefore, we can assume that the crew size for the Evolvable Mars Campaign is similar to or slightly larger than the crew sizes considered in [4].",
+ "created": "2026-11-23 20:39:16"
+}

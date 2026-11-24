@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.22,
+ "output": "According to [3], the landers for the JPL Minimal Mars Architecture's long-stay mission would provide a total landed payload capacity of 40 t (tons) each, as stated on page 29: \"This analysis resulted in a strategy whereby two landers, each capable of landing approximately 40 t of useful payload on the surface, would be utilized to support a crew of six for 500 days on the surface of Mars.\"",
+ "created": "2026-11-23 21:09:58"
+}

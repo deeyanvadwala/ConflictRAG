@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.49,
+ "output": "According to [5], NASA's Mars DRA 5.0 uses a surface fission power system, and it provides 300 kWe of power, not 30 kWe as previously misprinted.",
+ "created": "2026-11-23 20:38:30"
+}

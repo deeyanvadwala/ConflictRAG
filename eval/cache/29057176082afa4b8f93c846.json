@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.7,
+ "output": "{\n  \"reference_facts\": \"Nuclear thermal propulsion (NERVA-derivative engines) in the trans-Mars injection stage\",\n  \"answer_facts\": \"nuclear thermal TMI (Trans-Mars Injection) stage\",\n  \"correctness\": \"partial\"\n}",
+ "created": "2026-11-23 20:50:26"
+}

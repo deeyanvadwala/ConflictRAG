@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.38,
+ "output": "{\n  \"reference_facts\": \"160 kWe each (primary and backup reactor)\",\n  \"answer_facts\": \"160 kWe (kilowatts of electrical power)\",\n  \"correctness\": \"partial\"\n}",
+ "created": "2026-11-23 20:50:53"
+}

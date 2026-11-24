@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.46,
+ "output": "{\n  \"answers\": true,\n  \"value\": \"mid-November 2009\",\n  \"number\": null,\n  \"unit\": null,\n  \"describes\": \"the first crew of six will depart for Mars in the Version 1.0 Reference Mission\",\n  \"quote\": \"The first crew of six will depart for Mars in mid-November 2009.\"\n}",
+ "created": "2026-11-20 22:34:03"
+}

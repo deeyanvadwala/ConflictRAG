@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.69,
+ "output": "{\n  \"answers\": true,\n  \"value\": \"450-550 days\",\n  \"number\": 475,\n  \"unit\": \"days\",\n  \"describes\": \"DRA 5.0\",\n  \"quote\": \"450-550 days are spent at Mars.\"\n}",
+ "created": "2026-11-20 22:40:43"
+}

@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 7.58,
+ "output": "{\n  \"reference_facts\": \"six crewmembers, DRA 5.0, 2010 paper; four crew members, Evolvable Mars Campaign, 2015; two crew members, initial short mission\",\n  \"answer_facts\": \"six crew members, DRA 5.0, minimum of three consecutive opportunities\",\n  \"correctness\": \"partial\"\n}",
+ "created": "2026-11-23 20:37:28"
+}

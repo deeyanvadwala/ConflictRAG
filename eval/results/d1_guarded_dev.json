@@ -1,0 +1,1105 @@
+{
+ "title": "d1_guarded / dev (30 questions; ollama llama3.1:8b, judge v2, retrieval study_pool_rerank, prompt guarded, conflict check off, k=5, 1500/200 chunks)",
+ "metrics": {
+  "hit@3": [
+   0.5,
+   24
+  ],
+  "hit@5": [
+   0.7083333333333334,
+   24
+  ],
+  "hit@10": [
+   0.7083333333333334,
+   24
+  ],
+  "MRR@10": [
+   0.4784722222222222,
+   24
+  ],
+  "conflict coverage@5": [
+   0.2857142857142857,
+   7
+  ],
+  "correct (answerable)": [
+   0.375,
+   24
+  ],
+  "correct or partial (answerable)": [
+   0.75,
+   24
+  ],
+  "faithful (answered)": [
+   0.95,
+   20
+  ],
+  "citation hits gold": [
+   0.4583333333333333,
+   24
+  ],
+  "invalid citations (answers with any)": [
+   0.0,
+   30
+  ],
+  "abstention accuracy (no-answer qs)": [
+   1.0,
+   6
+  ],
+  "false abstention (answerable)": [
+   0.16666666666666666,
+   24
+  ],
+  "conflict detection": [
+   0.0,
+   5
+  ],
+  "false-conflict rate (traps)": [
+   0.0,
+   2
+  ],
+  "stale answer (conflicting)": [
+   0.2,
+   5
+  ],
+  "median LLM latency s": [
+   4.925,
+   30
+  ]
+ },
+ "rows": [
+  {
+   "id": "cf01",
+   "tag": "conflicting",
+   "question": "How many astronauts does NASA plan to send to Mars on a human mission?",
+   "answer": "According to [4], NASA Design Reference Architecture 5.0 (DRA 5.0) envisions sending six crew members to Mars on a minimum of three consecutive opportunities.",
+   "retrieved": [
+    "20140016934_0005",
+    "19980037039_0237",
+    "20160003093_0043",
+    "20090012109_0009",
+    "20090040343_0027",
+    "20110005558_0009",
+    "19980037039_0048",
+    "20090010571_0003",
+    "20160006315_0015",
+    "19980037039_0043"
+   ],
+   "gold_rank": 1,
+   "conflict_covered@5": true,
+   "cited": [
+    4
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": true,
+    "correctness": "partial",
+    "stated_values": [
+     1
+    ],
+    "faithful": true
+   },
+   "latency_s": 4.33,
+   "conflict_check": null
+  },
+  {
+   "id": "cf04",
+   "tag": "conflicting",
+   "question": "When does the first crew leave Earth for Mars in the Version 1.0 Reference Mission?",
+   "answer": "According to [3], the first crew leaves Earth for Mars in the second opportunity, but the exact date is not specified. However, it is mentioned that the crew departs after the two cargo missions have been launched, and they are sent on a fast transfer trajectory of only 180 days.\n\nIn [1], it is stated that the first crew of six departs for Mars in mid-November 2009, but this is not consistent with the information in [3]. \n\nTherefore, the answer is that the first crew leaves Earth for Mars in the second opportunity, but the exact date is not specified in the provided sources.",
+   "retrieved": [
+    "19980037039_0237",
+    "19980037039_0048",
+    "19980218778_0016",
+    "20090040343_0030",
+    "19980037039_0242",
+    "20090012109_0008",
+    "20090040343_0036",
+    "19980037039_0046",
+    "19980037039_0143",
+    "19980218778_0019"
+   ],
+   "gold_rank": 1,
+   "conflict_covered@5": true,
+   "cited": [
+    1,
+    3
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "incorrect",
+    "faithful": null
+   },
+   "latency_s": 6.32,
+   "conflict_check": null
+  },
+  {
+   "id": "cf06",
+   "tag": "conflicting",
+   "question": "How many days does the DRA 5.0 crew spend at Mars?",
+   "answer": "According to [2], the DRA 5.0 crew spends 450-550 days at Mars.",
+   "retrieved": [
+    "19980218778_0051",
+    "20160006315_0025",
+    "19980037039_0237",
+    "20090040343_0041",
+    "20160006315_0012",
+    "20120012929_0000",
+    "20090040343_0048",
+    "20090010571_0005",
+    "20140016934_0005",
+    "20090012109_0008"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": false,
+   "cited": [
+    2
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "partial",
+    "stated_values": [
+     1,
+     2
+    ],
+    "faithful": true
+   },
+   "latency_s": 3.76,
+   "conflict_check": null
+  },
+  {
+   "id": "cf07",
+   "tag": "conflicting",
+   "question": "How has the planned crew size for a human Mars mission changed from the 1997 Reference Mission to the 2015 Evolvable Mars Campaign?",
+   "answer": "Unfortunately, the provided sources do not explicitly state the planned crew size for the 2015 Evolvable Mars Campaign. However, we can infer some information from [4], which discusses the mass associated with a Mars mission and how it scales with crew size.\n\nAccording to [4], the mass associated with a Mars mission does not scale linearly with the size of the crew. The document compares the mass of missions with different crew sizes, including four and six crew members, and notes that changes in crew size have a relatively small impact on the overall mass of the mission.\n\nWhile we cannot determine the exact planned crew size for the 2015 Evolvable Mars Campaign, we can conclude that the crew size is likely to be similar to or slightly larger than the four or six crew members considered in [4].\n\nIt's worth noting that the 1997 Reference Mission is not explicitly mentioned in [4], but the document does discuss the Evolvable Mars Campaign, which is a follow-up to the Reference Mission. Therefore, we can assume that the crew size for the Evolvable Mars Campaign is similar to or slightly larger than the crew sizes considered in [4].",
+   "retrieved": [
+    "19980037039_0000",
+    "19980218778_0059",
+    "19980218778_0042",
+    "20160003093_0021",
+    "19980218778_0025",
+    "19980218778_0026",
+    "19980218778_0013",
+    "19980218778_0057",
+    "19980037039_0176",
+    "20160006315_0054"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": false,
+   "cited": [
+    4
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "incorrect",
+    "faithful": null
+   },
+   "latency_s": 8.7,
+   "conflict_check": null
+  },
+  {
+   "id": "dra01",
+   "tag": "easy",
+   "question": "What kind of surface power system does NASA's Mars DRA 5.0 use, and how many kilowatts does it provide?",
+   "answer": "According to source [2], NASA's Mars DRA 5.0 uses a nuclear power plant as its surface power system. The power plant is used to supply power for the systems on the Martian surface, including the habitat, rovers, and robotic rovers. The document does not specify the exact amount of power provided by the nuclear power plant, but it mentions that the power for these systems would be supplied by the nuclear power plant that would be previously deployed with the decent-ascent vehicle.",
+   "retrieved": [
+    "20160006315_0011",
+    "20090040343_0066",
+    "20120012928_0013",
+    "20160006315_0010",
+    "20160006315_0044",
+    "20120012929_0000",
+    "20160006315_0012",
+    "20120012928_0000",
+    "20090040343_0051",
+    "20090040343_0077"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [
+    2
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "incorrect",
+    "faithful": true
+   },
+   "latency_s": 5.35,
+   "conflict_check": null
+  },
+  {
+   "id": "dra02",
+   "tag": "easy",
+   "question": "How many nuclear thermal rocket engines are on the DRA 5.0 core propulsion stage, and what thrust and specific impulse does each have?",
+   "answer": "According to [1], the DRA 5.0 core propulsion stage has three 25 klbf (111 kN) NTR engines, each with a specific impulse of ~900 - 910 s.",
+   "retrieved": [
+    "20120012928_0000",
+    "20090040343_0052",
+    "20090040343_0051",
+    "20090040343_0050",
+    "20120012928_0013",
+    "20090040343_0049",
+    "20160003093_0075",
+    "20160003093_0068",
+    "20120012928_0014",
+    "20120012928_0002"
+   ],
+   "gold_rank": 5,
+   "conflict_covered@5": null,
+   "cited": [
+    1
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "partial",
+    "faithful": true
+   },
+   "latency_s": 4.5,
+   "conflict_check": null
+  },
+  {
+   "id": "dra03",
+   "tag": "easy",
+   "question": "For a crewed mission to the moons of Mars studied as part of DRA 5.0, how long would the whole trip take and how much time would the crew get to explore Phobos?",
+   "answer": "According to [4], for a crewed mission to Phobos as part of DRA 5.0, the total flight time would vary between 598 and 672 days, with less than 30 days available for Phobos exploration.",
+   "retrieved": [
+    "20090040343_0041",
+    "20160006315_0025",
+    "20160006315_0023",
+    "20110005558_0012",
+    "20160006315_0043",
+    "20160003093_0063",
+    "20160003093_0062",
+    "20160006315_0012",
+    "20160006315_0033",
+    "20150006952_0005"
+   ],
+   "gold_rank": 4,
+   "conflict_covered@5": null,
+   "cited": [
+    4
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": true
+   },
+   "latency_s": 5.67,
+   "conflict_check": null
+  },
+  {
+   "id": "dra07",
+   "tag": "multi-step",
+   "question": "According to the 2010 IEEE DRA 5.0 paper, how many Ares V launches in total are needed for the nuclear thermal rocket option (both cargo vehicles plus the crew vehicle)?",
+   "answer": "According to the 2010 IEEE DRA 5.0 paper [5], the total number of Ares V launches needed for the nuclear thermal rocket option is 9. This is stated in the following sentence:\n\n\"Nine Ares-V launches -- five for the two cargo MTVs and four for the crewed MTV -- deliver the key components for the three MTVs.\"\n\nThis is also consistent with the information provided in the other sources, which mention that 5 Ares-V launches are needed for the two cargo vehicles and 4 Ares-V launches are needed for the crewed vehicle.",
+   "retrieved": [
+    "20120012928_0001",
+    "20120012928_0002",
+    "20090040343_0052",
+    "20090040343_0029",
+    "20120012928_0000",
+    "20120012928_0018",
+    "20120012928_0014",
+    "20090040343_0034",
+    "20110005558_0010",
+    "20090010571_0025"
+   ],
+   "gold_rank": 3,
+   "conflict_covered@5": null,
+   "cited": [
+    5
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": true
+   },
+   "latency_s": 6.01,
+   "conflict_check": null
+  },
+  {
+   "id": "dra08",
+   "tag": "multi-step",
+   "question": "For the DRA 5.0 Commuter surface option, roughly how much mass would choosing nuclear fission power save compared with a solar power system?",
+   "answer": "According to [4], for the DRA 5.0 Commuter surface option, the mass of the solar based system was over 22,000 kg for a 25 kWe system, while the nuclear power system mass was approximately 8,000 kg for a 30 kWe system. This means that choosing nuclear fission power would save roughly 14,000 kg (22,000 kg - 8,000 kg) compared with a solar power system.",
+   "retrieved": [
+    "20120012928_0000",
+    "20120012929_0000",
+    "20090040343_0041",
+    "20120012929_0023",
+    "20090010571_0005",
+    "20090040343_0075",
+    "20090010571_0021",
+    "20160006315_0043",
+    "20160006315_0011",
+    "20090040343_0040"
+   ],
+   "gold_rank": 4,
+   "conflict_covered@5": null,
+   "cited": [
+    4
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": true
+   },
+   "latency_s": 5.9,
+   "conflict_check": null
+  },
+  {
+   "id": "dra09",
+   "tag": "multi-step",
+   "question": "In the chemical-propulsion human Mars orbit/Phobos mission, how many days in total would the crew spend traveling to and from Mars?",
+   "answer": "According to [4], the chemical-propulsion human Mars orbit/Phobos mission has a crew transit time of approximately 250 days out to Mars and 360 days back to Earth. Therefore, the total time the crew would spend traveling to and from Mars would be 250 + 360 = 610 days.",
+   "retrieved": [
+    "20160003093_0065",
+    "20160003093_0063",
+    "19980037039_0041",
+    "20110005558_0008",
+    "20160006315_0051",
+    "19980037039_0224",
+    "20150006952_0005",
+    "20160003093_0062",
+    "20160003093_0086",
+    "20160006315_0013"
+   ],
+   "gold_rank": 4,
+   "conflict_covered@5": null,
+   "cited": [
+    4
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": true
+   },
+   "latency_s": 47.05,
+   "conflict_check": null
+  },
+  {
+   "id": "emc01",
+   "tag": "easy",
+   "question": "In the Evolvable Mars Campaign surface operations study, what specific impulse does the Mars Ascent Vehicle's rocket engine deliver?",
+   "answer": "According to [2], the Mars Ascent Vehicle's rocket engine delivers an average specific impulse of 379 seconds throughout the MAV flight regime.",
+   "retrieved": [
+    "20140016934_0020",
+    "19980037039_0281",
+    "19980037039_0280",
+    "20160006315_0009",
+    "20140016934_0019",
+    "19980218778_0075",
+    "19980218778_0048",
+    "20120012928_0002",
+    "20140016934_0000",
+    "20160003093_0069"
+   ],
+   "gold_rank": 1,
+   "conflict_covered@5": null,
+   "cited": [
+    2
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "incorrect",
+    "faithful": true
+   },
+   "latency_s": 3.82,
+   "conflict_check": null
+  },
+  {
+   "id": "emc02",
+   "tag": "easy",
+   "question": "How much power was the SEP cargo stage in the SEP-Chem Evolvable Mars Campaign architecture assumed to supply to its electric propulsion thrusters?",
+   "answer": "According to [1], the SEP cargo stage in the SEP-Chem Evolvable Mars Campaign architecture was assumed to supply 150 kW of power to its electric propulsion thrusters.\n\nAdditionally, [2] states that the power to the EP system is 150 kW, with a power level that decreases with distance from the Sun, specifically 1/R^2 for R>1AU.\n\n[3] also mentions that the SEP cargo analysis examined performance to Mars as a function of thruster power levels starting from the 40 kW ARRM power upward to 300 kW, but the SEP stage in the SEP-Chem Evolvable Mars Campaign architecture was specifically assumed to supply 150 kW of power.\n\n[4] and [5] do not provide information on the power level of the SEP cargo stage in the SEP-Chem Evolvable Mars Campaign architecture.",
+   "retrieved": [
+    "20150006952_0010",
+    "20150006952_0011",
+    "20150006952_0021",
+    "20150006952_0020",
+    "20090010571_0025",
+    "20150006952_0012",
+    "20150006952_0022",
+    "20150006952_0013",
+    "20150006952_0000",
+    "20120012928_0001"
+   ],
+   "gold_rank": 1,
+   "conflict_covered@5": null,
+   "cited": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "partial",
+    "faithful": true
+   },
+   "latency_s": 7.27,
+   "conflict_check": null
+  },
+  {
+   "id": "emc03",
+   "tag": "easy",
+   "question": "In the SEP-Chem architecture for the Evolvable Mars Campaign, in which orbit are the crew transfer habitat and propulsive elements assembled before Earth departure?",
+   "answer": "According to [1], the crew transfer habitat and propulsive elements are assembled in the Lunar Distant Retrograde Orbit (LDRO) before Earth departure.",
+   "retrieved": [
+    "20150006952_0007",
+    "20150006952_0006",
+    "20150006952_0031",
+    "20090040343_0032",
+    "20150006952_0004",
+    "20110005558_0014",
+    "20160003093_0092",
+    "20090040343_0037",
+    "20150006952_0008",
+    "20150006952_0009"
+   ],
+   "gold_rank": 1,
+   "conflict_covered@5": null,
+   "cited": [
+    1
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": true
+   },
+   "latency_s": 3.79,
+   "conflict_check": null
+  },
+  {
+   "id": "emc04",
+   "tag": "easy",
+   "question": "According to the 2015 comparison of Mars architectures, how long at most would the two-person crew spend on the Martian surface during the short-stay mission of JPL's Minimal Mars Architecture?",
+   "answer": "According to [5], for the short-stay surface missions, the crew would have less than 60 days for actual exploration on the Martian surface.",
+   "retrieved": [
+    "20160006315_0013",
+    "20160006315_0012",
+    "20160006315_0051",
+    "20150006952_0005",
+    "20160003093_0065",
+    "20160006315_0025",
+    "20160006315_0014",
+    "20160006315_0039",
+    "19980037039_0170",
+    "19980037039_0243"
+   ],
+   "gold_rank": 1,
+   "conflict_covered@5": null,
+   "cited": [
+    5
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "partial",
+    "faithful": true
+   },
+   "latency_s": 3.8,
+   "conflict_check": null
+  },
+  {
+   "id": "emc05",
+   "tag": "multi-step",
+   "question": "For the 2033 crew flight in the SEP-Chem Evolvable Mars Campaign study, how much of the total initial mass in space is not the transit habitat itself?",
+   "answer": "According to the sources, the total initial mass in space for the 2033 crew flight is 127t, and the mass of the transit habitat is 36.6t [1]. To find the mass of the transit habitat itself, we need to subtract the mass of the transit habitat from the total initial mass in space.\n\nMass of transit habitat = 36.6t\nTotal initial mass in space = 127t\n\nMass not the transit habitat itself = Total initial mass in space - Mass of transit habitat\n= 127t - 36.6t\n= 90.4t\n\nTherefore, 90.4t of the total initial mass in space is not the transit habitat itself.",
+   "retrieved": [
+    "20150006952_0029",
+    "20150006952_0030",
+    "19980218778_0071",
+    "20150006952_0028",
+    "20160003093_0018",
+    "20160003093_0080",
+    "20160003093_0021",
+    "20160003093_0016",
+    "20120012928_0008",
+    "19980218778_0070"
+   ],
+   "gold_rank": 1,
+   "conflict_covered@5": null,
+   "cited": [
+    1
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": true
+   },
+   "latency_s": 6.36,
+   "conflict_check": null
+  },
+  {
+   "id": "emc06",
+   "tag": "multi-step",
+   "question": "In the Evolvable Mars Campaign surface study, what is the combined thrust of the Mars Ascent Vehicle's first stage?",
+   "answer": "Unfortunately, the provided sources do not mention the combined thrust of the Mars Ascent Vehicle's first stage. The sources discuss various aspects of the Evolvable Mars Campaign, including propulsion systems, engine development, and mission architectures, but do not provide specific information on the thrust of the Mars Ascent Vehicle's first stage.\n\nHowever, source [4] mentions that the common descent stage, which is used to deliver the ascent vehicle, employs four RL10-class engines modified to burn LOX/CH4. The RL10 engine has a thrust of approximately 110,000 pounds-force (lbf) [1]. Assuming that the four engines are used in parallel, the combined thrust would be approximately 440,000 lbf. However, this is not the thrust of the Mars Ascent Vehicle's first stage, but rather the thrust of the common descent stage.\n\nTherefore, I must answer that the information is not available in the provided sources.",
+   "retrieved": [
+    "20140016934_0019",
+    "20160006315_0009",
+    "20160006315_0003",
+    "19980037039_0062",
+    "20160006315_0007",
+    "20160006315_0008",
+    "19980218778_0077",
+    "19980037039_0238",
+    "20140016934_0000",
+    "20150006952_0001"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [
+    1,
+    4
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "incorrect",
+    "faithful": null
+   },
+   "latency_s": 7.2,
+   "conflict_check": null
+  },
+  {
+   "id": "fc01",
+   "tag": "false-conflict",
+   "question": "DRA 5.0 plans about 500 days on Mars and the Evolvable Mars Campaign plans up to 500 sols. Is that a contradiction between the two studies?",
+   "answer": "No, it is not a contradiction between the two studies. \n\nThe DRA 5.0 study [1] plans for a \"long surface stay (~500 days)\" on Mars, which is a specific duration in Earth days. \n\nThe Evolvable Mars Campaign (EMC) study [4] plans for \"up to 500 sols\" on the Martian surface. Since a sol is a Martian day, which is slightly longer than an Earth day, 500 sols is equivalent to approximately 520-540 Earth days. \n\nTherefore, the two studies are consistent in planning for a surface stay of approximately 500 days on Mars.",
+   "retrieved": [
+    "20120012928_0000",
+    "20140016934_0005",
+    "20160006315_0012",
+    "20140016934_0000",
+    "20160006315_0025",
+    "20120012929_0000",
+    "20160006315_0004",
+    "20090040343_0041",
+    "20160006315_0023",
+    "20160003093_0011"
+   ],
+   "gold_rank": 2,
+   "conflict_covered@5": false,
+   "cited": [
+    1,
+    4
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": true
+   },
+   "latency_s": 6.04,
+   "conflict_check": null
+  },
+  {
+   "id": "fc03",
+   "tag": "false-conflict",
+   "question": "Does the 2015 comparison of Mars architectures agree with the 2010 DRA 5.0 paper about DRA 5.0's crew size?",
+   "answer": "According to [2], the 2015 comparison of Mars architectures states that DRA 5.0 specifies a crew size of six, all of whom descend to the surface for long-stay exploration. This is consistent with the 2010 DRA 5.0 paper [5], which also states that the rationale for a crew of six has been judged to be a reasonable compromise between the skill mix and level of effort for missions of this complexity and duration.\n\nTherefore, the 2015 comparison of Mars architectures agrees with the 2010 DRA 5.0 paper about DRA 5.0's crew size.",
+   "retrieved": [
+    "20120012928_0000",
+    "20160006315_0038",
+    "20140016934_0005",
+    "20120012929_0000",
+    "20090040343_0027",
+    "20160006315_0025",
+    "20160006315_0012",
+    "20160006315_0004",
+    "20160003093_0042",
+    "20160006315_0043"
+   ],
+   "gold_rank": 5,
+   "conflict_covered@5": false,
+   "cited": [
+    2,
+    5
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": true
+   },
+   "latency_s": 5.7,
+   "conflict_check": null
+  },
+  {
+   "id": "mk01",
+   "tag": "model-knows",
+   "question": "When did NASA's Perseverance rover land on Mars?",
+   "answer": "The sources provided do not mention the Perseverance rover or its landing date on Mars. They appear to be related to NASA's plans and proposals for sending humans to Mars in the past, including the Evolvable Mars Campaign and the Inspiration Mars Foundation's flyby mission proposal.",
+   "retrieved": [
+    "19980037039_0237",
+    "20140016934_0004",
+    "20160006315_0014",
+    "19980037039_0235",
+    "19980218778_0016",
+    "20160006315_0016",
+    "20160006315_0015",
+    "20160003093_0043",
+    "20160006315_0017",
+    "20090040343_0082"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [],
+   "invalid_citations": [],
+   "cited_gold": null,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": null
+   },
+   "latency_s": 4.38,
+   "conflict_check": null
+  },
+  {
+   "id": "mk04",
+   "tag": "model-knows",
+   "question": "What is the name of the lunar-orbit station NASA plans to use as a stepping stone toward Mars?",
+   "answer": "The text does not mention the name of the lunar-orbit station that NASA plans to use as a stepping stone toward Mars. However, it does mention \"cis-lunar space destinations\" [1], which refers to the region of space between the Earth and the Moon. It also mentions \"lunar orbit\" [3] as a destination for future missions, but it does not specify a particular station or facility.\n\nIt's worth noting that the text does mention the International Space Station (ISS) [2] as a platform for conducting research and development for future human exploration missions, but it does not mention a specific lunar-orbit station.",
+   "retrieved": [
+    "20140016934_0004",
+    "20090040343_0001",
+    "20110005558_0002",
+    "20160006315_0014",
+    "20150006952_0000",
+    "20160006315_0003",
+    "20160006315_0015",
+    "20160003093_0008",
+    "20160006315_0011",
+    "20160006315_0012"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [
+    1,
+    2,
+    3
+   ],
+   "invalid_citations": [],
+   "cited_gold": null,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": null
+   },
+   "latency_s": 5.76,
+   "conflict_check": null
+  },
+  {
+   "id": "mk05",
+   "tag": "model-knows",
+   "question": "When did the first powered helicopter flight on Mars take place?",
+   "answer": "There is no information in the provided sources about the first powered helicopter flight on Mars. The sources discuss various aspects of Mars exploration, including mission plans, spacecraft design, and human exploration concepts, but do not mention a powered helicopter flight.",
+   "retrieved": [
+    "19980218778_0016",
+    "19980037039_0237",
+    "20090010571_0023",
+    "20090012109_0009",
+    "20160006315_0016",
+    "19980037039_0270",
+    "20090010571_0022",
+    "19980218778_0055",
+    "20160006315_0017",
+    "19980218778_0017"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [],
+   "invalid_citations": [],
+   "cited_gold": null,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": null
+   },
+   "latency_s": 4.24,
+   "conflict_check": null
+  },
+  {
+   "id": "rm01",
+   "tag": "easy",
+   "question": "How many astronauts make up each crew in the 1997 NASA Mars Reference Mission (SP-6107)?",
+   "answer": "According to [2], the nominal crew size for the 1997 NASA Mars Reference Mission (SP-6107) is six.",
+   "retrieved": [
+    "20140016934_0034",
+    "19980037039_0054",
+    "19980218778_0013",
+    "19980218778_0012",
+    "19980218778_0082",
+    "20120012929_0025",
+    "19980037039_0000",
+    "19980218778_0057",
+    "19980218778_0002",
+    "19980037039_0237"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [
+    2
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "partial",
+    "faithful": true
+   },
+   "latency_s": 3.68,
+   "conflict_check": null
+  },
+  {
+   "id": "rm02",
+   "tag": "conflicting",
+   "question": "How long do astronauts stay on the Martian surface in NASA's Version 1.0 Mars Reference Mission?",
+   "answer": "According to [2], in NASA's Version 1.0 Mars Reference Mission, the crew stays on the Martian surface for 500 days.",
+   "retrieved": [
+    "20160003093_0062",
+    "19980218778_0016",
+    "20150006952_0005",
+    "20160003093_0087",
+    "19980037039_0160",
+    "20160006315_0025",
+    "20160006315_0051",
+    "19980037039_0085",
+    "20140016934_0005",
+    "19980037039_0050"
+   ],
+   "gold_rank": 2,
+   "conflict_covered@5": false,
+   "cited": [
+    2
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "partial",
+    "stated_values": [
+     2
+    ],
+    "faithful": false
+   },
+   "latency_s": 3.73,
+   "conflict_check": null
+  },
+  {
+   "id": "rm03",
+   "tag": "easy",
+   "question": "What kind of propulsion does the 1997 Reference Mission use to send its spacecraft from Earth orbit toward Mars?",
+   "answer": "According to [1], the 1997 Reference Mission uses a nuclear thermal TMI (Trans-Mars Injection) stage to send its spacecraft from Earth orbit toward Mars.",
+   "retrieved": [
+    "19980218778_0059",
+    "20160006315_0009",
+    "19980037039_0000",
+    "20160003093_0078",
+    "19980218778_0058",
+    "19980218778_0021",
+    "19980218778_0042",
+    "19980037039_0092",
+    "20160003093_0053",
+    "19980218778_0083"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [
+    1
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "partial",
+    "faithful": true
+   },
+   "latency_s": 3.8,
+   "conflict_check": null
+  },
+  {
+   "id": "rm04",
+   "tag": "easy",
+   "question": "How much electrical power can each surface nuclear reactor produce in the 1997 Mars Reference Mission?",
+   "answer": "According to [1], each surface nuclear reactor in the 1997 Mars Reference Mission can produce 160 kWe (kilowatts of electrical power).",
+   "retrieved": [
+    "19980037039_0064",
+    "19980037039_0092",
+    "19980218778_0066",
+    "19980037039_0046",
+    "19980037039_0287",
+    "20120012928_0013",
+    "19980218778_0031",
+    "19980218778_0057",
+    "20090040343_0067",
+    "19980218778_0080"
+   ],
+   "gold_rank": 1,
+   "conflict_covered@5": null,
+   "cited": [
+    1
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "partial",
+    "faithful": true
+   },
+   "latency_s": 3.98,
+   "conflict_check": null
+  },
+  {
+   "id": "rm05",
+   "tag": "easy",
+   "question": "What payload-to-orbit capability was the launch vehicle required to have in Mars Reference Mission Version 3.0?",
+   "answer": "According to [1], the launch vehicle was required to have a payload capability of 80 metric tons to minimize on-orbit assembly costs and meet payload size requirements.\n\nSource: [1] (document 19980218778, pages 26-27)",
+   "retrieved": [
+    "19980218778_0035",
+    "19980218778_0053",
+    "20120012928_0026",
+    "19980218778_0042",
+    "19980218778_0052",
+    "19980218778_0008",
+    "19980037039_0253",
+    "19980218778_0043",
+    "19980037039_0056",
+    "19980218778_0069"
+   ],
+   "gold_rank": 1,
+   "conflict_covered@5": null,
+   "cited": [
+    1
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": true
+   },
+   "latency_s": 4.36,
+   "conflict_check": null
+  },
+  {
+   "id": "rm08",
+   "tag": "multi-step",
+   "question": "How many nuclear engines does the piloted trans-Mars injection stage use in the 1997 Reference Mission compared with Reference Mission Version 3.0?",
+   "answer": "The question is not directly answerable based on the provided sources. The sources do not mention the number of nuclear engines used in the piloted trans-Mars injection stage for either the 1997 Reference Mission or Reference Mission Version 3.0.\n\nHowever, we can infer some information from the sources. The 1997 Reference Mission is not explicitly mentioned in the sources, but Reference Mission Version 3.0 is discussed in detail. The sources do not provide information on the number of nuclear engines used in the piloted trans-Mars injection stage for Reference Mission Version 3.0.\n\nSource [5] mentions that the TMI stage uses a \"2-perigee burn\" Earth departure scenario, but it does not mention the number of nuclear engines used. Source [3] mentions that the TEI stage uses two RL10-class engines modified to burn LOX/CH4, but it does not mention the number of engines used in the piloted trans-Mars injection stage.\n\nTherefore, based on the provided sources, we cannot determine the number of nuclear engines used in the piloted trans-Mars injection stage for either the 1997 Reference Mission or Reference Mission Version 3.0.",
+   "retrieved": [
+    "19980218778_0053",
+    "20120012928_0026",
+    "19980218778_0050",
+    "19980218778_0048",
+    "19980218778_0042",
+    "19980218778_0013",
+    "19980218778_0035",
+    "19980218778_0057",
+    "19980218778_0049",
+    "19980218778_0059"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [
+    3,
+    5
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "incorrect",
+    "faithful": null
+   },
+   "latency_s": 8.59,
+   "conflict_check": null
+  },
+  {
+   "id": "un01",
+   "tag": "unanswerable",
+   "question": "From which launch pad at Kennedy Space Center will the Evolvable Mars Campaign crew launch?",
+   "answer": "There is no information in the provided sources about the specific launch pad at Kennedy Space Center that will be used for the Evolvable Mars Campaign crew launch. The sources discuss the Evolvable Mars Campaign (EMC) and its various phases, challenges, and architecture, but do not provide details about the launch pad.",
+   "retrieved": [
+    "20160006315_0007",
+    "20160006315_0041",
+    "20160006315_0003",
+    "20150006952_0001",
+    "20140016934_0004",
+    "20160006315_0004",
+    "20160006315_0000",
+    "20160006315_0005",
+    "20140016934_0000",
+    "19980037039_0234"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [],
+   "invalid_citations": [],
+   "cited_gold": null,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": null
+   },
+   "latency_s": 4.5,
+   "conflict_check": null
+  },
+  {
+   "id": "un02",
+   "tag": "unanswerable",
+   "question": "What data rate in megabits per second does the DRA 5.0 Mars-to-Earth communication link provide?",
+   "answer": "There is no information in the provided sources about the data rate of the DRA 5.0 Mars-to-Earth communication link. The sources discuss various aspects of the Mars Design Reference Architecture 5.0, including mission objectives, propulsion systems, and surface mission scenarios, but do not mention data rates for communication links.",
+   "retrieved": [
+    "20160006315_0003",
+    "20160003093_0050",
+    "20090040343_0000",
+    "20160003093_0053",
+    "20090040343_0041",
+    "20120012928_0000",
+    "20160006315_0044",
+    "20090010571_0025",
+    "20160006315_0038",
+    "20090010571_0005"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [],
+   "invalid_citations": [],
+   "cited_gold": null,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": null
+   },
+   "latency_s": 4.48,
+   "conflict_check": null
+  },
+  {
+   "id": "un03",
+   "tag": "unanswerable",
+   "question": "How much does a ticket to Mars cost on the Mars One mission?",
+   "answer": "Unfortunately, the sources provided do not mention the cost of a ticket to Mars on the Mars One mission. The sources discuss various aspects of Mars missions, such as trajectory planning, mission architecture, and logistics, but do not provide information on ticket prices.\n\nSource [2] mentions that Mars One anticipates delivering food and other consumables to Mars, but it does not provide any information on ticket prices. Source [1] provides a table with mass breakdowns for a Mars mission, but it does not include any information on ticket prices.\n\nTherefore, I must answer that the cost of a ticket to Mars on the Mars One mission is not specified in the provided sources.",
+   "retrieved": [
+    "20150006952_0017",
+    "20160006315_0049",
+    "20090012109_0009",
+    "20090040343_0009",
+    "19980218778_0035",
+    "20090010571_0006",
+    "20160006315_0048",
+    "20120012928_0010",
+    "20090010571_0010",
+    "20160003093_0060"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [
+    1,
+    2
+   ],
+   "invalid_citations": [],
+   "cited_gold": null,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": null
+   },
+   "latency_s": 6.08,
+   "conflict_check": null
+  }
+ ]
+}

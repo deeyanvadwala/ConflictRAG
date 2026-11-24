@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.08,
+ "output": "Unfortunately, the sources provided do not mention the cost of a ticket to Mars on the Mars One mission. The sources discuss various aspects of Mars missions, such as trajectory planning, mission architecture, and logistics, but do not provide information on ticket prices.\n\nSource [2] mentions that Mars One anticipates delivering food and other consumables to Mars, but it does not provide any information on ticket prices. Source [1] provides a table with mass breakdowns for a Mars mission, but it does not include any information on ticket prices.\n\nTherefore, I must answer that the cost of a ticket to Mars on the Mars One mission is not specified in the provided sources.",
+ "created": "2026-11-23 20:52:51"
+}

@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.89,
+ "output": "According to [1], the power system that is sized to meet the ISRU consumable production requirements would have ample power available for crew outpost operations. The ISRU plant, which is making ascent stage O2 propellant, is the dominant power requirement at 25 kWe operating continuously. \n\nHowever, the document does not specify the exact number of sols for producing the ascent vehicle's oxygen propellant on Mars. It only mentions that the ISRU plant operates continuously at 25 kWe.",
+ "created": "2026-11-23 20:56:06"
+}

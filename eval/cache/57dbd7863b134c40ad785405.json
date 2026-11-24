@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.11,
+ "output": "According to [1], current human health and support data indicate that it may take the crew a few weeks to acclimate to the partial gravity of Mars after landing.",
+ "created": "2026-11-23 20:55:17"
+}

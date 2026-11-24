@@ -1,0 +1,60 @@
+# CI: unit tests on every push; a smoke eval that rebuilds the index from the NASA PDFs and
+# replays LLM outputs from the committed cache (no model runs in CI, no API keys needed).
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install (CPU-only torch)
+        run: |
+          pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt pytest
+      - name: Unit tests
+        run: python -m pytest -q
+
+  smoke:
+    needs: unit
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install (CPU-only torch)
+        run: |
+          pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt
+      - name: Cache NASA PDFs
+        uses: actions/cache@v4
+        with:
+          path: data/raw
+          key: pdfs-${{ hashFiles('data/corpus_manifest.csv') }}
+      - name: Cache Hugging Face models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-${{ hashFiles('config.yaml') }}
+      - name: Build corpus and index
+        run: |
+          python download.py
+          python manifest.py
+          python ingest.py
+          python index.py
+      - name: Smoke eval (replay from cache, thresholds)
+        env:
+          CONFLICTRAG_OFFLINE: "1"
+        run: python eval/smoke.py

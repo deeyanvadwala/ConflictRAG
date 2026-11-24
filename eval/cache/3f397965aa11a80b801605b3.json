@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.39,
+ "output": "{\n  \"answers\": true,\n  \"value\": \"up to 500 sols\",\n  \"number\": 500,\n  \"unit\": \"sols\",\n  \"describes\": \"the Evolvable Mars Campaign\",\n  \"quote\": \"The goal of this single site approach to Mars surface infrastructure is to enable “Steady State” operations by at least 4 crew for up to 500 sols at this site.\"\n}",
+ "created": "2026-11-20 22:42:04"
+}

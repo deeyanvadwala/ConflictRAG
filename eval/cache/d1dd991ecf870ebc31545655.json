@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.78,
+ "output": "{\n  \"answers\": true,\n  \"value\": \"up to 500 sols\",\n  \"number\": 500,\n  \"unit\": \"sols\",\n  \"describes\": \"Evolvable Mars Campaign\",\n  \"quote\": \"plans up to 500 sols\"\n}",
+ "created": "2026-11-20 22:42:08"
+}

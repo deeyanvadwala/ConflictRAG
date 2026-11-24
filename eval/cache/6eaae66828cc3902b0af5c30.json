@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.96,
+ "output": "There is no mention of life insurance for DRA 5.0 crew members in the provided sources. The sources discuss various aspects of the DRA 5.0 mission, including mission architecture, propulsion systems, power requirements, and crew size, but do not mention life insurance.",
+ "created": "2026-11-23 20:59:46"
+}

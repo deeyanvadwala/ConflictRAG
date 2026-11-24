@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.19,
+ "output": "{\n  \"answers\": true,\n  \"value\": \"500 to 600 days\",\n  \"number\": 550,\n  \"unit\": \"days\",\n  \"describes\": \"the Reference Mission philosophy\",\n  \"quote\": \"Define a robust planetary surface exploration capacity capable of safely and productively supporting crews on the surface of Mars for 500 to 600 days each mission.\"\n}",
+ "created": "2026-11-20 22:43:24"
+}

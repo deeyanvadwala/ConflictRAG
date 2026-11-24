@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.24,
+ "output": "There is no information in the provided sources about the first powered helicopter flight on Mars. The sources discuss various aspects of Mars exploration, including mission plans, spacecraft design, and human exploration concepts, but do not mention a powered helicopter flight.",
+ "created": "2026-11-23 20:49:14"
+}

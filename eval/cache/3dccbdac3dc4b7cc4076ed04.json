@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.44,
+ "output": "According to [4] (document 20090040343, pages 21-21), the ISRU plant, which is making ascent stage O2 propellant, is the dominant power requirement at 25 kWe operating continuously.",
+ "created": "2026-11-23 21:10:03"
+}

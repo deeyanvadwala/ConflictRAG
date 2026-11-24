@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.82,
+ "output": "According to [1], the surface fission power figure for DRA 5.0 was misprinted in the original report, and the correct value is 300 kWe, not 30 kWe. Therefore, NASA's Mars DRA 5.0 uses a nuclear power system, and it provides 300 kilowatts of power.",
+ "created": "2026-11-23 20:38:27"
+}

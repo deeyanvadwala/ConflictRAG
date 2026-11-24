@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.8,
+ "output": "According to [5], for the short-stay surface missions, the crew would have less than 60 days for actual exploration on the Martian surface.",
+ "created": "2026-11-23 20:46:10"
+}

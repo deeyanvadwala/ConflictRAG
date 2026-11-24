@@ -1,0 +1,547 @@
+{
+ "title": "final / test (14 questions; ollama llama3.1:8b, judge v2, retrieval study_pool_rerank, prompt guarded, conflict check off, k=5, 1500/200 chunks)",
+ "metrics": {
+  "hit@3": [
+   0.4,
+   10
+  ],
+  "hit@5": [
+   0.6,
+   10
+  ],
+  "hit@10": [
+   0.7,
+   10
+  ],
+  "MRR@10": [
+   0.3476190476190476,
+   10
+  ],
+  "conflict coverage@5": [
+   0.0,
+   3
+  ],
+  "correct (answerable)": [
+   0.3,
+   10
+  ],
+  "correct or partial (answerable)": [
+   0.5,
+   10
+  ],
+  "faithful (answered)": [
+   1.0,
+   9
+  ],
+  "citation hits gold": [
+   0.4,
+   10
+  ],
+  "invalid citations (answers with any)": [
+   0.0,
+   14
+  ],
+  "abstention accuracy (no-answer qs)": [
+   1.0,
+   4
+  ],
+  "false abstention (answerable)": [
+   0.1,
+   10
+  ],
+  "conflict detection": [
+   0.0,
+   2
+  ],
+  "false-conflict rate (traps)": [
+   0.0,
+   1
+  ],
+  "stale answer (conflicting)": [
+   0.0,
+   2
+  ],
+  "median LLM latency s": [
+   5.23,
+   14
+  ]
+ },
+ "rows": [
+  {
+   "id": "cf03",
+   "tag": "conflicting",
+   "question": "How many heavy-lift launches does the DRA 5.0 architecture require?",
+   "answer": "According to [3], the DRA 5.0 architecture requires 3 heavy-lift launches: \n\n1. Ares-V heavy lift launch for the cargo lander\n2. Ares-V heavy lift launch for the habitat lander\n3. Ares-V heavy lift launch for the crewed Mars transfer vehicle (MTV)",
+   "retrieved": [
+    "20160006315_0043",
+    "20120012928_0000",
+    "20090040343_0041",
+    "20120012929_0000",
+    "20120012928_0013",
+    "20160003093_0045",
+    "20160003093_0052",
+    "20090040343_0030",
+    "20160006315_0031",
+    "20160006315_0032"
+   ],
+   "gold_rank": 7,
+   "conflict_covered@5": false,
+   "cited": [
+    3
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "incorrect",
+    "stated_values": [
+     1,
+     3
+    ],
+    "faithful": true
+   },
+   "latency_s": 5.45,
+   "conflict_check": null
+  },
+  {
+   "id": "cf05",
+   "tag": "conflicting",
+   "question": "What payload capability to low Earth orbit does the launch vehicle for the NASA Mars Reference Mission need?",
+   "answer": "According to [1], the launch vehicle for the NASA Mars Reference Mission needs a payload capability of 80 metric tons to low Earth orbit (LEO) to minimize on-orbit assembly costs and meet payload size requirements.",
+   "retrieved": [
+    "19980218778_0035",
+    "20120012928_0026",
+    "20120012928_0000",
+    "20160003093_0052",
+    "19980218778_0018",
+    "20090040343_0083",
+    "19980037039_0031",
+    "19980037039_0264",
+    "19980218778_0015",
+    "19980037039_0255"
+   ],
+   "gold_rank": 1,
+   "conflict_covered@5": false,
+   "cited": [
+    1
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "partial",
+    "stated_values": [
+     2
+    ],
+    "faithful": true
+   },
+   "latency_s": 4.99,
+   "conflict_check": null
+  },
+  {
+   "id": "dra04",
+   "tag": "easy",
+   "question": "According to NASA's DRA 5.0 Addendum #2, how much time should astronauts get to adjust to Mars gravity after landing before doing critical tasks?",
+   "answer": "According to [1], current human health and support data indicate that it may take the crew a few weeks to acclimate to the partial gravity of Mars after landing.",
+   "retrieved": [
+    "20090040343_0033",
+    "20160003093_0065",
+    "20160006315_0003",
+    "20160003093_0016",
+    "20160003093_0087",
+    "20140016934_0005",
+    "20160006315_0012",
+    "20160003093_0017",
+    "20160006315_0004",
+    "20140016934_0004"
+   ],
+   "gold_rank": 4,
+   "conflict_covered@5": null,
+   "cited": [
+    1
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "incorrect",
+    "faithful": true
+   },
+   "latency_s": 5.11,
+   "conflict_check": null
+  },
+  {
+   "id": "dra05",
+   "tag": "easy",
+   "question": "How long does the crew's one-way trip from Earth to Mars take in the DRA 5.0 reference mission?",
+   "answer": "According to [5], the crewed profile corresponds to the all-propulsive opportunity with transit times of 174 days outbound.",
+   "retrieved": [
+    "20090040343_0041",
+    "20160006315_0025",
+    "20160006315_0012",
+    "20120012929_0000",
+    "20090040343_0048",
+    "20160006315_0010",
+    "20160003093_0050",
+    "19980037039_0237",
+    "20140016934_0005",
+    "20110005558_0006"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [
+    5
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "partial",
+    "faithful": true
+   },
+   "latency_s": 4.23,
+   "conflict_check": null
+  },
+  {
+   "id": "dra06",
+   "tag": "easy",
+   "question": "How many sols does DRA 5.0 allow for producing the ascent vehicle's oxygen propellant on Mars?",
+   "answer": "According to [1], the power system that is sized to meet the ISRU consumable production requirements would have ample power available for crew outpost operations. The ISRU plant, which is making ascent stage O2 propellant, is the dominant power requirement at 25 kWe operating continuously. \n\nHowever, the document does not specify the exact number of sols for producing the ascent vehicle's oxygen propellant on Mars. It only mentions that the ISRU plant operates continuously at 25 kWe.",
+   "retrieved": [
+    "20090040343_0077",
+    "20140016934_0005",
+    "20160006315_0044",
+    "20110005558_0010",
+    "20160006315_0035",
+    "20160006315_0038",
+    "20090040343_0066",
+    "20160006315_0011",
+    "20090040343_0041",
+    "19980037039_0234"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [
+    1
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "incorrect",
+    "faithful": null
+   },
+   "latency_s": 5.89,
+   "conflict_check": null
+  },
+  {
+   "id": "emc07",
+   "tag": "multi-step",
+   "question": "Per the 2015 architecture comparison, what total landed payload capacity would the landers for JPL Minimal Mars Architecture's long-stay mission provide?",
+   "answer": "According to [4], the JPL Minimal Mars Architecture's long-stay mission would require a lander with a capacity of 23t.",
+   "retrieved": [
+    "20160006315_0013",
+    "20160006315_0014",
+    "20090040343_0033",
+    "20160006315_0035",
+    "20160006315_0045",
+    "20160006315_0012",
+    "20160006315_0037",
+    "20160006315_0038",
+    "20160003093_0051",
+    "20160003093_0083"
+   ],
+   "gold_rank": 1,
+   "conflict_covered@5": null,
+   "cited": [
+    4
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "incorrect",
+    "faithful": true
+   },
+   "latency_s": 4.3,
+   "conflict_check": null
+  },
+  {
+   "id": "fc02",
+   "tag": "false-conflict",
+   "question": "How much power does the DRA 5.0 ISRU oxygen plant need?",
+   "answer": "According to [2], the power that is required for the ISRU plant, which is making ascent stage O2 propellant, is 25 kWe operating continuously.",
+   "retrieved": [
+    "19980037039_0317",
+    "20090040343_0077",
+    "20090010571_0021",
+    "19980218778_0028",
+    "20110005558_0011",
+    "20120012929_0009",
+    "20090040343_0041",
+    "20090010571_0018",
+    "20140016934_0008",
+    "19980218778_0055"
+   ],
+   "gold_rank": 2,
+   "conflict_covered@5": false,
+   "cited": [
+    2
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": true
+   },
+   "latency_s": 4.91,
+   "conflict_check": null
+  },
+  {
+   "id": "mk02",
+   "tag": "model-knows",
+   "question": "Which crater did the Perseverance rover land in?",
+   "answer": "There is no information in the provided sources about the Perseverance rover landing in a specific crater. The sources discuss various aspects of Mars exploration, including the Mars DRA 5.0, the scientific exploration of Mars by humans, and different mission architectures, but do not mention the Perseverance rover or its landing site.",
+   "retrieved": [
+    "20090040343_0066",
+    "20090040343_0090",
+    "20090040343_0010",
+    "20160006315_0014",
+    "20090040343_0009",
+    "19980037039_0000",
+    "20160006315_0016",
+    "20160006315_0009",
+    "20090010571_0033",
+    "19980037039_0065"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [],
+   "invalid_citations": [],
+   "cited_gold": null,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": null
+   },
+   "latency_s": 5.35,
+   "conflict_check": null
+  },
+  {
+   "id": "mk03",
+   "tag": "model-knows",
+   "question": "What is the name of the SpaceX vehicle intended to carry people to Mars?",
+   "answer": "There is no mention of a SpaceX vehicle intended to carry people to Mars in the provided sources. The sources discuss various NASA architectures and vehicles, such as the Mars Ascent Vehicle (MAV), the Mars Descent Module (MDM), and the Mars Design Reference Architecture 5.0 (DRA 5.0), but none of them are associated with SpaceX.",
+   "retrieved": [
+    "20160006315_0009",
+    "20140016934_0020",
+    "20160006315_0012",
+    "20120012928_0001",
+    "20140016934_0019",
+    "20090012109_0009",
+    "19980218778_0059",
+    "19980218778_0061",
+    "19980037039_0237",
+    "20160006315_0015"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [],
+   "invalid_citations": [],
+   "cited_gold": null,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": null
+   },
+   "latency_s": 5.68,
+   "conflict_check": null
+  },
+  {
+   "id": "rm06",
+   "tag": "easy",
+   "question": "If something goes wrong on the way to Mars in the 1997 Reference Mission, where does the crew go as their safe haven abort option?",
+   "answer": "According to [4] (document 19980037039, pages 50-50), the crew's safe haven abort option is the Martian surface. The document states: \"An alternate strategy, and one that was selected for this Reference Mission, is to take advantage of the martian surface as a safe haven where open space, gravity, and radiation protection are naturally available.\" This is referred to as the \"abort to the surface\" strategy.",
+   "retrieved": [
+    "19980037039_0087",
+    "19980037039_0081",
+    "20090040343_0064",
+    "19980037039_0086",
+    "19980037039_0143",
+    "19980037039_0295",
+    "19980037039_0076",
+    "19980218778_0059",
+    "19980218778_0083",
+    "19980037039_0085"
+   ],
+   "gold_rank": 4,
+   "conflict_covered@5": null,
+   "cited": [
+    4
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": true
+   },
+   "latency_s": 5.79,
+   "conflict_check": null
+  },
+  {
+   "id": "rm09",
+   "tag": "multi-step",
+   "question": "By how many kilograms did the estimated ISRU plant mass drop between Reference Mission Version 1.0 and Version 3.0?",
+   "answer": "According to [3], the estimated ISRU plant mass for Reference Mission Version 1.0 was 4802 kg, and for Version 3.0 it was 3941 kg. Therefore, the estimated ISRU plant mass dropped by 961 kg between Reference Mission Version 1.0 and Version 3.0.",
+   "retrieved": [
+    "19980218778_0053",
+    "19980218778_0034",
+    "19980218778_0028",
+    "19980218778_0030",
+    "19980218778_0055",
+    "20090010571_0018",
+    "19980218778_0032",
+    "20120012928_0026",
+    "19980218778_0035",
+    "19980218778_0033"
+   ],
+   "gold_rank": 3,
+   "conflict_covered@5": null,
+   "cited": [
+    3
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "incorrect",
+    "faithful": true
+   },
+   "latency_s": 5.82,
+   "conflict_check": null
+  },
+  {
+   "id": "rm10",
+   "tag": "multi-step",
+   "question": "Across all the human missions planned in the 1997 NASA Reference Mission, how many people in total would be sent to Mars?",
+   "answer": "According to [1], the Reference Mission of the NASA Mars Exploration Study Team, the primary objectives for future human exploration of Mars include sending a crew to the planet. However, the exact number of people to be sent is not specified in this source.\n\nAccording to [2], the NASA Design Reference Architecture 5.0, which is a companion document to the Reference Mission, it is envisioned that six crew members will be sent to Mars on a minimum of three consecutive opportunities.\n\nTherefore, based on the information provided in [2], the total number of people to be sent to Mars across all the human missions planned in the 1997 NASA Reference Mission would be at least 18 (6 crew members per mission, with 3 missions).\n\nIt's worth noting that [2] does not provide a definitive answer to the question, but rather presents a design reference architecture that envisions sending six crew members to Mars on multiple missions.",
+   "retrieved": [
+    "19980037039_0000",
+    "20090040343_0027",
+    "20090012109_0009",
+    "19980218778_0012",
+    "19980218778_0013",
+    "19980218778_0083",
+    "20140016934_0005",
+    "19980037039_0366",
+    "19980218778_0074",
+    "20120012928_0010"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [
+    1,
+    2
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": true
+   },
+   "latency_s": 8.11,
+   "conflict_check": null
+  },
+  {
+   "id": "un04",
+   "tag": "unanswerable",
+   "question": "What life insurance is provided for DRA 5.0 crew members?",
+   "answer": "There is no mention of life insurance for DRA 5.0 crew members in the provided sources. The sources discuss various aspects of the DRA 5.0 mission, including mission architecture, propulsion systems, power requirements, and crew size, but do not mention life insurance.",
+   "retrieved": [
+    "20120012928_0000",
+    "20090040343_0041",
+    "20160006315_0038",
+    "20090040343_0027",
+    "20120012929_0000",
+    "20160006315_0025",
+    "20160006315_0040",
+    "20090040343_0066",
+    "20160006315_0024",
+    "20090040343_0057"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [],
+   "invalid_citations": [],
+   "cited_gold": null,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": null
+   },
+   "latency_s": 4.96,
+   "conflict_check": null
+  },
+  {
+   "id": "un05",
+   "tag": "unanswerable",
+   "question": "What salary will the astronauts on a DRA 5.0 mission be paid?",
+   "answer": "There is no information in the provided sources about the salary of the astronauts on a DRA 5.0 mission. The sources discuss various aspects of the mission, such as the architecture, propulsion systems, power requirements, and exploration strategy, but do not mention compensation or salaries for the astronauts.",
+   "retrieved": [
+    "20120012928_0000",
+    "20110005558_0010",
+    "20120012929_0000",
+    "20090040343_0027",
+    "20090040343_0041",
+    "20090040343_0066",
+    "20160006315_0038",
+    "20090040343_0000",
+    "20160006315_0037",
+    "20160006315_0031"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [],
+   "invalid_citations": [],
+   "cited_gold": null,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": null
+   },
+   "latency_s": 4.89,
+   "conflict_check": null
+  }
+ ]
+}

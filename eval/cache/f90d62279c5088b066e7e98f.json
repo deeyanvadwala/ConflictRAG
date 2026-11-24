@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.95,
+ "output": "{\n  \"reference_facts\": \"200-225 tonnes, 80 metric tons\",\n  \"answer_facts\": \"80 metric tons\",\n  \"correctness\": \"partial\"\n}",
+ "created": "2026-11-23 21:03:22"
+}

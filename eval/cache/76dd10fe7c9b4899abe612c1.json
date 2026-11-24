@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.48,
+ "output": "{\n  \"answers\": true,\n  \"value\": \"500 days\",\n  \"number\": 500,\n  \"unit\": \"days\",\n  \"describes\": \"the response of the crew to 500 days on the surface of Mars at 3/8-g gravity\",\n  \"quote\": \"The response of the crew to 500 days on the surface of Mars at 3/8-g gravity is unknown but thought to be beneficial compared to zero-g.\"\n}",
+ "created": "2026-11-20 22:43:19"
+}

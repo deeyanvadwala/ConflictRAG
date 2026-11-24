@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.35,
+ "output": "There is no information in the provided sources about the Perseverance rover landing in a specific crater. The sources discuss various aspects of Mars exploration, including the Mars DRA 5.0, the scientific exploration of Mars by humans, and different mission architectures, but do not mention the Perseverance rover or its landing site.",
+ "created": "2026-11-23 20:57:25"
+}

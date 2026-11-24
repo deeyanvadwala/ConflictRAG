@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.22,
+ "output": "{\n  \"reference_facts\": \"90.4 t\",\n  \"answer_facts\": \"90.4 t\",\n  \"correctness\": \"correct\"\n}",
+ "created": "2026-11-23 20:46:44"
+}

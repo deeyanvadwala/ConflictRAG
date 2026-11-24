@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.79,
+ "output": "According to [4] (document 19980037039, pages 50-50), the crew's safe haven abort option is the Martian surface. The document states: \"An alternate strategy, and one that was selected for this Reference Mission, is to take advantage of the martian surface as a safe haven where open space, gravity, and radiation protection are naturally available.\" This is referred to as the \"abort to the surface\" strategy.",
+ "created": "2026-11-23 20:58:26"
+}

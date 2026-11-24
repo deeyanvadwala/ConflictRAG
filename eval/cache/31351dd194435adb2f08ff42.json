@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.68,
+ "output": "According to [2], the nominal crew size for the 1997 NASA Mars Reference Mission (SP-6107) is six.",
+ "created": "2026-11-23 20:49:35"
+}

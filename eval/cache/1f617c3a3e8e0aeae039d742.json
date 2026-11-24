@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.94,
+ "output": "According to source [2], NASA's Mars DRA 5.0 uses a nuclear power plant to supply power for the surface systems. The power plant is used to make a portion of the ascent propellant and consumables, and it also provides power for the systems. However, the document does not specify the exact power output of the nuclear power plant.\n\nBut, according to source [3], a Photovoltaic Array (PVA) Primary Power System is sized for ~7 kWe at 1 A.U. and has a mass of ~455 kg and array area of ~25 m2. To supply 1 kWe at Mars requires ~10 m2 of array area.",
+ "created": "2026-11-23 20:37:26"
+}

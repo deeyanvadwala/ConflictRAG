@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.94,
+ "output": "According to the documents [1] and [4], if something goes wrong on the way to Mars in the 1997 Reference Mission, the crew's safe haven abort option is the Martian surface. The document states that \"An alternate strategy, and one that was selected for this Reference Mission, is to take advantage of the martian surface as a safe haven where open space, gravity, and radiation protection are naturally available.\" [1] and \"This approach places a greater burden on the entry, landing, and martian-based launch systems. However, the trade-off of making these systems a viable part of the abort strategy through increased redundancy and reliability versus the enhancements needed to sustain a crew through a 2- to 3-year interplanetary abort have tended to favor the abort to the surface strategy.\" [4]",
+ "created": "2026-11-23 21:10:21"
+}

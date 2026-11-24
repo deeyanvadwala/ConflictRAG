@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.38,
+ "output": "The sources provided do not mention the Perseverance rover or its landing date on Mars. They appear to be related to NASA's plans and proposals for sending humans to Mars in the past, including the Evolvable Mars Campaign and the Inspiration Mars Foundation's flyby mission proposal.",
+ "created": "2026-11-23 20:48:32"
+}

@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.82,
+ "output": "According to [2], the Mars Ascent Vehicle's rocket engine delivers an average specific impulse of 379 seconds throughout the MAV flight regime.",
+ "created": "2026-11-23 20:44:27"
+}

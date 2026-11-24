@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.81,
+ "output": "{\n  \"answers\": true,\n  \"value\": \"second opportunity\",\n  \"number\": null,\n  \"unit\": \"opportunity\",\n  \"describes\": \"Version 1.0 Reference Mission\",\n  \"quote\": \"The first crew of six departs for Mars in the second opportunity.\"\n}",
+ "created": "2026-11-20 22:40:12"
+}

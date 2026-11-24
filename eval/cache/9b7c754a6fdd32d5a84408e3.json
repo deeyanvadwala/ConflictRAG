@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.11,
+ "output": "{\n  \"answers\": true,\n  \"value\": \"more than 1 year\",\n  \"number\": null,\n  \"unit\": \"years\",\n  \"describes\": \"NASA's Version 1.0 Mars Reference Mission\",\n  \"quote\": \"becoming the first humans to spend more than 1 year on the surface of a planet other than Earth.\"\n}",
+ "created": "2026-11-20 22:43:15"
+}

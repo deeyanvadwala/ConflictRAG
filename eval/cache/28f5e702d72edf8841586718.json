@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.95,
+ "output": "According to [2], the SEP cargo stage in the SEP-Chem Evolvable Mars Campaign architecture was assumed to supply 150 kW of power to its electric propulsion thrusters.",
+ "created": "2026-11-23 20:40:27"
+}

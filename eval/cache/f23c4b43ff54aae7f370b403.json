@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 10.67,
+ "output": "Unfortunately, the provided context does not explicitly state the number of people planned to be sent to Mars in the 1997 NASA Reference Mission. However, we can infer some information from the documents.\n\nIn [1], the document mentions that the Reference Mission is a plan for the first human missions to Mars, but it does not specify the number of people involved.\n\nIn [2], the document states that the Reference Mission is a tool used to compare and evaluate approaches to mission and system concepts, and it does not represent a final or recommended approach to human Mars missions. It also mentions that several alternative scenarios are under study, but it does not provide information on the number of people involved in these scenarios.\n\nIn [3], the document mentions that the Reference Mission has undergone changes and updates, and it outlines the current version (Version 3.0). However, it does not provide information on the number of people planned to be sent to Mars.\n\nIn [4], the document mentions that the Reference Mission is a starting point for NASA's continuing efforts to develop the technologies and systems needed for human exploration of Mars. However, it does not provide information on the number of people involved.\n\nIn [5], the document mentions the Inspiration Mars 2021 mission, which is a separate concept that involves a two-person crew. However, this is not part of the 1997 NASA Reference Mission.\n\nUnfortunately, the provided context does not provide a clear answer to the question. However, based on the information provided, it appears that the 1997 NASA Reference Mission did not specify the number of people planned to be sent to Mars.",
+ "created": "2026-11-23 21:10:37"
+}

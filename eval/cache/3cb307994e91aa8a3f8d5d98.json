@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.71,
+ "output": "According to [1], in the revised plan of NASA's Mars Reference Mission Version 1.0, Revision B (2021 update), the crew stays on the Martian surface for 900 days.\n\nNote: This is in contrast to the original plan mentioned in [3], where the crew stayed on the surface for 500 days.",
+ "created": "2026-11-23 20:41:01"
+}

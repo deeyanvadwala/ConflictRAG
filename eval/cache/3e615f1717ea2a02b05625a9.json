@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.5,
+ "output": "According to [1], the SEP cargo stage supplies 400 kW to its electric propulsion thrusters.",
+ "created": "2026-11-23 20:35:02"
+}

@@ -1,0 +1,381 @@
+{
+ "title": "e3smoke / dev (7 questions; ollama llama3.1:8b, judge v2, retrieval study_pool_rerank, prompt naive, conflict check on, k=5, 1500/200 chunks)",
+ "metrics": {
+  "hit@3": [
+   0.5714285714285714,
+   7
+  ],
+  "hit@5": [
+   0.7142857142857143,
+   7
+  ],
+  "hit@10": [
+   0.7142857142857143,
+   7
+  ],
+  "MRR@10": [
+   0.4571428571428572,
+   7
+  ],
+  "conflict coverage@5": [
+   0.2857142857142857,
+   7
+  ],
+  "correct (answerable)": [
+   0.2857142857142857,
+   7
+  ],
+  "correct or partial (answerable)": [
+   0.8571428571428571,
+   7
+  ],
+  "faithful (answered)": [
+   0.8333333333333334,
+   6
+  ],
+  "citation hits gold": [
+   0.5714285714285714,
+   7
+  ],
+  "invalid citations (answers with any)": [
+   0.0,
+   7
+  ],
+  "abstention accuracy (no-answer qs)": [
+   null,
+   0
+  ],
+  "false abstention (answerable)": [
+   0.14285714285714285,
+   7
+  ],
+  "conflict detection": [
+   0.0,
+   5
+  ],
+  "false-conflict rate (traps)": [
+   0.0,
+   2
+  ],
+  "stale answer (conflicting)": [
+   0.4,
+   5
+  ],
+  "module flags conflict (conflicting)": [
+   0.0,
+   5
+  ],
+  "module flags conflict (traps)": [
+   0.0,
+   2
+  ],
+  "module flags conflict (other answerable)": [
+   null,
+   0
+  ],
+  "median LLM latency s": [
+   5.58,
+   7
+  ]
+ },
+ "rows": [
+  {
+   "id": "cf01",
+   "tag": "conflicting",
+   "question": "How many astronauts does NASA plan to send to Mars on a human mission?",
+   "answer": "According to the provided documents, NASA plans to send a crew of six astronauts to Mars on a human mission. This is mentioned in [4] (document 20090012109, pages 14-16) and [5] (document 20090040343, pages 7-7).",
+   "retrieved": [
+    "20140016934_0005",
+    "19980037039_0237",
+    "20160003093_0043",
+    "20090012109_0009",
+    "20090040343_0027",
+    "20110005558_0009",
+    "19980037039_0048",
+    "20090010571_0003",
+    "20160006315_0015",
+    "19980037039_0043"
+   ],
+   "gold_rank": 1,
+   "conflict_covered@5": true,
+   "cited": [
+    4,
+    5
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": true,
+    "correctness": "partial",
+    "stated_values": [
+     1
+    ],
+    "faithful": true
+   },
+   "latency_s": 12.41,
+   "conflict_check": {
+    "decision": "none",
+    "claims": [
+     {
+      "source": 5,
+      "doc_id": "20090040343",
+      "year": 2010,
+      "value": "six crewmembers",
+      "number": 6.0,
+      "unit": "crew",
+      "describes": "the NASA Design Reference Architecture 5.0",
+      "quote": "The NASA Design Reference Architecture 5.0 envisions sending six crewmembers to Mars on a minimum of three consecutive opportunities.",
+      "verified": "quote",
+      "relevant": true,
+      "base_unit": "crew",
+      "base": 6.0
+     }
+    ],
+    "note": ""
+   }
+  },
+  {
+   "id": "cf04",
+   "tag": "conflicting",
+   "question": "When does the first crew leave Earth for Mars in the Version 1.0 Reference Mission?",
+   "answer": "According to [3] (document 19980218778, pages 12-12), the first crew leaves Earth for Mars in the second opportunity, but the exact date is not specified. However, it is mentioned that the crew departs for Mars in the second opportunity, which is after the two cargo missions have been launched.\n\nAccording to [1] (document 19980037039, pages 135-135), the first crew of six departs for Mars in mid-November 2009.",
+   "retrieved": [
+    "19980037039_0237",
+    "19980037039_0048",
+    "19980218778_0016",
+    "20090040343_0030",
+    "19980037039_0242",
+    "20090012109_0008",
+    "20090040343_0036",
+    "19980037039_0046",
+    "19980037039_0143",
+    "19980218778_0019"
+   ],
+   "gold_rank": 1,
+   "conflict_covered@5": true,
+   "cited": [
+    1,
+    3
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": true,
+    "correctness": "partial",
+    "stated_values": [
+     1
+    ],
+    "faithful": true
+   },
+   "latency_s": 5.58,
+   "conflict_check": {
+    "decision": "none",
+    "claims": [],
+    "note": ""
+   }
+  },
+  {
+   "id": "cf06",
+   "tag": "conflicting",
+   "question": "How many days does the DRA 5.0 crew spend at Mars?",
+   "answer": "According to [2] (document 20160006315, pages 12-12), the DRA 5.0 crew spends 450-550 days at Mars.",
+   "retrieved": [
+    "19980218778_0051",
+    "20160006315_0025",
+    "19980037039_0237",
+    "20090040343_0041",
+    "20160006315_0012",
+    "20120012929_0000",
+    "20090040343_0048",
+    "20090010571_0005",
+    "20140016934_0005",
+    "20090012109_0008"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": false,
+   "cited": [
+    2
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "partial",
+    "stated_values": [
+     1,
+     2
+    ],
+    "faithful": true
+   },
+   "latency_s": 4.16,
+   "conflict_check": {
+    "decision": "none",
+    "claims": [],
+    "note": ""
+   }
+  },
+  {
+   "id": "cf07",
+   "tag": "conflicting",
+   "question": "How has the planned crew size for a human Mars mission changed from the 1997 Reference Mission to the 2015 Evolvable Mars Campaign?",
+   "answer": "Unfortunately, the provided context does not explicitly state the planned crew size for the 1997 Reference Mission or the 2015 Evolvable Mars Campaign. However, we can infer some information from the context.\n\nThe 1997 Reference Mission is discussed in [1] and [2], but the crew size is not explicitly mentioned. In [3], the context mentions that the cargo and piloted Mars spacecraft depart LEO using a \"2-perigee burn\" Earth departure scenario, but it does not mention the crew size.\n\nThe 2015 Evolvable Mars Campaign is discussed in [4], which mentions that the mass associated with a Mars mission does not scale linearly with the size of the crew. It also mentions that once a basic capability to transport and support a crew is established, changes in the size of the crew have a relatively small impact on the overall mass of the mission.\n\nHowever, [4] does provide some information on the crew size. It mentions that the analysis was performed for combinations of four or six crew with lander capacities of 20 t or 40 t of useful payload to the surface of Mars.\n\nUnfortunately, we cannot determine the exact change in planned crew size from the 1997 Reference Mission to the 2015 Evolvable Mars Campaign based on the provided context.",
+   "retrieved": [
+    "19980037039_0000",
+    "19980218778_0059",
+    "19980218778_0042",
+    "20160003093_0021",
+    "19980218778_0025",
+    "19980218778_0026",
+    "19980218778_0013",
+    "19980218778_0057",
+    "19980037039_0176",
+    "20160006315_0054"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": false,
+   "cited": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "incorrect",
+    "faithful": null
+   },
+   "latency_s": 8.72,
+   "conflict_check": {
+    "decision": "none",
+    "claims": [],
+    "note": ""
+   }
+  },
+  {
+   "id": "fc01",
+   "tag": "false-conflict",
+   "question": "DRA 5.0 plans about 500 days on Mars and the Evolvable Mars Campaign plans up to 500 sols. Is that a contradiction between the two studies?",
+   "answer": "No, it is not a contradiction between the two studies. \n\nDRA 5.0 plans about 500 days on Mars, which is a duration of time. \n\nThe Evolvable Mars Campaign (EMC) plans up to 500 sols, where a sol is a Martian day, which is slightly more than 24 hours long. \n\nSince 500 sols is equivalent to approximately 500 days (since a sol is about 24.6 hours long), the two studies are actually consistent with each other.",
+   "retrieved": [
+    "20120012928_0000",
+    "20140016934_0005",
+    "20160006315_0012",
+    "20140016934_0000",
+    "20160006315_0025",
+    "20120012929_0000",
+    "20160006315_0004",
+    "20090040343_0041",
+    "20160006315_0023",
+    "20160003093_0011"
+   ],
+   "gold_rank": 2,
+   "conflict_covered@5": false,
+   "cited": [],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": true
+   },
+   "latency_s": 5.5,
+   "conflict_check": {
+    "decision": "none",
+    "claims": [],
+    "note": ""
+   }
+  },
+  {
+   "id": "fc03",
+   "tag": "false-conflict",
+   "question": "Does the 2015 comparison of Mars architectures agree with the 2010 DRA 5.0 paper about DRA 5.0's crew size?",
+   "answer": "According to the 2015 comparison of Mars architectures [3], the crew size for the Design Reference Architecture 5.0 (DRA 5.0) is six, all of whom descend to the surface for long-stay exploration. This is consistent with the 2010 DRA 5.0 paper [5], which also states that the primary objectives for future human exploration of Mars include sending six crewmembers to Mars on a minimum of three consecutive opportunities.\n\nTherefore, the 2015 comparison of Mars architectures agrees with the 2010 DRA 5.0 paper about DRA 5.0's crew size.",
+   "retrieved": [
+    "20120012928_0000",
+    "20160006315_0038",
+    "20140016934_0005",
+    "20120012929_0000",
+    "20090040343_0027",
+    "20160006315_0025",
+    "20160006315_0012",
+    "20160006315_0004",
+    "20160003093_0042",
+    "20160006315_0043"
+   ],
+   "gold_rank": 5,
+   "conflict_covered@5": false,
+   "cited": [
+    3,
+    5
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": true
+   },
+   "latency_s": 5.91,
+   "conflict_check": {
+    "decision": "none",
+    "claims": [],
+    "note": ""
+   }
+  },
+  {
+   "id": "rm02",
+   "tag": "conflicting",
+   "question": "How long do astronauts stay on the Martian surface in NASA's Version 1.0 Mars Reference Mission?",
+   "answer": "According to [2], in NASA's Version 1.0 Mars Reference Mission, the crew stays on the Martian surface for 500 days.",
+   "retrieved": [
+    "20160003093_0062",
+    "19980218778_0016",
+    "20150006952_0005",
+    "20160003093_0087",
+    "19980037039_0160",
+    "20160006315_0025",
+    "20160006315_0051",
+    "19980037039_0085",
+    "20140016934_0005",
+    "19980037039_0050"
+   ],
+   "gold_rank": 2,
+   "conflict_covered@5": false,
+   "cited": [
+    2
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "partial",
+    "stated_values": [
+     2
+    ],
+    "faithful": false
+   },
+   "latency_s": 3.86,
+   "conflict_check": {
+    "decision": "none",
+    "claims": [],
+    "note": ""
+   }
+  }
+ ]
+}

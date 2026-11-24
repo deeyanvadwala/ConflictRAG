@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 2.76,
+ "output": "{\"label\": \"unavailable\"}",
+ "created": "2026-11-23 21:13:18"
+}

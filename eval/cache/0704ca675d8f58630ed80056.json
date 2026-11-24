@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.27,
+ "output": "{\n  \"answers\": true,\n  \"value\": \"500 days\",\n  \"number\": 500,\n  \"unit\": \"days\",\n  \"describes\": \"the 500-day surface mission\",\n  \"quote\": \"After completion of the 500-day surface mission, the crew ascends to Mars orbit and rendezvous in Mars orbit with the pre-deployed return vehicle (ERV-1).\"\n}",
+ "created": "2026-11-20 22:43:11"
+}

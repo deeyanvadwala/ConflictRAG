@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.21,
+ "output": "Unfortunately, the provided context does not mention the salary of the astronauts on a DRA 5.0 mission. The documents discuss the mission architecture, power requirements, crew duration, and programmatic sustainability, but do not provide information on compensation or salaries.",
+ "created": "2026-11-23 21:10:46"
+}

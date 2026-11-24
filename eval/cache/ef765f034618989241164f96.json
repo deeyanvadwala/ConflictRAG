@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.74,
+ "output": "{\n  \"answers\": true,\n  \"value\": \"180 days\",\n  \"number\": 180,\n  \"unit\": \"days\",\n  \"describes\": \"Crewed\",\n  \"quote\": \"Crew- -'180 days'\"\n}",
+ "created": "2026-11-20 22:34:44"
+}

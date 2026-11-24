@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.43,
+ "output": "{\n  \"reference_facts\": \"175-225 days\",\n  \"answer_facts\": \"450-550 days\",\n  \"correctness\": \"incorrect\"\n}",
+ "created": "2026-11-23 21:12:07"
+}

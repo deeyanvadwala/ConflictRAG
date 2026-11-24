@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.59,
+ "output": "{\n  \"reference_facts\": \"861 kg (from 4802 kg to 3941 kg)\",\n  \"answer_facts\": \"961 kg (4802 - 3941)\",\n  \"correctness\": \"incorrect\"\n}",
+ "created": "2026-11-23 21:13:07"
+}

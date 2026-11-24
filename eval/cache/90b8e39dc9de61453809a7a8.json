@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.67,
+ "output": "According to [4], for a crewed mission to Phobos as part of DRA 5.0, the total flight time would vary between 598 and 672 days, with less than 30 days available for Phobos exploration.",
+ "created": "2026-11-23 20:41:07"
+}

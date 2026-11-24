@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.9,
+ "output": "According to [4], for the DRA 5.0 Commuter surface option, the mass of the solar based system was over 22,000 kg for a 25 kWe system, while the nuclear power system mass was approximately 8,000 kg for a 30 kWe system. This means that choosing nuclear fission power would save roughly 14,000 kg (22,000 kg - 8,000 kg) compared with a solar power system.",
+ "created": "2026-11-23 20:42:19"
+}

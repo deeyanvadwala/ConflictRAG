@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.68,
+ "output": "There is no mention of a SpaceX vehicle intended to carry people to Mars in the provided sources. The sources discuss various NASA architectures and vehicles, such as the Mars Ascent Vehicle (MAV), the Mars Descent Module (MDM), and the Mars Design Reference Architecture 5.0 (DRA 5.0), but none of them are associated with SpaceX.",
+ "created": "2026-11-23 20:57:53"
+}

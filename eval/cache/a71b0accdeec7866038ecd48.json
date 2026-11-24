@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 7.27,
+ "output": "According to [1], the SEP cargo stage in the SEP-Chem Evolvable Mars Campaign architecture was assumed to supply 150 kW of power to its electric propulsion thrusters.\n\nAdditionally, [2] states that the power to the EP system is 150 kW, with a power level that decreases with distance from the Sun, specifically 1/R^2 for R>1AU.\n\n[3] also mentions that the SEP cargo analysis examined performance to Mars as a function of thruster power levels starting from the 40 kW ARRM power upward to 300 kW, but the SEP stage in the SEP-Chem Evolvable Mars Campaign architecture was specifically assumed to supply 150 kW of power.\n\n[4] and [5] do not provide information on the power level of the SEP cargo stage in the SEP-Chem Evolvable Mars Campaign architecture.",
+ "created": "2026-11-23 20:45:09"
+}

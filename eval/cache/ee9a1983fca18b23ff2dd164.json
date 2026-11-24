@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.66,
+ "output": "Unfortunately, the provided context does not explicitly state the number of heavy-lift launches required by the DRA 5.0 architecture. However, it does mention that the architecture relies on a high launch rate to support the missions, with vehicles launching on 30-60 day centers to support aggregation in low Earth orbit and departure [1].\n\nIt is also mentioned that the number of launches might be updated since DRA 5 assumed an Ares-V launch vehicle, whereas the current heavy-lift launch vehicle is the Space Launch System (SLS) [3].\n\nTherefore, based on the provided context, it is not possible to determine the exact number of heavy-lift launches required by the DRA 5.0 architecture.",
+ "created": "2026-11-23 21:09:27"
+}

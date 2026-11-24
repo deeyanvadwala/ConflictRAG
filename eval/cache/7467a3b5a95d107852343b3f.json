@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.5,
+ "output": "According to [1], the DRA 5.0 core propulsion stage has three 25 klbf (111 kN) NTR engines, each with a specific impulse of ~900 - 910 s.",
+ "created": "2026-11-23 20:40:28"
+}

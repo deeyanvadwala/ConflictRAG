@@ -22,7 +22,7 @@ Metrics
   stale = conflicting questions answered with only an older source's value.
 - Latency: median seconds, measured when the answer was first generated (cache keeps it).
 """
-import argparse, hashlib, json, pathlib, re, statistics, sys, time
+import argparse, hashlib, json, os, pathlib, re, statistics, sys, time
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -134,6 +134,9 @@ def cached_complete(prompt, json_mode=False):
     USED.add(path.name)
     if path.exists():
         return json.loads(path.read_text(encoding="utf-8"))
+    if os.environ.get("CONFLICTRAG_OFFLINE") == "1":   # CI replay: never call a model
+        raise LLMError(f"cache miss {path.name} in offline mode: a prompt changed, or retrieval "
+                       f"returned different chunks than when the cache was made")
     t = time.perf_counter()
     out, finish = complete_meta(prompt, json_mode=json_mode)
     if finish != "stop":   # never cache a cut-off or blocked output: it would be reused forever
@@ -212,17 +215,27 @@ def judge_v2(q, answer, context):
     return v
 
 
-def run_one(q, k_gen, judge="v2", retrieval="topk", style="naive"):
+def run_one(q, k_gen, judge="v2", retrieval="topk", style="naive", conflict_check=False):
     hits = STRATEGIES[retrieval](q["question"], 10)   # top 10 for hit@k; the first k_gen go to the LLM
     gen_hits = hits[:k_gen]
     prompt = build_prompt(q["question"], gen_hits, style)
     gen = cached_complete(prompt)
     answer = gen["output"]
-    cited = [n for n in cited_numbers(answer) if 1 <= n <= len(gen_hits)]
-    invalid = [n for n in cited_numbers(answer) if not 1 <= n <= len(gen_hits)]
+    check = None
+    if conflict_check:   # E3: code compares extracted claims and appends a note
+        from conflicts import check as run_check
+        check = run_check(q["question"], gen_hits, ask)
+        if check["note"]:
+            answer = answer.rstrip() + "\n\n" + check["note"]
+    # Citations are counted on the generator's own text, not on the appended note.
+    cited = [n for n in cited_numbers(gen["output"]) if 1 <= n <= len(gen_hits)]
+    invalid = [n for n in cited_numbers(gen["output"]) if not 1 <= n <= len(gen_hits)]
 
     context = "\n\n".join(f"[{n}] {h['text']}" for n, h in enumerate(gen_hits, start=1))
-    verdict = (judge_v1 if judge == "v1" else judge_v2)(q, answer, context)
+    if judge == "none":   # answers only: lets a human label them before seeing any judge verdict
+        verdict = {}
+    else:
+        verdict = (judge_v1 if judge == "v1" else judge_v2)(q, answer, context)
 
     gold = q.get("gold", [])
     return {
@@ -233,6 +246,7 @@ def run_one(q, k_gen, judge="v2", retrieval="topk", style="naive"):
         "cited": cited, "invalid_citations": invalid,
         "cited_gold": any(gold_rank([gen_hits[n - 1]], gold) for n in cited) if gold else None,
         "verdict": verdict, "latency_s": gen["latency_s"],
+        "conflict_check": check,
     }
 
 
@@ -263,6 +277,12 @@ def summarize(rows):
     m["conflict detection"] = rate([v(r, "claims_disagreement") for r in conf])
     m["false-conflict rate (traps)"] = rate([v(r, "claims_disagreement") for r in trap])
     m["stale answer (conflicting)"] = rate([v(r, "only_older_value") for r in conf])
+    if any(r.get("conflict_check") for r in rows):   # measured by code, no judge
+        flag = lambda r: r["conflict_check"]["decision"] == "conflict"
+        other = [r for r in ans if r["tag"] not in {"conflicting", "false-conflict"}]
+        m["module flags conflict (conflicting)"] = rate([flag(r) for r in conf])
+        m["module flags conflict (traps)"] = rate([flag(r) for r in trap])
+        m["module flags conflict (other answerable)"] = rate([flag(r) for r in other])
     lat = [r["latency_s"] for r in rows]
     m["median LLM latency s"] = (statistics.median(lat), len(lat)) if lat else (None, 0)
     return m
@@ -290,8 +310,10 @@ if __name__ == "__main__":
     p.add_argument("--questions", default=str(ROOT / "questions.jsonl"))
     p.add_argument("--only", nargs="*", help="run only these question ids (smoke test)")
     p.add_argument("--retrieval", choices=sorted(STRATEGIES), default=CFG["retrieval"])
-    p.add_argument("--prompt", choices=["naive", "conflict"], default=CFG["prompt"])
-    p.add_argument("--judge", choices=["v1", "v2"], default="v2",
+    p.add_argument("--prompt", choices=["naive", "conflict", "guarded"], default=CFG["prompt"])
+    p.add_argument("--conflict-check", action="store_true",
+                   help="E3: append a code-decided source comparison to each answer (conflicts.py)")
+    p.add_argument("--judge", choices=["v1", "v2", "none"], default="v2",
                    help="v1 = single-prompt judge used for B0; v2 = narrow questions combined by code")
     p.add_argument("--prune", action="store_true",
                    help="after the run, delete cache files this run did not use (run with --split all)")
@@ -308,10 +330,12 @@ if __name__ == "__main__":
     rows = []
     for i, q in enumerate(qs, start=1):
         print(f"[{i}/{len(qs)}] {q['id']} {q['tag']}", file=sys.stderr)
-        rows.append(run_one(q, CFG["top_k"], judge=a.judge, retrieval=a.retrieval, style=a.prompt))
+        rows.append(run_one(q, CFG["top_k"], judge=a.judge, retrieval=a.retrieval, style=a.prompt,
+                            conflict_check=a.conflict_check))
     m = summarize(rows)
     provider = CFG["llm_provider"]
     title = (f"{a.name} / {a.split} ({len(rows)} questions; {provider} {CFG['llm_models'][provider]}, judge {a.judge}, retrieval {a.retrieval}, prompt {a.prompt}, "
+             f"conflict check {'on' if a.conflict_check else 'off'}, "
              f"k={CFG['top_k']}, {CFG['chunk_chars']}/{CFG['chunk_overlap']} chunks)")
     out = table(m, title)
     print(out)

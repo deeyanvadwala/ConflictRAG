@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.02,
+ "output": "{\n  \"answers\": true,\n  \"value\": \"~500 days\",\n  \"number\": 500,\n  \"unit\": \"days\",\n  \"describes\": \"DRA 5.0 plans\",\n  \"quote\": \"DRA 5.0 features a long surface stay (~500 days) “split mission”\"\n}",
+ "created": "2026-11-20 22:41:51"
+}

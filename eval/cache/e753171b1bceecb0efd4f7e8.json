@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.5,
+ "output": "There is no information in the provided sources about the specific launch pad at Kennedy Space Center that will be used for the Evolvable Mars Campaign crew launch. The sources discuss the Evolvable Mars Campaign (EMC) and its various phases, challenges, and architecture, but do not provide details about the launch pad.",
+ "created": "2026-11-23 20:52:09"
+}

@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.91,
+ "output": "According to [2] (document 19980218778, pages 12-12), in the Reference Mission Version 1.0, the crew stays on the Martian surface for 500 days.\n\nHowever, according to [5] (document 2024009908, pages 1-1), in the revised plan, the crew stays on the Martian surface for 900 days.\n\nIt's worth noting that [3] (document 20150006952, pages 2-2) also mentions a long-stay mission with a crew staying on the Martian surface for more than 1 year, but it does not specify the exact duration.",
+ "created": "2026-11-23 20:35:31"
+}

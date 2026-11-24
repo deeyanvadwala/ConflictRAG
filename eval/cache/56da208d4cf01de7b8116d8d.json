@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.65,
+ "output": "{\n  \"reference_facts\": \"69 t (three landers of 23 t each)\",\n  \"answer_facts\": \"40 t (two landers)\",\n  \"correctness\": \"incorrect\"\n}",
+ "created": "2026-11-23 21:12:22"
+}

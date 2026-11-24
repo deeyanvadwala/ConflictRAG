@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.81,
+ "output": "{\n  \"answers\": true,\n  \"value\": \"7 days\",\n  \"number\": 7,\n  \"unit\": \"days\",\n  \"describes\": \"TMI Stage: -7 days / TMI\",\n  \"quote\": \"–7 days / TMI:\"\n}",
+ "created": "2026-11-20 22:40:39"
+}

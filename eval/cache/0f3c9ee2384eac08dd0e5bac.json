@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.32,
+ "output": "According to [3], the first crew leaves Earth for Mars in the second opportunity, but the exact date is not specified. However, it is mentioned that the crew departs after the two cargo missions have been launched, and they are sent on a fast transfer trajectory of only 180 days.\n\nIn [1], it is stated that the first crew of six departs for Mars in mid-November 2009, but this is not consistent with the information in [3]. \n\nTherefore, the answer is that the first crew leaves Earth for Mars in the second opportunity, but the exact date is not specified in the provided sources.",
+ "created": "2026-11-23 20:38:04"
+}

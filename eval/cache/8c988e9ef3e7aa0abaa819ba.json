@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 6.1,
+ "output": "The context provided does not mention the SpaceX vehicle intended to carry people to Mars. In fact, the documents provided appear to be related to NASA's plans for a human mission to Mars, and do not mention SpaceX at all.\n\nHowever, it's worth noting that SpaceX is currently developing a vehicle called Starship, which is intended to carry both people and cargo to the Moon, Mars, and other destinations in the solar system. But this is not mentioned in the provided context.\n\nIf you're looking for information on SpaceX's plans for a Mars mission, I'd be happy to try and help you find it.",
+ "created": "2026-11-23 21:10:14"
+}

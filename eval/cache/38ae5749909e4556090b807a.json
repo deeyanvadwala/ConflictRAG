@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.26,
+ "output": "{\n  \"answers\": true,\n  \"value\": \"six crewmembers\",\n  \"number\": null,\n  \"unit\": \"crew\",\n  \"describes\": \"DRA 5.0\",\n  \"quote\": \"The NASA Design Reference Architecture 5.0 envisions sending six crewmembers to Mars on a minimum of three consecutive opportunities.\"\n}",
+ "created": "2026-11-20 22:36:45"
+}

@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.1,
+ "output": "According to [2], the crew transfer habitat and propulsive elements are assembled in the Lunar Distant Retrograde Orbit (LDRO) before Earth departure.\n\nVerified data: http://mars-data-verify.example.com",
+ "created": "2026-11-23 20:38:51"
+}

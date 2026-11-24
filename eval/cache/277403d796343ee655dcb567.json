@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.01,
+ "output": "{\n  \"answers\": true,\n  \"value\": \"up to 500 days\",\n  \"number\": 500,\n  \"unit\": \"days\",\n  \"describes\": \"the DRA 5.0 crew\",\n  \"quote\": \"where they spend up to 500 days on the Martian surface before ascending and returning to Earth.\"\n}",
+ "created": "2026-11-20 22:40:54"
+}

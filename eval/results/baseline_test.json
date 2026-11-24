@@ -1,0 +1,549 @@
+{
+ "title": "baseline / test (14 questions; ollama llama3.1:8b, judge v2, retrieval topk, prompt naive, conflict check off, k=5, 1500/200 chunks)",
+ "metrics": {
+  "hit@3": [
+   0.5,
+   10
+  ],
+  "hit@5": [
+   0.6,
+   10
+  ],
+  "hit@10": [
+   0.8,
+   10
+  ],
+  "MRR@10": [
+   0.39666666666666667,
+   10
+  ],
+  "conflict coverage@5": [
+   0.6666666666666666,
+   3
+  ],
+  "correct (answerable)": [
+   0.3,
+   10
+  ],
+  "correct or partial (answerable)": [
+   0.4,
+   10
+  ],
+  "faithful (answered)": [
+   1.0,
+   8
+  ],
+  "citation hits gold": [
+   0.4,
+   10
+  ],
+  "invalid citations (answers with any)": [
+   0.0,
+   14
+  ],
+  "abstention accuracy (no-answer qs)": [
+   0.75,
+   4
+  ],
+  "false abstention (answerable)": [
+   0.3,
+   10
+  ],
+  "conflict detection": [
+   0.0,
+   2
+  ],
+  "false-conflict rate (traps)": [
+   0.0,
+   1
+  ],
+  "stale answer (conflicting)": [
+   0.0,
+   2
+  ],
+  "median LLM latency s": [
+   5.25,
+   14
+  ]
+ },
+ "rows": [
+  {
+   "id": "cf03",
+   "tag": "conflicting",
+   "question": "How many heavy-lift launches does the DRA 5.0 architecture require?",
+   "answer": "Unfortunately, the provided context does not explicitly state the number of heavy-lift launches required by the DRA 5.0 architecture. However, it does mention that the architecture relies on a high launch rate to support the missions, with vehicles launching on 30-60 day centers to support aggregation in low Earth orbit and departure [1].\n\nIt is also mentioned that the number of launches might be updated since DRA 5 assumed an Ares-V launch vehicle, whereas the current heavy-lift launch vehicle is the Space Launch System (SLS) [3].\n\nTherefore, based on the provided context, it is not possible to determine the exact number of heavy-lift launches required by the DRA 5.0 architecture.",
+   "retrieved": [
+    "20160006315_0044",
+    "20160006315_0012",
+    "20160003093_0148",
+    "20120012929_0000",
+    "20160006315_0011",
+    "20120012928_0000",
+    "20160006315_0045",
+    "20160006315_0043",
+    "20090040343_0044",
+    "20160003093_0052"
+   ],
+   "gold_rank": 10,
+   "conflict_covered@5": false,
+   "cited": [
+    1,
+    3
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "incorrect",
+    "faithful": null
+   },
+   "latency_s": 6.66,
+   "conflict_check": null
+  },
+  {
+   "id": "cf05",
+   "tag": "conflicting",
+   "question": "What payload capability to low Earth orbit does the launch vehicle for the NASA Mars Reference Mission need?",
+   "answer": "According to [4], the launch vehicle for the NASA Mars Reference Mission needs a payload capability of 80 metric tons to low Earth orbit (LEO) to minimize on-orbit assembly costs and meet payload size requirements.",
+   "retrieved": [
+    "19980037039_0264",
+    "19980037039_0057",
+    "20160003093_0005",
+    "19980218778_0035",
+    "19980037039_0230",
+    "20160003093_0004",
+    "19980037039_0039",
+    "20090040343_0083",
+    "20120012928_0008",
+    "19980037039_0266"
+   ],
+   "gold_rank": 2,
+   "conflict_covered@5": true,
+   "cited": [
+    4
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "partial",
+    "stated_values": [
+     2
+    ],
+    "faithful": true
+   },
+   "latency_s": 4.19,
+   "conflict_check": null
+  },
+  {
+   "id": "dra04",
+   "tag": "easy",
+   "question": "According to NASA's DRA 5.0 Addendum #2, how much time should astronauts get to adjust to Mars gravity after landing before doing critical tasks?",
+   "answer": "According to the provided context, the answer is not directly found in the DRA 5.0 Addendum #2, but rather in document [1] (document 20160003093, pages 30-30). According to this document, the Human Research Program indicates that sufficient time, on the order of 7-14 days, should be provided for the crew to acclimate to the surface gravity of Mars before doing critical tasks.",
+   "retrieved": [
+    "20160003093_0017",
+    "20160003093_0087",
+    "20160006315_0025",
+    "20120012929_0000",
+    "19980037039_0193",
+    "20090040343_0033",
+    "20160003093_0065",
+    "20160003093_0016",
+    "19980037039_0039",
+    "19980037039_0225"
+   ],
+   "gold_rank": 1,
+   "conflict_covered@5": null,
+   "cited": [
+    1
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": true
+   },
+   "latency_s": 5.21,
+   "conflict_check": null
+  },
+  {
+   "id": "dra05",
+   "tag": "easy",
+   "question": "How long does the crew's one-way trip from Earth to Mars take in the DRA 5.0 reference mission?",
+   "answer": "According to [3] (document 20160003093, pages 78-79), the crew stay on Mars in DRA 5.0 is 539 days. However, this is the total duration of the crew's stay on Mars, including the time spent on the Martian surface and in transit.\n\nTo determine the one-way trip time from Earth to Mars, we need to look at the return trip time, which is mentioned in [3] as 180-220 days. Since the crew's stay on Mars is 539 days, and the return trip takes 180-220 days, we can infer that the one-way trip time from Earth to Mars is approximately 359-419 days.\n\nHowever, the most direct answer can be found in [1] (document 20160006315, pages 12-12), which states that the total mission duration for DRA 5.0 is 900-1000 days, of which 450-550 days are in free space and 450-550 days are spent at Mars. Since the crew's stay on Mars is 450-550 days, and the total mission duration is 900-1000 days, we can infer that the one-way trip time from Earth to Mars is approximately 450-550 days.",
+   "retrieved": [
+    "20160006315_0025",
+    "20160006315_0012",
+    "20160003093_0132",
+    "20140016934_0005",
+    "20090040343_0041",
+    "20090040343_0037",
+    "20090040343_0048",
+    "20120012929_0000",
+    "20090040343_0000",
+    "20160006315_0011"
+   ],
+   "gold_rank": 6,
+   "conflict_covered@5": null,
+   "cited": [
+    1,
+    3
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "incorrect",
+    "faithful": true
+   },
+   "latency_s": 9.19,
+   "conflict_check": null
+  },
+  {
+   "id": "dra06",
+   "tag": "easy",
+   "question": "How many sols does DRA 5.0 allow for producing the ascent vehicle's oxygen propellant on Mars?",
+   "answer": "Unfortunately, the provided context does not explicitly state the number of sols (Martian days) DRA 5.0 allows for producing the ascent vehicle's oxygen propellant on Mars. However, we can infer some information from the context.\n\nAccording to [4], the Altair Descent Stage is capable of producing 24 t of oxygen for ascent, which is used by the Mars Ascent Vehicle (MAV). The document also mentions that the MAV returns the crew to Mars orbit for rendezvous with the crew return vehicle, which is assumed to be in a 1 Sol elliptical orbit.\n\nHowever, we cannot directly infer the number of sols allowed for producing the oxygen propellant from this information. The context does not provide a specific time frame for producing the oxygen propellant.\n\nTherefore, I must conclude that the answer cannot be determined based on the provided context.",
+   "retrieved": [
+    "20160003093_0015",
+    "20160006315_0044",
+    "20090040343_0066",
+    "20090010571_0032",
+    "20140016934_0019",
+    "19980037039_0045",
+    "20120012929_0000",
+    "19980037039_0279",
+    "20160003093_0005",
+    "20140016934_0020"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [
+    4
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "incorrect",
+    "faithful": null
+   },
+   "latency_s": 7.21,
+   "conflict_check": null
+  },
+  {
+   "id": "emc07",
+   "tag": "multi-step",
+   "question": "Per the 2015 architecture comparison, what total landed payload capacity would the landers for JPL Minimal Mars Architecture's long-stay mission provide?",
+   "answer": "According to [3], the landers for the JPL Minimal Mars Architecture's long-stay mission would provide a total landed payload capacity of 40 t (tons) each, as stated on page 29: \"This analysis resulted in a strategy whereby two landers, each capable of landing approximately 40 t of useful payload on the surface, would be utilized to support a crew of six for 500 days on the surface of Mars.\"",
+   "retrieved": [
+    "20160006315_0013",
+    "20120012929_0000",
+    "20160003093_0011",
+    "20140016934_0037",
+    "20160003093_0083",
+    "20160003093_0018",
+    "19980037039_0225",
+    "20160006315_0004",
+    "20160003093_0082",
+    "20160006315_0023"
+   ],
+   "gold_rank": 1,
+   "conflict_covered@5": null,
+   "cited": [
+    3
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "incorrect",
+    "faithful": true
+   },
+   "latency_s": 5.22,
+   "conflict_check": null
+  },
+  {
+   "id": "fc02",
+   "tag": "false-conflict",
+   "question": "How much power does the DRA 5.0 ISRU oxygen plant need?",
+   "answer": "According to [4] (document 20090040343, pages 21-21), the ISRU plant, which is making ascent stage O2 propellant, is the dominant power requirement at 25 kWe operating continuously.",
+   "retrieved": [
+    "20090010571_0018",
+    "20120012929_0011",
+    "20090040343_0074",
+    "20090040343_0077",
+    "19980037039_0304",
+    "20120012929_0010",
+    "20120012929_0012",
+    "19980218778_0028",
+    "20120012929_0000",
+    "19980037039_0317"
+   ],
+   "gold_rank": 2,
+   "conflict_covered@5": true,
+   "cited": [
+    4
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": true
+   },
+   "latency_s": 4.44,
+   "conflict_check": null
+  },
+  {
+   "id": "mk02",
+   "tag": "model-knows",
+   "question": "Which crater did the Perseverance rover land in?",
+   "answer": "Unfortunately, the provided context does not mention the Perseverance rover or the crater it landed in. The context appears to be related to Mars mission planning, architecture, and scientific exploration, but it does not specifically mention the Perseverance rover or its landing site.\n\nHowever, based on general knowledge, the Perseverance rover landed in Jezero crater on Mars on February 18, 2021.",
+   "retrieved": [
+    "20090040343_0073",
+    "20090012109_0009",
+    "20160003093_0035",
+    "19980037039_0065",
+    "20090040343_0090",
+    "20090010571_0033",
+    "20090040343_0074",
+    "19980037039_0252",
+    "20110005558_0013",
+    "20090040343_0066"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [],
+   "invalid_citations": [],
+   "cited_gold": null,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "incorrect",
+    "faithful": true
+   },
+   "latency_s": 5.28,
+   "conflict_check": null
+  },
+  {
+   "id": "mk03",
+   "tag": "model-knows",
+   "question": "What is the name of the SpaceX vehicle intended to carry people to Mars?",
+   "answer": "The context provided does not mention the SpaceX vehicle intended to carry people to Mars. In fact, the documents provided appear to be related to NASA's plans for a human mission to Mars, and do not mention SpaceX at all.\n\nHowever, it's worth noting that SpaceX is currently developing a vehicle called Starship, which is intended to carry both people and cargo to the Moon, Mars, and other destinations in the solar system. But this is not mentioned in the provided context.\n\nIf you're looking for information on SpaceX's plans for a Mars mission, I'd be happy to try and help you find it.",
+   "retrieved": [
+    "20120012928_0001",
+    "20160003093_0071",
+    "20120012928_0026",
+    "20090012109_0011",
+    "19980037039_0277",
+    "20090012109_0009",
+    "19980037039_0237",
+    "19980037039_0062",
+    "20150006952_0031",
+    "20090040343_0083"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [],
+   "invalid_citations": [],
+   "cited_gold": null,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": null
+   },
+   "latency_s": 6.1,
+   "conflict_check": null
+  },
+  {
+   "id": "rm06",
+   "tag": "easy",
+   "question": "If something goes wrong on the way to Mars in the 1997 Reference Mission, where does the crew go as their safe haven abort option?",
+   "answer": "According to the documents [1] and [4], if something goes wrong on the way to Mars in the 1997 Reference Mission, the crew's safe haven abort option is the Martian surface. The document states that \"An alternate strategy, and one that was selected for this Reference Mission, is to take advantage of the martian surface as a safe haven where open space, gravity, and radiation protection are naturally available.\" [1] and \"This approach places a greater burden on the entry, landing, and martian-based launch systems. However, the trade-off of making these systems a viable part of the abort strategy through increased redundancy and reliability versus the enhancements needed to sustain a crew through a 2- to 3-year interplanetary abort have tended to favor the abort to the surface strategy.\" [4]",
+   "retrieved": [
+    "19980037039_0085",
+    "19980037039_0086",
+    "19980218778_0012",
+    "19980037039_0087",
+    "19980218778_0013",
+    "19980037039_0032",
+    "19980037039_0055",
+    "19980037039_0237",
+    "19980037039_0166",
+    "20160006315_0008"
+   ],
+   "gold_rank": 2,
+   "conflict_covered@5": null,
+   "cited": [
+    1,
+    4
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": true
+   },
+   "latency_s": 6.94,
+   "conflict_check": null
+  },
+  {
+   "id": "rm09",
+   "tag": "multi-step",
+   "question": "By how many kilograms did the estimated ISRU plant mass drop between Reference Mission Version 1.0 and Version 3.0?",
+   "answer": "According to [5], the estimated ISRU plant mass for Reference Mission Version 1.0 was 4802 kg, and for Version 3.0, it was 3941 kg. Therefore, the estimated ISRU plant mass dropped by 961 kg (4802 - 3941) between Reference Mission Version 1.0 and Version 3.0.",
+   "retrieved": [
+    "19980218778_0053",
+    "20090010571_0019",
+    "19980218778_0052",
+    "19980037039_0298",
+    "19980218778_0028",
+    "20090040343_0084",
+    "19980037039_0305",
+    "19980218778_0031",
+    "19980218778_0032",
+    "20090010571_0018"
+   ],
+   "gold_rank": 5,
+   "conflict_covered@5": null,
+   "cited": [
+    5
+   ],
+   "invalid_citations": [],
+   "cited_gold": true,
+   "verdict": {
+    "abstained": false,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "incorrect",
+    "faithful": true
+   },
+   "latency_s": 4.99,
+   "conflict_check": null
+  },
+  {
+   "id": "rm10",
+   "tag": "multi-step",
+   "question": "Across all the human missions planned in the 1997 NASA Reference Mission, how many people in total would be sent to Mars?",
+   "answer": "Unfortunately, the provided context does not explicitly state the number of people planned to be sent to Mars in the 1997 NASA Reference Mission. However, we can infer some information from the documents.\n\nIn [1], the document mentions that the Reference Mission is a plan for the first human missions to Mars, but it does not specify the number of people involved.\n\nIn [2], the document states that the Reference Mission is a tool used to compare and evaluate approaches to mission and system concepts, and it does not represent a final or recommended approach to human Mars missions. It also mentions that several alternative scenarios are under study, but it does not provide information on the number of people involved in these scenarios.\n\nIn [3], the document mentions that the Reference Mission has undergone changes and updates, and it outlines the current version (Version 3.0). However, it does not provide information on the number of people planned to be sent to Mars.\n\nIn [4], the document mentions that the Reference Mission is a starting point for NASA's continuing efforts to develop the technologies and systems needed for human exploration of Mars. However, it does not provide information on the number of people involved.\n\nIn [5], the document mentions the Inspiration Mars 2021 mission, which is a separate concept that involves a two-person crew. However, this is not part of the 1997 NASA Reference Mission.\n\nUnfortunately, the provided context does not provide a clear answer to the question. However, based on the information provided, it appears that the 1997 NASA Reference Mission did not specify the number of people planned to be sent to Mars.",
+   "retrieved": [
+    "19980037039_0031",
+    "19980218778_0012",
+    "19980218778_0013",
+    "19980037039_0003",
+    "20160006315_0015",
+    "20090040343_0024",
+    "19980218778_0083",
+    "20110005558_0003",
+    "19980037039_0032",
+    "20090040343_0000"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "invalid_citations": [],
+   "cited_gold": false,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "incorrect",
+    "faithful": null
+   },
+   "latency_s": 10.67,
+   "conflict_check": null
+  },
+  {
+   "id": "un04",
+   "tag": "unanswerable",
+   "question": "What life insurance is provided for DRA 5.0 crew members?",
+   "answer": "Unfortunately, the provided context does not mention life insurance for DRA 5.0 crew members. The context discusses various aspects of the Mars Design Reference Architecture 5.0 (DRA 5.0), including mission architecture, crew duration, and programmatic sustainability impacts, but it does not mention life insurance.",
+   "retrieved": [
+    "20160006315_0012",
+    "20160006315_0026",
+    "20160006315_0025",
+    "19980037039_0242",
+    "19980037039_0189",
+    "20090040343_0081",
+    "20160006315_0045",
+    "20160006315_0011",
+    "20090040343_0044",
+    "20110005558_0000"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [],
+   "invalid_citations": [],
+   "cited_gold": null,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": null
+   },
+   "latency_s": 4.82,
+   "conflict_check": null
+  },
+  {
+   "id": "un05",
+   "tag": "unanswerable",
+   "question": "What salary will the astronauts on a DRA 5.0 mission be paid?",
+   "answer": "Unfortunately, the provided context does not mention the salary of the astronauts on a DRA 5.0 mission. The documents discuss the mission architecture, power requirements, crew duration, and programmatic sustainability, but do not provide information on compensation or salaries.",
+   "retrieved": [
+    "20160006315_0012",
+    "20120012929_0000",
+    "20160006315_0025",
+    "20090040343_0000",
+    "20110005558_0000",
+    "20090040343_0041",
+    "20160006315_0011",
+    "20090040343_0044",
+    "20120012928_0000",
+    "20160003093_0018"
+   ],
+   "gold_rank": null,
+   "conflict_covered@5": null,
+   "cited": [],
+   "invalid_citations": [],
+   "cited_gold": null,
+   "verdict": {
+    "abstained": true,
+    "claims_disagreement": false,
+    "only_older_value": false,
+    "correctness": "correct",
+    "faithful": null
+   },
+   "latency_s": 4.21,
+   "conflict_check": null
+  }
+ ]
+}

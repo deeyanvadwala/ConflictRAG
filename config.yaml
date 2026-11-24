@@ -13,8 +13,8 @@ reranker_revision: 2cfc18c9415c912f9d8155881c133215df768a70   # Hugging Face com
 chroma_path: chroma_db
 collection: mars
 top_k: 5
-retrieval: topk          # strategy from strategies.py; topk = baseline embedding search
-prompt: naive            # naive = baseline prompt; conflict = conflict-aware prompt (generate.py)
+retrieval: study_pool_rerank   # 2026-11-23: final system = E1 (changes.md C10); baseline B0 used topk
+prompt: guarded          # 2026-11-23: final = guarded (D1); naive = baseline B0; conflict = E2 (rejected)
 seed: 42
 
 # Generation (llm.py). Free options only: gemini (free tier) or ollama (local).
@@ -27,3 +27,10 @@ temperature: 0
 max_output_tokens: 4096   # includes Gemini's hidden "thinking" tokens; 1024 cut off judge verdicts
 ollama_url: http://localhost:11434
 ollama_num_ctx: 8192     # judge prompts are ~3k tokens; the Ollama default would silently truncate them
+
+# Web app (app.py). Caps keep a public demo cheap and hard to abuse.
+app:
+  max_question_chars: 300
+  max_answer_tokens: 600       # replaces max_output_tokens for app answers only
+  per_user_per_minute: 4       # requests per browser session per minute
+  daily_cap: 200               # total questions per day across all users; resets at midnight UTC

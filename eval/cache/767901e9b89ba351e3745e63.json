@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.35,
+ "output": "According to [2], the DRA 5.0 core propulsion stage has three 25 klbf (111 kN) NTR engines, with a specific impulse of 900 - 910 s. \n\nAccording to [3], the DRA 6.0 core propulsion stage has five nuclear thermal rocket engines of 40 klbf thrust each, operating at a specific impulse of 1,100 s.",
+ "created": "2026-11-23 20:37:53"
+}

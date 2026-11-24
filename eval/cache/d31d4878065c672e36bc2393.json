@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.21,
+ "output": "According to the provided context, the answer is not directly found in the DRA 5.0 Addendum #2, but rather in document [1] (document 20160003093, pages 30-30). According to this document, the Human Research Program indicates that sufficient time, on the order of 7-14 days, should be provided for the crew to acclimate to the surface gravity of Mars before doing critical tasks.",
+ "created": "2026-11-23 21:09:36"
+}

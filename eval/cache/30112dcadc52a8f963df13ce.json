@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.26,
+ "output": "{\n  \"answers\": true,\n  \"value\": \"26 months\",\n  \"number\": 26,\n  \"unit\": \"months\",\n  \"describes\": \"the first crew departure from Earth\",\n  \"quote\": \"These components are followed 26 months later (at the next injection opportunity in 2014) by a second surface habitat, Hab-2, piloted by a crew of six.\"\n}",
+ "created": "2026-11-20 22:40:17"
+}

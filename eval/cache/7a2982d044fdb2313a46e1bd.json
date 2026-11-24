@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.82,
+ "output": "According to [3], the estimated ISRU plant mass for Reference Mission Version 1.0 was 4802 kg, and for Version 3.0 it was 3941 kg. Therefore, the estimated ISRU plant mass dropped by 961 kg between Reference Mission Version 1.0 and Version 3.0.",
+ "created": "2026-11-23 20:58:54"
+}

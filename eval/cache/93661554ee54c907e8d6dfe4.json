@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.87,
+ "output": "{\n  \"answers\": true,\n  \"value\": \"150-170\",\n  \"number\": 165,\n  \"unit\": \"crew\",\n  \"describes\": \"est.\",\n  \"quote\": \"Crew Size 6 150-170 (est.)\"\n}",
+ "created": "2026-11-20 22:39:46"
+}

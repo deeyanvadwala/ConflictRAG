@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.93,
+ "output": "According to [1], the launch vehicle was required to have a payload-to-orbit capability of 80 metric tons to minimize on-orbit assembly costs and meet payload size requirements.",
+ "created": "2026-11-23 20:34:44"
+}

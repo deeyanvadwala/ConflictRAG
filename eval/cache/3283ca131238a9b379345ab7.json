@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.78,
+ "output": "{\n  \"reference_facts\": \"610 days (~250 days out plus ~360 days back), with ~40 sols at Mars\",\n  \"answer_facts\": \"610 days (250 days out plus 360 days back)\",\n  \"correctness\": \"correct\"\n}",
+ "created": "2026-11-23 20:43:54"
+}

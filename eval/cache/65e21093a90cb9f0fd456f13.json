@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.18,
+ "output": "{\n  \"reference_facts\": \"six crew members\",\n  \"answer_facts\": \"nominal crew size is six\",\n  \"correctness\": \"partial\"\n}",
+ "created": "2026-11-23 20:49:41"
+}

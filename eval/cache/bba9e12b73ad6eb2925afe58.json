@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.75,
+ "output": "{\n  \"reference_facts\": \"500 sols, 500 days, sol is a Martian day\",\n  \"answer_facts\": \"500 sols, approximately 500 days, a sol is about 24.6 hours long\",\n  \"correctness\": \"correct\"\n}",
+ "created": "2026-11-20 22:42:14"
+}

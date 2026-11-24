@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 3.92,
+ "output": "{\n  \"reference_facts\": \"500 sols (Martian days), 500 days (Earth days), unit difference\",\n  \"answer_facts\": \"500 days (Earth days), 500 sols (Martian days), equivalent to approximately 520-540 Earth days\",\n  \"correctness\": \"correct\"\n}",
+ "created": "2026-11-23 20:47:38"
+}

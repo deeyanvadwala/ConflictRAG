@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 4.3,
+ "output": "According to [4], the JPL Minimal Mars Architecture's long-stay mission would require a lander with a capacity of 23t.",
+ "created": "2026-11-23 20:56:28"
+}

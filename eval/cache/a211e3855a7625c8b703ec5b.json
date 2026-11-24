@@ -1,0 +1,9 @@
+{
+ "provider": "ollama",
+ "model": "llama3.1:8b",
+ "temperature": 0,
+ "max_output_tokens": 4096,
+ "latency_s": 5.35,
+ "output": "According to source [2], NASA's Mars DRA 5.0 uses a nuclear power plant as its surface power system. The power plant is used to supply power for the systems on the Martian surface, including the habitat, rovers, and robotic rovers. The document does not specify the exact amount of power provided by the nuclear power plant, but it mentions that the power for these systems would be supplied by the nuclear power plant that would be previously deployed with the decent-ascent vehicle.",
+ "created": "2026-11-23 20:39:47"
+}
