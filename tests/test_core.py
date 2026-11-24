@@ -14,7 +14,9 @@ from generate import PROMPT, build_prompt, cited_numbers, trusted   # noqa: E402
 from ingest import page_range                         # noqa: E402
 from verify_gold import norm                          # noqa: E402
 
-FROZEN_QUESTIONS_SHA256 = "628e5b49afdb9ec551b71355aec273d302886c938a1da9f1acc620808f7de137"
+# Hash of the file with LF line endings. Git stores it with LF; a Windows checkout has CRLF
+# (hash 628e5b49..., the value recorded when the set was frozen). Same content either way.
+FROZEN_QUESTIONS_SHA256 = "c55f99ed6baad3ce34059af4d1d6f895261c53f44f4f67997902902fe0bba7b7"
 
 
 def hit(doc_id, text="passage"):
@@ -29,7 +31,7 @@ def claim(source, doc_id, year, number, unit, describes=""):
 
 # --- eval set integrity -------------------------------------------------------------------
 def test_questions_file_is_frozen():
-    data = (ROOT / "eval" / "questions.jsonl").read_bytes()
+    data = (ROOT / "eval" / "questions.jsonl").read_bytes().replace(bytes([13, 10]), bytes([10]))  # CRLF -> LF
     assert hashlib.sha256(data).hexdigest() == FROZEN_QUESTIONS_SHA256
 
 

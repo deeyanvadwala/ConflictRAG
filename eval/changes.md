@@ -72,7 +72,7 @@ These are 3-10 hand-picked queries, so they show direction only, not a score.
 - 44 questions approved. `python eval/make_split.py` (stratified by tag, seed 42, 30% test): **30 dev, 14 test**.
   - dev: easy 11, multi-step 6, conflicting 5, false-conflict 2, unanswerable 3, model-knows 3.
   - test: easy 4, multi-step 3, conflicting 2, false-conflict 1, unanswerable 2, model-knows 2.
-- Frozen file: eval/questions.jsonl, SHA-256 `628e5b49afdb9ec551b71355aec273d302886c938a1da9f1acc620808f7de137`.
+- Frozen file: eval/questions.jsonl, SHA-256 `628e5b49afdb9ec551b71355aec273d302886c938a1da9f1acc620808f7de137` (Windows CRLF line endings; with LF line endings, as git stores it: `c55f99ed6baad3ce34059af4d1d6f895261c53f44f4f67997902902fe0bba7b7`. Same content.)
 - **Rules from here:** no question is edited, added or removed. All experiments run on `--split dev` only. The test split is run once, at the end, and every wrong answer is categorized.
 
 ## C7: judge fixes; switch the eval LLM to local Ollama (2026-11-20)
